@@ -3,6 +3,31 @@ class_name Unit
 
 enum Action {ATTACK, ITEM, SWAP}
 
+@export_group("Unit Stats")
+@export var hit_points := 0
+@export var attack := 0
+@export var defense := 0
+@export var magic := 0
+@export var magic_defense := 0
+@export var speed := 0
+
+@export_group("Equipment")
+@export var hat : Equipment
+@export var top : Equipment
+@export var bottoms : Equipment
+@export var equipment_one : Equipment
+@export var equipment_two : Equipment
+@export var item : Item
+
+@export_group("Moves")
+@export var moves : Array[Move] = [null, null, null, null]
+
+@export_group("Extra Data")
+@export var job : Role
+
+@export_group("Node References")
+@export var animated_sprite : AnimatedSprite3D
+
 var current_hit_points : int
 var effective_max_hp : int
 var effective_attack : int
@@ -36,6 +61,7 @@ func take_turn():
 			print("ERROR. Ending turn.")
 
 func attack_action(target: Unit, move: Move):
+	animated_sprite.play("Attack01")
 	print(str(name) + " attacking " + str(target.name) + " with " + str(move.name) + ".")
 
 func item_action():

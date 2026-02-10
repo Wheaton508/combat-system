@@ -7,7 +7,6 @@ var enemy_units : Array[EnemyUnit]
 var unit_list : Array[Unit]
 var current_unit : PlayerUnit
 
-
 @export_group("Hierarchy References")
 @export var player_units_node : Node
 @export var enemy_units_node : Node

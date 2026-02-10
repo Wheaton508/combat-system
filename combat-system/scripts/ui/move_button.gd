@@ -12,8 +12,8 @@ var stored_move : Move
 
 func _on_visibility_changed() -> void:
 	if is_visible_in_tree():
-		if combat_manager.current_unit.stats.moves[move_id] != null:
-			stored_move = combat_manager.current_unit.stats.moves[move_id]
+		if combat_manager.current_unit.moves[move_id] != null:
+			stored_move = combat_manager.current_unit.moves[move_id]
 			text = stored_move.short_name
 		else:
 			disabled = true

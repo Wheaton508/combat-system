@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://dxcbyf3qlsc8k"]
+[gd_resource type="Theme" format=3 uid="uid://dxcbyf3qlsc8k"]
 
 [ext_resource type="Texture2D" uid="uid://c670mmwjvyi2h" path="res://imports/fantasy_ui/ui/UI assets (2x).png" id="1_bncg2"]
 [ext_resource type="FontFile" uid="uid://bqk8rlhovw02r" path="res://imports/fantasy_ui/fonts/FantasyRPGtext (size 8).ttf" id="1_ydt7m"]

@@ -1,5 +1,5 @@
 extends Resource
-class_name Class
+class_name Role
 
 enum Weapon_Type {SWORD, LANCE, AXE, BOW, MAGIC, MISC}
 enum Attack_Type {STAB, SLASH, CRUSH, FIRE, LIGHTNING, WIND, ICE, DARK, LIGHT, HEALING, NEUTRAL}

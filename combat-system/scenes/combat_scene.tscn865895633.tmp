@@ -29,6 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
 
 [node name="Slime" parent="Units/EnemyUnits" unique_id=1446500193 instance=ExtResource("3_a2e2y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+magic = null
 
 [node name="CombatOverlay" type="CanvasLayer" parent="." unique_id=1482529089]
 
