@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://bmtp5018wcdt6"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_ymd2x"]
+
+[resource]
+script = ExtResource("1_ymd2x")
+name = "Test Crush"
+short_name = "Test Crush"
+description = "A move that tests crushing."
+power = 40
+accuracy = 100
+weapon_types = Array[int]([5])
+attack_types = Array[int]([2])
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://daxugkpvknm6q"
+path="res://.godot/imported/Armored Axeman.aseprite-99666356666c3c0e0904f0a8003e6254.res"
+
+[deps]
+
+source_file="res://imports/character_sprites/Armored Axeman.aseprite"
+dest_files=["res://.godot/imported/Armored Axeman.aseprite-99666356666c3c0e0904f0a8003e6254.res"]
+
+[params]
+

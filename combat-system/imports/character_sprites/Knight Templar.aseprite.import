@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://d0u30o5re4ytx"
+path="res://.godot/imported/Knight Templar.aseprite-29fcbefdb54ef6af2f1c94f828804c07.res"
+
+[deps]
+
+source_file="res://imports/character_sprites/Knight Templar.aseprite"
+dest_files=["res://.godot/imported/Knight Templar.aseprite-29fcbefdb54ef6af2f1c94f828804c07.res"]
+
+[params]
+

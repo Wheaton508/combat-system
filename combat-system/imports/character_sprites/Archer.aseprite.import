@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bypvc1owe5klr"
+path="res://.godot/imported/Archer.aseprite-126e0e6df29ade3849a6d8617b5b2785.res"
+
+[deps]
+
+source_file="res://imports/character_sprites/Archer.aseprite"
+dest_files=["res://.godot/imported/Archer.aseprite-126e0e6df29ade3849a6d8617b5b2785.res"]
+
+[params]
+

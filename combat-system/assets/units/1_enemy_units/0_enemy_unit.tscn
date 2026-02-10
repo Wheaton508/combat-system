@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dccw8wo14n5wh"]
+
+[ext_resource type="Script" uid="uid://cc68narx07e1t" path="res://scripts/units/enemy_unit.gd" id="1_rblny"]
+
+[node name="Unit" type="Node3D"]
+script = ExtResource("1_rblny")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+flip_h = true
+billboard = 2
+texture_filter = 0

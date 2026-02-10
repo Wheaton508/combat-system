@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpr7da4xkv7iu"]
+
+[ext_resource type="Script" uid="uid://cc68narx07e1t" path="res://scripts/units/enemy_unit.gd" id="1_uocq2"]
+[ext_resource type="SpriteFrames" uid="uid://bk2ndnrcc3dso" path="res://assets/sprite_frames/sf_slime.tres" id="2_b525d"]
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="2_bcx1q"]
+[ext_resource type="Resource" uid="uid://bmbwhtanedqcc" path="res://assets/resources/moves/0_test_hit.tres" id="3_q4vkt"]
+[ext_resource type="Script" uid="uid://bdbmmrvi1kdxv" path="res://scripts/custom_resources/stats.gd" id="4_fhayn"]
+
+[sub_resource type="Resource" id="Resource_0wwkm"]
+script = ExtResource("4_fhayn")
+hit_points = 20
+attack = 3
+defense = 1
+magic_defense = 1
+speed = 2
+moves = Array[ExtResource("2_bcx1q")]([ExtResource("3_q4vkt"), null, null, null])
+metadata/_custom_type_script = "uid://bdbmmrvi1kdxv"
+
+[node name="Unit" type="Node3D"]
+script = ExtResource("1_uocq2")
+stats = SubResource("Resource_0wwkm")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+flip_h = true
+billboard = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_b525d")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.9869395

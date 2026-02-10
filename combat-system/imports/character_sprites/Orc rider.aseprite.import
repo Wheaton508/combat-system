@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bhr6x7bmtl11u"
+path="res://.godot/imported/Orc rider.aseprite-b8a472ef0fc4fa5a0fe70d87e0753261.res"
+
+[deps]
+
+source_file="res://imports/character_sprites/Orc rider.aseprite"
+dest_files=["res://.godot/imported/Orc rider.aseprite-b8a472ef0fc4fa5a0fe70d87e0753261.res"]
+
+[params]
+

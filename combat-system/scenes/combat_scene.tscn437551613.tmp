@@ -1,0 +1,309 @@
+[gd_scene load_steps=11 format=3 uid="uid://dl2t55wpkhhgg"]
+
+[ext_resource type="Script" uid="uid://d1t2en52jouks" path="res://scripts/managers/combat_manager.gd" id="1_ik0t7"]
+[ext_resource type="PackedScene" uid="uid://deh1dhnm15maf" path="res://assets/units/0_player_units/1_test_knight.tscn" id="2_m17q1"]
+[ext_resource type="PackedScene" uid="uid://cpr7da4xkv7iu" path="res://assets/units/1_enemy_units/1_test_slime.tscn" id="3_a2e2y"]
+[ext_resource type="Texture2D" uid="uid://c670mmwjvyi2h" path="res://imports/fantasy_ui/ui/UI assets (2x).png" id="4_m2d54"]
+[ext_resource type="Script" uid="uid://dscpe3dx674ow" path="res://scripts/ui/menu.gd" id="6_0vylu"]
+[ext_resource type="PackedScene" uid="uid://vnhrqkgsl3g0" path="res://scenes/ui/selection_button.tscn" id="6_ikfks"]
+[ext_resource type="PackedScene" uid="uid://hkn13w46xd8m" path="res://scenes/ui/move_button.tscn" id="7_0vylu"]
+[ext_resource type="FontFile" uid="uid://bmj6c7pbnucom" path="res://imports/fantasy_ui/fonts/FantasyRPGtitle (size 11).ttf" id="7_2edba"]
+[ext_resource type="Script" uid="uid://dk13m2h2ab0ju" path="res://scripts/ui/move_info_panel.gd" id="7_ivkwx"]
+[ext_resource type="FontFile" uid="uid://bqk8rlhovw02r" path="res://imports/fantasy_ui/fonts/FantasyRPGtext (size 8).ttf" id="8_6ovae"]
+
+[node name="CombatScene" type="Node3D"]
+
+[node name="CombatManager" type="Node" parent="." node_paths=PackedStringArray("player_units", "enemy_units", "unit_list", "current_unit", "player_units_node", "enemy_units_node")]
+script = ExtResource("1_ik0t7")
+player_units = [NodePath("../Units/PlayerUnits/Unit")]
+enemy_units = [NodePath("../Units/EnemyUnits/Unit")]
+unit_list = [NodePath("../Units/PlayerUnits/Unit"), NodePath("../Units/EnemyUnits/Unit")]
+current_unit = NodePath("../Units/PlayerUnits/Unit")
+player_units_node = NodePath("../Units/PlayerUnits")
+enemy_units_node = NodePath("../Units/EnemyUnits")
+
+[node name="Units" type="Node" parent="."]
+
+[node name="PlayerUnits" type="Node" parent="Units"]
+
+[node name="Unit" parent="Units/PlayerUnits" instance=ExtResource("2_m17q1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
+
+[node name="EnemyUnits" type="Node" parent="Units"]
+
+[node name="Unit" parent="Units/EnemyUnits" instance=ExtResource("3_a2e2y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+
+[node name="CombatOverlay" type="CanvasLayer" parent="."]
+
+[node name="BaseUI" type="Control" parent="CombatOverlay"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BattleUIPanel" type="NinePatchRect" parent="CombatOverlay/BaseUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 200.0
+offset_right = -25.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_m2d54")
+region_rect = Rect2(204, 12, 72, 72)
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="ActionSelect" type="Control" parent="CombatOverlay/BaseUI"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CombatOverlay/BaseUI/ActionSelect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 218.0
+offset_right = -488.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_m2d54")
+region_rect = Rect2(300, 12, 72, 72)
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+
+[node name="AttackButton" parent="CombatOverlay/BaseUI/ActionSelect" node_paths=PackedStringArray("menu_to_open") instance=ExtResource("6_ikfks")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 288.0
+offset_top = 216.00002
+offset_right = -208.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Attack"
+menu_to_open = NodePath("../../MoveSelect")
+
+[node name="ItemButton" parent="CombatOverlay/BaseUI/ActionSelect" node_paths=PackedStringArray("menu_to_open") instance=ExtResource("6_ikfks")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 448.0
+offset_top = 216.0
+offset_right = -48.0
+offset_bottom = -96.0
+disabled = true
+text = "Item"
+menu_to_open = NodePath("../../UseItem")
+
+[node name="SwapButton" parent="CombatOverlay/BaseUI/ActionSelect" node_paths=PackedStringArray("menu_to_open") instance=ExtResource("6_ikfks")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 368.0
+offset_top = 272.0
+offset_right = -128.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+disabled = true
+text = "Swap"
+menu_to_open = NodePath("../../ConfirmSwap")
+
+[node name="MoveSelect" type="Control" parent="CombatOverlay/BaseUI" node_paths=PackedStringArray("default_menu")]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_0vylu")
+default_menu = NodePath("../ActionSelect")
+
+[node name="InfoPanel" type="NinePatchRect" parent="CombatOverlay/BaseUI/MoveSelect" node_paths=PackedStringArray("move_name", "move_description", "move_data")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 218.0
+offset_right = -368.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_m2d54")
+region_rect = Rect2(300, 12, 72, 72)
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+script = ExtResource("7_ivkwx")
+move_name = NodePath("Name")
+move_description = NodePath("Description")
+move_data = NodePath("Data")
+
+[node name="Name" type="Label" parent="CombatOverlay/BaseUI/MoveSelect/InfoPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 10.0
+offset_right = -42.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_2edba")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="CombatOverlay/BaseUI/MoveSelect/InfoPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 34.0
+offset_right = -24.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_6ovae")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Data" type="Label" parent="CombatOverlay/BaseUI/MoveSelect/InfoPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 72.0
+offset_right = -24.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_6ovae")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="MoveOne" parent="CombatOverlay/BaseUI/MoveSelect" node_paths=PackedStringArray("combat_manager", "info_panel") instance=ExtResource("7_0vylu")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 288.0
+offset_top = 216.0
+offset_right = -208.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+combat_manager = NodePath("../../../../CombatManager")
+info_panel = NodePath("../InfoPanel")
+
+[node name="MoveTwo" parent="CombatOverlay/BaseUI/MoveSelect" node_paths=PackedStringArray("combat_manager", "info_panel") instance=ExtResource("7_0vylu")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 448.0
+offset_top = 216.0
+offset_right = -48.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+combat_manager = NodePath("../../../../CombatManager")
+info_panel = NodePath("../InfoPanel")
+move_id = 1
+
+[node name="MoveButton2" parent="CombatOverlay/BaseUI/MoveSelect" node_paths=PackedStringArray("combat_manager", "info_panel") instance=ExtResource("7_0vylu")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 288.0
+offset_top = 272.0
+offset_right = -208.0
+offset_bottom = -40.0
+combat_manager = NodePath("../../../../CombatManager")
+info_panel = NodePath("../InfoPanel")
+move_id = 2
+
+[node name="MoveButton3" parent="CombatOverlay/BaseUI/MoveSelect" node_paths=PackedStringArray("combat_manager", "info_panel") instance=ExtResource("7_0vylu")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 448.0
+offset_top = 272.0
+offset_right = -48.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+combat_manager = NodePath("../../../../CombatManager")
+info_panel = NodePath("../InfoPanel")
+move_id = 3
+
+[node name="UseItem" type="Control" parent="CombatOverlay/BaseUI" node_paths=PackedStringArray("default_menu")]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_0vylu")
+default_menu = NodePath("../ActionSelect")
+
+[node name="ConfirmSwap" type="Control" parent="CombatOverlay/BaseUI" node_paths=PackedStringArray("default_menu")]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_0vylu")
+default_menu = NodePath("../ActionSelect")
+
+[node name="UnitStatus" type="Control" parent="CombatOverlay/BaseUI"]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 0, 0, 0.75)

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://c5okiiastpwul"
+path="res://.godot/imported/Werewolf.aseprite-9ec554d78db2f34980a0c1bc34d56a2f.res"
+
+[deps]
+
+source_file="res://imports/character_sprites/Werewolf.aseprite"
+dest_files=["res://.godot/imported/Werewolf.aseprite-9ec554d78db2f34980a0c1bc34d56a2f.res"]
+
+[params]
+

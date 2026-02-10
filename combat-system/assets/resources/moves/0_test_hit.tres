@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://bmbwhtanedqcc"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_f6850"]
+
+[resource]
+script = ExtResource("1_f6850")
+name = "Test Hit"
+short_name = "Test Hit"
+description = "This move is a test move. Very cool."
+power = 40
+accuracy = 100
+weapon_types = Array[int]([5])
+attack_types = Array[int]([10])
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"
