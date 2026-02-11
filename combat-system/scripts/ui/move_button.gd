@@ -33,7 +33,7 @@ func _on_mouse_exited() -> void:
 
 func _on_pressed() -> void:
 	# Set move on the current unit
-	combat_manager.current_unit.current_action = combat_manager.current_unit.Action.ATTACK
+	combat_manager.current_unit.current_action = combat_manager.current_unit.Action.MOVE
 	combat_manager.current_unit.current_move = stored_move
 	combat_manager.current_unit.set_target(combat_manager.enemy_units)
 	

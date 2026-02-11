@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Role" format=3 uid="uid://dbvglovprgxmn"]
+
+[ext_resource type="Script" uid="uid://dvpk6sp6cueqp" path="res://scripts/custom_resources/role.gd" id="1_8366j"]
+
+[resource]
+script = ExtResource("1_8366j")
+weaknesses = Array[int]([2])
+metadata/_custom_type_script = "uid://dvpk6sp6cueqp"

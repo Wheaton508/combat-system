@@ -7,10 +7,11 @@
 
 [node name="Unit" type="Node3D" unique_id=1330794216 node_paths=PackedStringArray("animated_sprite")]
 script = ExtResource("1_uocq2")
-hit_points = 20
-attack = 3
-defense = 1
-magic_defense = 1
+hit_points = 25
+attack = 4
+defense = 3
+magic = 2
+magic_defense = 5
 speed = 2
 moves = Array[ExtResource("2_bcx1q")]([ExtResource("3_q4vkt"), null, null, null])
 animated_sprite = NodePath("AnimatedSprite3D")

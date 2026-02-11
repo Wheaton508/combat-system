@@ -6,7 +6,7 @@ class_name EnemyUnit
 
 
 func random_move(target_list : Array[PlayerUnit]):
-	current_action = Action.ATTACK
+	current_action = Action.MOVE
 	
 	var valid_move = false
 	while valid_move == false:
