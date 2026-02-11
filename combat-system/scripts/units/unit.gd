@@ -79,23 +79,28 @@ func move_action(target: Unit, move: Move):
 			# do effect
 			pass
 		_:
-			print("ERROR. Move failed.")
+			print("ERROR. Move selection failed.")
 	
 	animated_sprite.play("Attack01")
 	print(str(name) + " attacking " + str(target.name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
 
 func calculate_weakness(target: Unit, move: Move) -> float:
 	var weakness_mod := 1.0
-	# Currently setting t = 10... what? Will need to look into this later
+	var weakness_count := 0
+	
+	# Check weaknesses and set weakness_count accordingly
 	for t in move.attack_types:
-		print(t)
 		if target.role.weaknesses.has(t):
-			print(str(t) + " is a weakness of " + str(target) + ".")
-		else:
-			print(str(t) + " is not a weakness of " + str(target) + ".")
-	# for each move type on move, if in unit.weaknesses, add one to a counter
-	# if 1, 2, >=3
-	# set weakness
+			weakness_count += 1
+	
+	# Set weakness_modifier
+	if weakness_count == 0:
+		weakness_mod = 1.0
+	elif weakness_count == 1:
+		weakness_mod = 0.75
+	else: # if weakness_count >= 2:
+		weakness_mod = 0.5
+	
 	return weakness_mod
 
 func item_action():
