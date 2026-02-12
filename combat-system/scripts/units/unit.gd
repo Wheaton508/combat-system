@@ -63,26 +63,39 @@ func take_turn():
 
 func move_action(target: Unit, move: Move):
 	var damage_dealt : int
+	var damage_healed : int
 	
 	match move.move_type:
 		move.Move_Type.PHYSICAL:
 			var weakness = calculate_weakness(target, move)
 			damage_dealt = ((move.power * ((attack * 2) / (target.defense * weakness))) + ((level + target.level) / 2)) / 25 * randf_range(0.9, 1.1)
+			
 			if damage_dealt < 1:
 				damage_dealt = 1
+			
+			animated_sprite.play("Attack01")
+			print(str(name) + " attacking " + str(target.name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
 		move.Move_Type.MAGIC:
-			var weakness = calculate_weakness(target, move)
-			damage_dealt = ((move.power * ((magic * 2) / (target.magic_defense * weakness))) + ((level + target.level) / 2)) / 25 * randf_range(0.9, 1.1)
-			if damage_dealt < 1:
-				damage_dealt = 1
+			# Checks if move is healing or offensive magic
+			if "Healing" in move.attack_types:
+				damage_healed = (10 + (magic * (1 + (move.power / 100)))) * randf_range(0.9, 1.1)
+				if damage_healed < 10:
+					damage_healed = 10
+				animated_sprite.play("Attack01")
+				print(str(name) + " healing " + str(target.name) + " with " + str(move.name) + " for " + str(damage_healed) + "!")
+			else:
+				var weakness = calculate_weakness(target, move)
+				damage_dealt = ((move.power * ((magic * 2) / (target.magic_defense * weakness))) + ((level + target.level) / 2)) / 25 * randf_range(0.9, 1.1)
+				if damage_dealt < 1:
+					damage_dealt = 1
+				
+				animated_sprite.play("Attack01")
+				print(str(name) + " attacking " + str(target.name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
 		move.Move_Type.STATUS:
 			# do effect
 			pass
 		_:
 			print("ERROR. Move selection failed.")
-	
-	animated_sprite.play("Attack01")
-	print(str(name) + " attacking " + str(target.name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
 
 func calculate_weakness(target: Unit, move: Move) -> float:
 	var weakness_mod := 1.0

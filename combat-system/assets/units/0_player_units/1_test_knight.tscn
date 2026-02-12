@@ -5,6 +5,7 @@
 [ext_resource type="SpriteFrames" uid="uid://cxks03gs2ynl" path="res://assets/sprite_frames/sf_knight.tres" id="2_80pr4"]
 [ext_resource type="Resource" uid="uid://bmbwhtanedqcc" path="res://assets/resources/moves/0_test_hit.tres" id="3_imlo0"]
 [ext_resource type="Resource" uid="uid://bmtp5018wcdt6" path="res://assets/resources/moves/1_test_crush.tres" id="4_2bspm"]
+[ext_resource type="Resource" uid="uid://dhotfbaks5t5p" path="res://assets/resources/moves/2_test_heal.tres" id="5_imlo0"]
 
 [node name="Unit" type="Node3D" unique_id=1909121839 node_paths=PackedStringArray("animated_sprite")]
 script = ExtResource("1_lywc2")
@@ -14,7 +15,7 @@ defense = 4
 magic = 1
 magic_defense = 3
 speed = 5
-moves = Array[ExtResource("2_05hpn")]([ExtResource("3_imlo0"), ExtResource("4_2bspm"), null, null])
+moves = Array[ExtResource("2_05hpn")]([ExtResource("3_imlo0"), ExtResource("4_2bspm"), ExtResource("5_imlo0"), null])
 animated_sprite = NodePath("AnimatedSprite3D")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=577222760]

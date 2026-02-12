@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://dhotfbaks5t5p"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_1ercg"]
+
+[resource]
+script = ExtResource("1_1ercg")
+name = "Test Heal"
+short_name = "Test Heal"
+description = "This move tests healing"
+power = 20
+accuracy = 101
+move_type = 1
+weapon_types = Array[String](["Magic"])
+attack_types = Array[String](["Healing"])
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"
