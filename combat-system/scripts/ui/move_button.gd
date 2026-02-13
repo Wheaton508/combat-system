@@ -20,10 +20,24 @@ func _on_visibility_changed() -> void:
 		pass
 
 func _on_mouse_entered() -> void:
+	var display_power : String
+	var display_accuracy : String
+	
 	if not disabled:
 		info_panel.move_name.text = stored_move.name
 		info_panel.move_description.text = stored_move.description
-		info_panel.move_data.text = "Pow: " + str(stored_move.power) + "   Acc: " + str(stored_move.accuracy) + "%"
+		
+		if stored_move.power == 0:
+			display_power = "-"
+		else:
+			display_power = str(stored_move.power)
+		
+		if stored_move.accuracy == 101:
+			display_accuracy = "-"
+		else:
+			display_accuracy = str(stored_move.accuracy) + "%"
+		
+		info_panel.move_data.text = "Pow: " + display_power + "   Acc: " + display_accuracy
 
 func _on_mouse_exited() -> void:
 	if not disabled:

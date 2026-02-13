@@ -51,9 +51,13 @@ func combat_start():
 	# loop through unit list, find fastest unit, make them take their turn, repeat
 	for u in unit_list:
 		u.take_turn()
-	pass
+	
+	combat_end()
 
 func combat_end():
+	for u in unit_list:
+		u.has_acted = false
+		u.protecting = false
 	# end of combat effects
 	
 	# reset combat manager

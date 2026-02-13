@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://d3d22yl4bi230"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_v1fof"]
+
+[resource]
+script = ExtResource("1_v1fof")
+name = "Protect"
+short_name = "Protect"
+description = "Always wear protection"
+accuracy = 101
+move_type = 2
+targeting_type = 2
+move_effect = 3
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"

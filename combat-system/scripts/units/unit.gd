@@ -42,6 +42,7 @@ var current_move: Move
 var current_target: Unit
 var has_acted := false
 var incapacitated := false
+var protecting := false # make sure this gets reset during end of turn phase
 
 
 # =================================================================================================
@@ -64,38 +65,53 @@ func take_turn():
 func move_action(target: Unit, move: Move):
 	var damage_dealt : int
 	var damage_healed : int
+	var accuracy_check : int
 	
-	match move.move_type:
-		move.Move_Type.PHYSICAL:
-			var weakness = calculate_weakness(target, move)
-			damage_dealt = ((move.power * ((attack * 2) / (target.defense * weakness))) + ((level + target.level) / 2)) / 25 * randf_range(0.9, 1.1)
-			
-			if damage_dealt < 1:
-				damage_dealt = 1
-			
-			animated_sprite.play("Attack01")
-			print(str(name) + " attacking " + str(target.name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
-		move.Move_Type.MAGIC:
-			# Checks if move is healing or offensive magic
-			if "Healing" in move.attack_types:
-				damage_healed = (10 + (magic * (1 + (move.power / 100)))) * randf_range(0.9, 1.1)
-				if damage_healed < 10:
-					damage_healed = 10
-				animated_sprite.play("Attack01")
-				print(str(name) + " healing " + str(target.name) + " with " + str(move.name) + " for " + str(damage_healed) + "!")
-			else:
-				var weakness = calculate_weakness(target, move)
-				damage_dealt = ((move.power * ((magic * 2) / (target.magic_defense * weakness))) + ((level + target.level) / 2)) / 25 * randf_range(0.9, 1.1)
-				if damage_dealt < 1:
-					damage_dealt = 1
+	if move.accuracy == 101:
+		accuracy_check = 101
+	else:
+		accuracy_check = randi_range(0, 100)
+	
+	if accuracy_check <= move.accuracy:
+		match move.move_type:
+			move.Move_Type.PHYSICAL:
+				if target.protecting == true:
+					damage_dealt = 0
+				else:
+					var weakness = calculate_weakness(target, move)
+					damage_dealt = ((move.power * ((attack * 2) / (target.defense * weakness))) + ((level + target.level) / 2)) / 25 * randf_range(0.9, 1.1)
+					
+					if damage_dealt < 1:
+						damage_dealt = 1
 				
 				animated_sprite.play("Attack01")
 				print(str(name) + " attacking " + str(target.name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
-		move.Move_Type.STATUS:
-			# do effect
-			pass
-		_:
-			print("ERROR. Move selection failed.")
+			move.Move_Type.MAGIC:
+				# Checks if move is healing or offensive magic
+				if "Healing" in move.attack_types:
+					damage_healed = (10 + (magic * (1 + (move.power / 100)))) * randf_range(0.9, 1.1)
+					if damage_healed < 10:
+						damage_healed = 10
+					animated_sprite.play("Attack01")
+					print(str(name) + " healing " + str(target.name) + " with " + str(move.name) + " for " + str(damage_healed) + "!")
+				else:
+					if target.protecting == true:
+						damage_dealt = 0
+					else:
+						var weakness = calculate_weakness(target, move)
+						damage_dealt = ((move.power * ((magic * 2) / (target.magic_defense * weakness))) + ((level + target.level) / 2)) / 25 * randf_range(0.9, 1.1)
+						if damage_dealt < 1:
+							damage_dealt = 1
+					
+					animated_sprite.play("Attack01")
+					print(str(name) + " attacking " + str(target.name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
+			move.Move_Type.STATUS:
+				move_effect(target, move)
+				pass
+			_:
+				print("ERROR. Move selection failed.")
+	else: 
+		print(str(name) + " missed!")
 
 func calculate_weakness(target: Unit, move: Move) -> float:
 	var weakness_mod := 1.0
@@ -115,6 +131,24 @@ func calculate_weakness(target: Unit, move: Move) -> float:
 		weakness_mod = 0.5
 	
 	return weakness_mod
+
+func move_effect(target: Unit, move: Move):
+	match move.move_effect:
+		Move.Move_Effect.BUFF:
+			
+			pass
+		Move.Move_Effect.DEBUFF:
+			
+			pass
+		Move.Move_Effect.PROTECT:
+			print(str(name) + " is protecting themself!")
+			protecting = true
+		Move.Move_Effect.REDIRECT:
+			# for each enemy, if target.current_target == PlayerUnit, target.current_target = self
+			pass
+		_:
+			print("ERROR. Move effect invalid.")
+	pass
 
 func item_action():
 	pass

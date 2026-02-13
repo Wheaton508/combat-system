@@ -2,14 +2,19 @@
 
 [ext_resource type="Script" uid="uid://d1t2en52jouks" path="res://scripts/managers/combat_manager.gd" id="1_ik0t7"]
 [ext_resource type="PackedScene" uid="uid://deh1dhnm15maf" path="res://assets/units/0_player_units/1_test_knight.tscn" id="2_m17q1"]
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="3_6r8bj"]
 [ext_resource type="PackedScene" uid="uid://cpr7da4xkv7iu" path="res://assets/units/1_enemy_units/1_test_slime.tscn" id="3_a2e2y"]
 [ext_resource type="Resource" uid="uid://dbvglovprgxmn" path="res://assets/resources/roles/knight_role.tres" id="3_g0m11"]
+[ext_resource type="Resource" uid="uid://bmbwhtanedqcc" path="res://assets/resources/moves/0_test_hit.tres" id="4_da1ml"]
 [ext_resource type="Texture2D" uid="uid://c670mmwjvyi2h" path="res://imports/fantasy_ui/ui/UI assets (2x).png" id="4_m2d54"]
 [ext_resource type="Resource" uid="uid://cfk8pr6mg8ndf" path="res://assets/resources/roles/slime_role.tres" id="5_5qq3q"]
+[ext_resource type="Resource" uid="uid://bmtp5018wcdt6" path="res://assets/resources/moves/1_test_crush.tres" id="5_lef5q"]
 [ext_resource type="Script" uid="uid://dscpe3dx674ow" path="res://scripts/ui/menu.gd" id="6_0vylu"]
+[ext_resource type="Resource" uid="uid://dhotfbaks5t5p" path="res://assets/resources/moves/2_test_heal.tres" id="6_aepks"]
 [ext_resource type="PackedScene" uid="uid://vnhrqkgsl3g0" path="res://scenes/ui/selection_button.tscn" id="6_ikfks"]
 [ext_resource type="PackedScene" uid="uid://hkn13w46xd8m" path="res://scenes/ui/move_button.tscn" id="7_0vylu"]
 [ext_resource type="FontFile" uid="uid://bmj6c7pbnucom" path="res://imports/fantasy_ui/fonts/FantasyRPGtitle (size 11).ttf" id="7_2edba"]
+[ext_resource type="Resource" uid="uid://d3d22yl4bi230" path="res://assets/resources/moves/3_test_protect.tres" id="7_ff51q"]
 [ext_resource type="Script" uid="uid://dk13m2h2ab0ju" path="res://scripts/ui/move_info_panel.gd" id="7_ivkwx"]
 [ext_resource type="FontFile" uid="uid://bqk8rlhovw02r" path="res://imports/fantasy_ui/fonts/FantasyRPGtext (size 8).ttf" id="8_6ovae"]
 
@@ -26,6 +31,7 @@ enemy_units_node = NodePath("../Units/EnemyUnits")
 
 [node name="Knight" parent="Units/PlayerUnits" unique_id=287831804 instance=ExtResource("2_m17q1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
+moves = Array[ExtResource("3_6r8bj")]([ExtResource("4_da1ml"), ExtResource("5_lef5q"), ExtResource("6_aepks"), ExtResource("7_ff51q")])
 role = ExtResource("3_g0m11")
 
 [node name="EnemyUnits" type="Node" parent="Units" unique_id=1082379289]
@@ -195,6 +201,7 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_6ovae")
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Data" type="Label" parent="CombatOverlay/BaseUI/MoveSelect/InfoPanel" unique_id=1607589859]
