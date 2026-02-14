@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_yf5dr")
-weaknesses = Array[String](["Crush"])
+name = "Slime"
+weapon_types = Array[String](["Misc"])
+weaknesses = Array[String](["Slash", "Crush", "Ice"])
 metadata/_custom_type_script = "uid://dvpk6sp6cueqp"

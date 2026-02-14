@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Role" format=3 uid="uid://c70nhbcsmyhpj"]
+
+[ext_resource type="Script" uid="uid://dvpk6sp6cueqp" path="res://scripts/custom_resources/role.gd" id="1_ttgu8"]
+
+[resource]
+script = ExtResource("1_ttgu8")
+name = "Orc"
+weapon_types = Array[String](["Axe"])
+weaknesses = Array[String](["Slash", "Stab", "Fire"])
+metadata/_custom_type_script = "uid://dvpk6sp6cueqp"

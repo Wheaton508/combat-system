@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Role" format=3 uid="uid://gavnnpcvcrix"]
+
+[ext_resource type="Script" uid="uid://dvpk6sp6cueqp" path="res://scripts/custom_resources/role.gd" id="1_hlpf6"]
+
+[resource]
+script = ExtResource("1_hlpf6")
+name = "Skeleton Brawler"
+weapon_types = Array[String](["Sword"])
+weaknesses = Array[String](["Crush", "Light"])
+metadata/_custom_type_script = "uid://dvpk6sp6cueqp"

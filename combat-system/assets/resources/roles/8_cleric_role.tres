@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Role" format=3 uid="uid://dt76i2jrnhk5f"]
+
+[ext_resource type="Script" uid="uid://dvpk6sp6cueqp" path="res://scripts/custom_resources/role.gd" id="1_cbdfe"]
+
+[resource]
+script = ExtResource("1_cbdfe")
+name = "Cleric"
+weapon_types = Array[String](["Magic"])
+weaknesses = Array[String](["Slash", "Stab", "Crush", "Dark"])
+metadata/_custom_type_script = "uid://dvpk6sp6cueqp"

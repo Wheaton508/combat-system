@@ -5,8 +5,9 @@ class_name Role
 # enum Attack_Type {STAB, SLASH, CRUSH, FIRE, LIGHTNING, WIND, ICE, DARK, LIGHT, HEALING, NEUTRAL}
 
 @export_group("Class Data")
-@export var weapon_types: Array[String]
-@export var weaknesses: Array[String]
+@export var name : String
+@export var weapon_types : Array[String]
+@export var weaknesses : Array[String]
 
 
 # =================================================================================================

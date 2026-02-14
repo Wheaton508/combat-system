@@ -72,7 +72,9 @@ func move_action(target: Unit, move: Move):
 	else:
 		accuracy_check = randi_range(0, 100)
 	
-	if accuracy_check <= move.accuracy:
+	if accuracy_check <= move.accuracy: # accuracy checks will have to be reworked to allow spread move targeting to work
+		# alternatively make the animation happen first, then deal damage for each target?
+		# targeting will also have to become an array which fucks with things a bit
 		match move.move_type:
 			move.Move_Type.PHYSICAL:
 				if target.protecting == true:

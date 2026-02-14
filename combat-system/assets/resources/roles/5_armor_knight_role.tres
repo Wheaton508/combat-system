@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Role" format=3 uid="uid://b5tbmuhmaf6wd"]
+
+[ext_resource type="Script" uid="uid://dvpk6sp6cueqp" path="res://scripts/custom_resources/role.gd" id="1_2ih4l"]
+
+[resource]
+script = ExtResource("1_2ih4l")
+name = "Armor Knight"
+weapon_types = Array[String](["Axe"])
+weaknesses = Array[String](["Crush", "Fire", "Lightning", "Ice"])
+metadata/_custom_type_script = "uid://dvpk6sp6cueqp"
