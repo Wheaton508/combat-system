@@ -7,6 +7,8 @@ script = ExtResource("1_rblny")
 animated_sprite = NodePath("AnimatedSprite3D")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1890203869]
+offset = Vector2(0, 7)
 flip_h = true
 billboard = 2
+alpha_cut = 2
 texture_filter = 0

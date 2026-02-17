@@ -19,7 +19,10 @@ moves = Array[ExtResource("2_05hpn")]([ExtResource("3_imlo0"), ExtResource("4_2b
 animated_sprite = NodePath("AnimatedSprite3D")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=577222760]
+offset = Vector2(0, 7)
 billboard = 2
+shaded = true
+alpha_cut = 2
 texture_filter = 0
 sprite_frames = ExtResource("2_80pr4")
 animation = &"Idle"
