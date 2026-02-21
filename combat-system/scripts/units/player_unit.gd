@@ -12,6 +12,3 @@ func _ready() -> void:
 		# set initialized to true
 		pass
 	pass
-
-func set_target(target_list : Array[EnemyUnit]):
-	current_target = target_list.pick_random()

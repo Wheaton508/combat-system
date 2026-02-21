@@ -51,7 +51,7 @@ var spd_cd : int
 @export var current_position : Position # THIS WILL EVENTUALLY BE CHANGED WHEN I DO ACTUAL UNIT GENERATION. For now I have to set it manually.
 var current_action : Action
 var current_move : Move
-var current_target : Unit
+var current_targets : Array[Unit]
 var has_acted := false
 var incapacitated := false
 var protecting := false
@@ -68,7 +68,8 @@ func take_turn():
 	
 	match current_action:
 		Action.MOVE:
-			move_action(current_target, current_move)
+			for u in current_targets:
+				move_action(u, current_move) # I want to clean this up eventually, maybe even attack both targets simultaneously, but for now this works
 		Action.ITEM:
 			item_action()
 		Action.SWAP:
@@ -171,3 +172,9 @@ func item_action():
 
 func swap_action():
 	pass
+
+func reset_variables():
+	current_move = null
+	current_targets.clear()
+	has_acted = false
+	protecting = false

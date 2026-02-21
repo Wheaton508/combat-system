@@ -1,10 +1,14 @@
 extends Button
 class_name TargetButton
 
-@export var combat_manager : CombatManager
+@export_group("Button Data")
 # 0 for Primary, 1 for Secondary, and 2 for Backline. This is used literally only here.
 @export var position_id : int
 @export var is_player : bool
+
+@export_group("Node References")
+@export var combat_manager : CombatManager
+@export var action_menu : Control
 
 var stored_unit : Unit
 
@@ -34,11 +38,13 @@ func _on_visibility_changed() -> void:
 
 
 func _on_pressed() -> void:
-	combat_manager.current_unit.current_target = stored_unit
+	combat_manager.current_unit.current_targets.append(stored_unit)
 	
 	if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
-		# set up move selection for secondary unit
-		pass
+		combat_manager.current_unit = combat_manager.get_unit_at_position(Unit.Position.SECONDARY, true)
+		action_menu.visible = true
+		get_parent().visible = false
 	else:
-		# move to combat proceedings
+		combat_manager.combat_setup()
+		get_parent().visible = false
 		pass

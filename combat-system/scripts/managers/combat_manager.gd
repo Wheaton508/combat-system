@@ -16,9 +16,9 @@ var current_unit : PlayerUnit
 
 
 func _ready() -> void:
-	combat_setup()
+	initialize_combat()
 
-func combat_setup():
+func initialize_combat():
 	# Fill player_units and set current_unit
 	var temp_array = player_units_node.get_children()
 	for p in temp_array:
@@ -39,11 +39,22 @@ func combat_setup():
 		if u is Unit:
 			unit_list.append(u)
 	
-	current_unit = get_unit_at_position(Unit.Position.PRIMARY, true)
+	if get_unit_at_position(Unit.Position.PRIMARY, true).incapacitated == false:
+		current_unit = get_unit_at_position(Unit.Position.PRIMARY, true)
+	else:
+		current_unit = get_unit_at_position(Unit.Position.SECONDARY, true)
 
-func enemy_moves():
+## Sets up combat, which includes setting necessary variables for incapacitated and enemy units, as well as handling enemy move selection
+func combat_setup():
+	# Set has_acted for backline and incapacitated units
+	for u in unit_list:
+		if u.current_position == Unit.Position.BACKLINE or u.incapacitated == true:
+			u.has_acted = true
+	
+	# Enemy move selection - only happens for units that aren't backline or incapacitated, so that they can't move after swaps or revives
 	for e in enemy_units:
-		e.random_move(player_units)
+		if e.has_acted != true:
+			e.select_move()
 	
 	combat_start()
 

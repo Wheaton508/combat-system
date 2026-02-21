@@ -370,7 +370,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="MoveOne" parent="CombatOverlay/BaseUI/MoveSelect" unique_id=1709784684 node_paths=PackedStringArray("combat_manager", "action_menu", "target_menu", "info_panel") instance=ExtResource("7_0vylu")]
+[node name="MoveOne" parent="CombatOverlay/BaseUI/MoveSelect" unique_id=1709784684 node_paths=PackedStringArray("combat_manager", "info_panel") instance=ExtResource("7_0vylu")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -382,11 +382,10 @@ offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 combat_manager = NodePath("../../../../CombatManager")
-action_menu = NodePath("../../ActionSelect")
-target_menu = NodePath("../../TargetSelect")
 info_panel = NodePath("../InfoPanel")
+move_id = null
 
-[node name="MoveTwo" parent="CombatOverlay/BaseUI/MoveSelect" unique_id=567837962 node_paths=PackedStringArray("combat_manager", "action_menu", "target_menu", "info_panel") instance=ExtResource("7_0vylu")]
+[node name="MoveTwo" parent="CombatOverlay/BaseUI/MoveSelect" unique_id=567837962 node_paths=PackedStringArray("combat_manager", "info_panel") instance=ExtResource("7_0vylu")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -397,13 +396,11 @@ offset_right = -48.0
 offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
+combat_manager = NodePath("../../../../CombatManager")
+info_panel = NodePath("../InfoPanel")
 move_id = 1
-combat_manager = NodePath("../../../../CombatManager")
-action_menu = NodePath("../../ActionSelect")
-target_menu = NodePath("../../TargetSelect")
-info_panel = NodePath("../InfoPanel")
 
-[node name="MoveThree" parent="CombatOverlay/BaseUI/MoveSelect" unique_id=365400366 node_paths=PackedStringArray("combat_manager", "action_menu", "target_menu", "info_panel") instance=ExtResource("7_0vylu")]
+[node name="MoveThree" parent="CombatOverlay/BaseUI/MoveSelect" unique_id=365400366 node_paths=PackedStringArray("combat_manager", "info_panel") instance=ExtResource("7_0vylu")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -414,13 +411,11 @@ offset_right = -208.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
-move_id = 2
 combat_manager = NodePath("../../../../CombatManager")
-action_menu = NodePath("../../ActionSelect")
-target_menu = NodePath("../../TargetSelect")
 info_panel = NodePath("../InfoPanel")
+move_id = 2
 
-[node name="MoveFour" parent="CombatOverlay/BaseUI/MoveSelect" unique_id=1145391514 node_paths=PackedStringArray("combat_manager", "action_menu", "target_menu", "info_panel") instance=ExtResource("7_0vylu")]
+[node name="MoveFour" parent="CombatOverlay/BaseUI/MoveSelect" unique_id=1145391514 node_paths=PackedStringArray("combat_manager", "info_panel") instance=ExtResource("7_0vylu")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -431,11 +426,9 @@ offset_right = -48.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
-move_id = 3
 combat_manager = NodePath("../../../../CombatManager")
-action_menu = NodePath("../../ActionSelect")
-target_menu = NodePath("../../TargetSelect")
 info_panel = NodePath("../InfoPanel")
+move_id = 3
 
 [node name="TargetSelect" type="Control" parent="CombatOverlay/BaseUI" unique_id=1007161829]
 visible = false
@@ -446,7 +439,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PlayerPrimary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1654964177 node_paths=PackedStringArray("combat_manager", "action_menu") instance=ExtResource("19_lef5q")]
+[node name="PlayerPrimary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1654964177 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -458,11 +451,10 @@ offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("20_ff51q")
-is_player = true
 combat_manager = NodePath("../../../../CombatManager")
-action_menu = NodePath("../../ActionSelect")
+is_player = true
 
-[node name="PlayerSecondary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=84436576 node_paths=PackedStringArray("combat_manager", "action_menu") instance=ExtResource("19_lef5q")]
+[node name="PlayerSecondary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=84436576 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -474,12 +466,11 @@ offset_bottom = -104.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("20_ff51q")
+combat_manager = NodePath("../../../../CombatManager")
 position_id = 1
 is_player = true
-combat_manager = NodePath("../../../../CombatManager")
-action_menu = NodePath("../../ActionSelect")
 
-[node name="PlayerBackline" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1055610896 node_paths=PackedStringArray("combat_manager", "action_menu") instance=ExtResource("19_lef5q")]
+[node name="PlayerBackline" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1055610896 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -491,12 +482,11 @@ offset_bottom = -72.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("20_ff51q")
+combat_manager = NodePath("../../../../CombatManager")
 position_id = 2
 is_player = true
-combat_manager = NodePath("../../../../CombatManager")
-action_menu = NodePath("../../ActionSelect")
 
-[node name="EnemyPrimary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1290327799 node_paths=PackedStringArray("combat_manager", "action_menu") instance=ExtResource("19_lef5q")]
+[node name="EnemyPrimary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1290327799 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -509,9 +499,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("21_gcf8m")
 combat_manager = NodePath("../../../../CombatManager")
-action_menu = NodePath("../../ActionSelect")
 
-[node name="EnemySecondary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1227903302 node_paths=PackedStringArray("combat_manager", "action_menu") instance=ExtResource("19_lef5q")]
+[node name="EnemySecondary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1227903302 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -523,11 +512,10 @@ offset_bottom = -104.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("21_gcf8m")
-position_id = 1
 combat_manager = NodePath("../../../../CombatManager")
-action_menu = NodePath("../../ActionSelect")
+position_id = 1
 
-[node name="EnemyBackline" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1384011392 node_paths=PackedStringArray("combat_manager", "action_menu") instance=ExtResource("19_lef5q")]
+[node name="EnemyBackline" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1384011392 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -539,9 +527,8 @@ offset_bottom = -72.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("21_gcf8m")
-position_id = 2
 combat_manager = NodePath("../../../../CombatManager")
-action_menu = NodePath("../../ActionSelect")
+position_id = 2
 
 [node name="UseItem" type="Control" parent="CombatOverlay/BaseUI" unique_id=1103714832 node_paths=PackedStringArray("default_menu")]
 visible = false

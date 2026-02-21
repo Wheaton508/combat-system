@@ -1,10 +1,14 @@
 extends Button
 class_name MoveButton
 
-# Label
-@export var combat_manager : CombatManager
-@export var info_panel : MoveInfoPanel
+@export_group("Button Data")
 @export var move_id : int
+
+@export_group("Node References")
+@export var combat_manager : CombatManager
+@export var action_menu : Control
+@export var target_menu : Control
+@export var info_panel : MoveInfoPanel
 
 var stored_move : Move
 
@@ -69,7 +73,7 @@ func _on_mouse_entered() -> void:
 				# turn on indicator for all other units
 				pass
 			_:
-				pass
+				print("ERROR. No valid targeting type.")
 
 func _on_mouse_exited() -> void:
 	if not disabled:
@@ -82,36 +86,64 @@ func _on_mouse_exited() -> void:
 			u.indicator.visible = false
 
 func _on_pressed() -> void:
-	if stored_move.targeting_type == Move.Targeting_Type.SINGLE:
-		# bring up targeting window
-		pass
-	elif stored_move.targeting_type == Move.Targeting_Type.ALLY:
-		if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
-			# target secondary
-			pass
-		else:
-			# target primary
-			pass
-		pass
-	else:
-		# set targeting as normal
-		# 
-		pass
-	# pull up a ui screen that has all units in combat, disable units that are not valid targets. Will have to do some weird stuff for spread moves but we will figure it out. Or it just auto selects outside of single target idk
-	# also set current targets
+	# Set move on current_unit - HEY SO MAKE SURE YOU CAN'T TARGET INCAPACITATED GUYS THANK YOU
+	# Also need to actually do the valid targeting for single moves
+	combat_manager.current_unit.current_action = combat_manager.current_unit.Action.MOVE
+	combat_manager.current_unit.current_move = stored_move
 	
-	# Set move on the current unit
-	#combat_manager.current_unit.current_action = combat_manager.current_unit.Action.MOVE
-	#combat_manager.current_unit.current_move = stored_move
-	#combat_manager.current_unit.set_target(combat_manager.enemy_units)
-	
-	# Reset move_info_panel, just in case - do this whenever the panel is changed
-	#info_panel.move_name.text = ""
-	#info_panel.move_description.text = ""
-	#info_panel.move_data.text = ""
-	#get_parent().visible = false
+	# Set targeting for current_unit
+	match stored_move.targeting_type:
+		Move.Targeting_Type.SINGLE:
+			target_menu.visible = true
+			get_parent().visible = false
+		Move.Targeting_Type.SPREAD:
+			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.PRIMARY, false))
+			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.SECONDARY, false))
+			to_next_phase()
+		Move.Targeting_Type.SELF:
+			combat_manager.current_unit.current_targets.append(combat_manager.current_unit)
+			to_next_phase()
+		Move.Targeting_Type.ALLY:
+			if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
+				combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.SECONDARY, true))
+			else:
+				combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.PRIMARY, true))
+			to_next_phase()
+		Move.Targeting_Type.TEAM:
+			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.PRIMARY, true))
+			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.SECONDARY, true))
+			to_next_phase()
+		Move.Targeting_Type.FIELD:
+			# Add enemies to targeting
+			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.PRIMARY, false))
+			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.SECONDARY, false))
+			
+			# Add ally to targeting
+			if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
+				combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.SECONDARY, true))
+			else:
+				combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.PRIMARY, true))
+			to_next_phase()
+		_:
+			print("ERROR. No valid targeting type.")
 	
 	# Call combat_manager to proceed to the next unit
 	# Eventually, right now just begin combat
 	# combat_manager.enemy_moves()
-	pass
+
+func to_next_phase():
+	# Resets info panel, just in case
+	info_panel.move_name.text = ""
+	info_panel.move_description.text = ""
+	info_panel.move_data.text = ""
+	
+	if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
+		combat_manager.current_unit = combat_manager.get_unit_at_position(Unit.Position.SECONDARY, true)
+		action_menu.visible = true
+		get_parent().visible = false
+	else:
+		combat_manager.combat_setup()
+		get_parent().visible = false
+		pass
+	
+	
