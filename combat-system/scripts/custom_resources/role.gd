@@ -9,5 +9,23 @@ class_name Role
 @export var weapon_types : Array[String]
 @export var weaknesses : Array[String]
 
+## The unit this class is attached to will inherit these stats as their own on initialization.
+@export_group("Base Stats")
+var base_hp : int
+var base_atk : int
+var base_def : int
+var base_mag : int
+var base_mag_def : int
+var base_spd : int
+
+## The unit this class is attached to will inherit these growth rates as their own on initialization.
+@export_group("Base Growths")
+var base_hp_growth : int
+var base_atk_growth : int
+var base_def_growth : int
+var base_mag_growth : int
+var base_mag_def_growth : int
+var base_spd_growth : int
+
 
 # =================================================================================================

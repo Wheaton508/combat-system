@@ -19,6 +19,10 @@ run/main_scene="uid://dl2t55wpkhhgg"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://wjwvgtv2je2d"
+
 [display]
 
 window/size/viewport_width=640
@@ -65,9 +69,11 @@ folder_colors={
 "res://imports/prototype_kit/": "orange",
 "res://imports/prototype_kit/Textures/": "yellow",
 "res://scenes/": "red",
+"res://scenes/game_objects/": "orange",
 "res://scenes/ui/": "orange",
 "res://scripts/": "red",
 "res://scripts/custom_resources/": "orange",
+"res://scripts/game_objects/": "orange",
 "res://scripts/managers/": "orange",
 "res://scripts/ui/": "orange",
 "res://scripts/units/": "orange"

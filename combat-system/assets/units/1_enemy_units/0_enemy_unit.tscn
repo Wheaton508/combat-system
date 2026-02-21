@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://dccw8wo14n5wh"]
 
 [ext_resource type="Script" uid="uid://cc68narx07e1t" path="res://scripts/units/enemy_unit.gd" id="1_rblny"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_4mw8t"]
 
-[node name="Unit" type="Node3D" unique_id=2021740730 node_paths=PackedStringArray("animated_sprite")]
+[node name="Unit" type="Node3D" unique_id=2021740730 node_paths=PackedStringArray("animated_sprite", "indicator")]
 script = ExtResource("1_rblny")
 animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1890203869]
 offset = Vector2(0, 7)
@@ -12,3 +14,7 @@ flip_h = true
 billboard = 2
 alpha_cut = 2
 texture_filter = 0
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_4mw8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+visible = false

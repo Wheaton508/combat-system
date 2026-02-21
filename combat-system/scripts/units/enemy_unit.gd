@@ -5,6 +5,8 @@ class_name EnemyUnit
 # =================================================================================================
 
 
+# i need some sort of spawn function that takes in unit level and set the unit's stats based on their class's growth rates
+
 func random_move(target_list : Array[PlayerUnit]):
 	current_action = Action.MOVE
 	

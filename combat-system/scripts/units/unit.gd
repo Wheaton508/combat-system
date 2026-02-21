@@ -1,16 +1,10 @@
 extends Node3D
 class_name Unit
 
+enum Position {PRIMARY, SECONDARY, BACKLINE}
 enum Action {MOVE, ITEM, SWAP}
 
-@export_group("Unit Stats")
-@export var level := 1
-@export var hit_points := 0
-@export var attack := 0
-@export var defense := 0
-@export var magic := 0
-@export var magic_defense := 0
-@export var speed := 0
+@export var unit_name : String
 
 @export_group("Equipment")
 @export var hat : Equipment
@@ -28,21 +22,41 @@ enum Action {MOVE, ITEM, SWAP}
 
 @export_group("Node References")
 @export var animated_sprite : AnimatedSprite3D
+@export var indicator :Node3D
 
-var current_hit_points : int
-var effective_max_hp : int
-var effective_attack : int
-var effective_defense : int
-var effective_magic : int
-var effective_magic_defense : int
-var effective_speed : int
+# Unit stats. Directly affected by level ups and equipment.
+var level := 1
+var experience := 0
+var hp : int
+var atk : int
+var def : int
+var mag : int
+var mag_def : int
+var spd : int
 
-var current_action: Action
-var current_move: Move
-var current_target: Unit
+# Buff/defbuff inflictions.
+var atk_buff : int
+var def_buff : int
+var mag_buff : int
+var mag_def_buff : int
+var spd_buff : int
+
+# Cooldowns for buffs/debuffs. Decrement at the end of the turn (minimum of zero), and get reset at the end of combat.
+var atk_cd : int
+var def_cd : int
+var mag_cd : int
+var mag_def_cd : int
+var spd_cd : int
+
+@export var current_position : Position # THIS WILL EVENTUALLY BE CHANGED WHEN I DO ACTUAL UNIT GENERATION. For now I have to set it manually.
+var current_action : Action
+var current_move : Move
+var current_target : Unit
 var has_acted := false
 var incapacitated := false
-var protecting := false # make sure this gets reset during end of turn phase
+var protecting := false
+
+var initialized := false
 
 
 # =================================================================================================
@@ -81,7 +95,7 @@ func move_action(target: Unit, move: Move):
 					damage_dealt = 0
 				else:
 					var weakness = calculate_weakness(target, move)
-					damage_dealt = ((move.power * ((attack * 2) / (target.defense * weakness))) + ((level + target.level) / 2)) / 25 * randf_range(0.9, 1.1)
+					damage_dealt = int(((((((2 * ((level + target.level) / 2)) / 5) + 2) * move.power * ((atk * atk_buff) / ((target.def * target.def_buff) + 1))) / 50) + 2) * weakness * randf_range(0.9, 1.1))
 					
 					if damage_dealt < 1:
 						damage_dealt = 1
@@ -91,7 +105,7 @@ func move_action(target: Unit, move: Move):
 			move.Move_Type.MAGIC:
 				# Checks if move is healing or offensive magic
 				if "Healing" in move.attack_types:
-					damage_healed = (10 + (magic * (1 + (move.power / 100)))) * randf_range(0.9, 1.1)
+					damage_healed = int((10 + (mag * (1 + (move.power / 100)))) * randf_range(0.9, 1.1))
 					if damage_healed < 10:
 						damage_healed = 10
 					animated_sprite.play("Attack01")
@@ -101,7 +115,7 @@ func move_action(target: Unit, move: Move):
 						damage_dealt = 0
 					else:
 						var weakness = calculate_weakness(target, move)
-						damage_dealt = ((move.power * ((magic * 2) / (target.magic_defense * weakness))) + ((level + target.level) / 2)) / 25 * randf_range(0.9, 1.1)
+						damage_dealt = int(((((((2 * ((level + target.level) / 2)) / 5) + 2) * move.power * ((mag * mag_buff) / ((target.mag_def * target.mag_def_buff) + 1))) / 50) + 2) * weakness * randf_range(0.9, 1.1))
 						if damage_dealt < 1:
 							damage_dealt = 1
 					
@@ -128,9 +142,9 @@ func calculate_weakness(target: Unit, move: Move) -> float:
 	if weakness_count == 0:
 		weakness_mod = 1.0
 	elif weakness_count == 1:
-		weakness_mod = 0.75
+		weakness_mod = 1.25
 	else: # if weakness_count >= 2:
-		weakness_mod = 0.5
+		weakness_mod = 1.5
 	
 	return weakness_mod
 
@@ -156,8 +170,4 @@ func item_action():
 	pass
 
 func swap_action():
-	pass
-
-func update_stats():
-	# called whenever a unit levels up or (un)equips an item. likely not using this yet? but nice to have
 	pass

@@ -1,15 +1,15 @@
 extends Node
 class_name CombatManager
 
+@export_group("Hierarchy References")
+@export var player_units_node : Node
+@export var enemy_units_node : Node
+
 @export_group("Unit Lists")
 var player_units : Array[PlayerUnit]
 var enemy_units : Array[EnemyUnit]
 var unit_list : Array[Unit]
 var current_unit : PlayerUnit
-
-@export_group("Hierarchy References")
-@export var player_units_node : Node
-@export var enemy_units_node : Node
 
 
 # =================================================================================================
@@ -25,8 +25,6 @@ func combat_setup():
 		if p is PlayerUnit:
 			player_units.append(p)
 	
-	current_unit = player_units[0]
-	
 	# Fill enemy_units
 	temp_array = enemy_units_node.get_children()
 	for e in temp_array:
@@ -40,6 +38,8 @@ func combat_setup():
 	for u in enemy_units:
 		if u is Unit:
 			unit_list.append(u)
+	
+	current_unit = get_unit_at_position(Unit.Position.PRIMARY, true)
 
 func enemy_moves():
 	for e in enemy_units:
@@ -62,3 +62,20 @@ func combat_end():
 	
 	# reset combat manager
 	pass
+
+func get_unit_at_position(position_to_find : Unit.Position, is_player_unit : bool) -> Unit:
+	var found_unit : Unit
+	
+	match is_player_unit:
+		true:
+			for p in player_units:
+				if p.current_position == position_to_find:
+					found_unit = p
+		false:
+			for e in enemy_units:
+				if e.current_position == position_to_find:
+					found_unit = e
+		_:
+			print("ERROR. How the fuck are you seeing this? It's a boolean.")
+	
+	return found_unit

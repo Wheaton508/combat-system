@@ -6,17 +6,13 @@
 [ext_resource type="Resource" uid="uid://bmbwhtanedqcc" path="res://assets/resources/moves/0_test_hit.tres" id="3_imlo0"]
 [ext_resource type="Resource" uid="uid://bmtp5018wcdt6" path="res://assets/resources/moves/1_test_crush.tres" id="4_2bspm"]
 [ext_resource type="Resource" uid="uid://dhotfbaks5t5p" path="res://assets/resources/moves/2_test_heal.tres" id="5_imlo0"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="7_2bspm"]
 
-[node name="Unit" type="Node3D" unique_id=1909121839 node_paths=PackedStringArray("animated_sprite")]
+[node name="Unit" type="Node3D" unique_id=1909121839 node_paths=PackedStringArray("animated_sprite", "indicator")]
 script = ExtResource("1_lywc2")
-hit_points = 30
-attack = 7
-defense = 4
-magic = 1
-magic_defense = 3
-speed = 5
 moves = Array[ExtResource("2_05hpn")]([ExtResource("3_imlo0"), ExtResource("4_2bspm"), ExtResource("5_imlo0"), null])
 animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=577222760]
 offset = Vector2(0, 7)
@@ -28,3 +24,7 @@ sprite_frames = ExtResource("2_80pr4")
 animation = &"Idle"
 autoplay = "Idle"
 frame_progress = 0.28675544
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("7_2bspm")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

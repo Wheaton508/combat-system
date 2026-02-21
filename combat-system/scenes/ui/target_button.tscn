@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dtjugfsf6srpy"]
+
+[ext_resource type="Script" uid="uid://dgo5bbp6sahbt" path="res://scripts/ui/target_button.gd" id="1_d35cx"]
+
+[node name="TargetButton" type="Button" unique_id=1654964177]
+anchors_preset = -1
+anchor_right = 0.15
+anchor_bottom = 0.089
+offset_bottom = -0.040000916
+text = "-"
+script = ExtResource("1_d35cx")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

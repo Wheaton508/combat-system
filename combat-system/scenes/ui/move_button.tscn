@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://hkn13w46xd8m"]
+[gd_scene format=3 uid="uid://hkn13w46xd8m"]
 
 [ext_resource type="Script" uid="uid://x3k83in1llkx" path="res://scripts/ui/move_button.gd" id="1_iikxo"]
 [ext_resource type="Theme" uid="uid://dxcbyf3qlsc8k" path="res://assets/themes/golden_button.tres" id="1_ma2pc"]
 
-[node name="MoveButton" type="Button"]
-offset_right = 144.0
-offset_bottom = 48.0
+[node name="MoveButton" type="Button" unique_id=772594528]
+anchors_preset = -1
+anchor_right = 0.22500001
+anchor_bottom = 0.133
+offset_bottom = 0.11999893
 theme = ExtResource("1_ma2pc")
 theme_override_font_sizes/font_size = 16
 text = "-"

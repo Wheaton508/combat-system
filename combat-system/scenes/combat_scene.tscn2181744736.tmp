@@ -35,20 +35,17 @@ enemy_units_node = NodePath("../Units/EnemyUnits")
 
 [node name="Knight" parent="Units/PlayerUnits" unique_id=287831804 instance=ExtResource("2_m17q1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.1)
-unit_name = "Knight One"
 moves = Array[ExtResource("3_6r8bj")]([ExtResource("4_da1ml"), ExtResource("5_lef5q"), ExtResource("6_aepks"), ExtResource("7_ff51q")])
 role = ExtResource("3_g0m11")
 
 [node name="Knight2" parent="Units/PlayerUnits" unique_id=1909121839 instance=ExtResource("2_m17q1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
-unit_name = "Knight Two"
 moves = Array[ExtResource("3_6r8bj")]([ExtResource("4_da1ml"), ExtResource("5_lef5q"), ExtResource("6_aepks"), ExtResource("7_ff51q")])
 role = ExtResource("3_g0m11")
 current_position = 1
 
 [node name="Knight3" parent="Units/PlayerUnits" unique_id=2047959139 instance=ExtResource("2_m17q1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -0.1)
-unit_name = "Knight Three"
 moves = Array[ExtResource("3_6r8bj")]([ExtResource("4_da1ml"), ExtResource("5_lef5q"), ExtResource("6_aepks"), ExtResource("7_ff51q")])
 role = ExtResource("3_g0m11")
 current_position = 2
@@ -57,18 +54,15 @@ current_position = 2
 
 [node name="Slime" parent="Units/EnemyUnits" unique_id=1446500193 instance=ExtResource("3_a2e2y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.1)
-unit_name = "Slime One"
 role = ExtResource("5_5qq3q")
 
 [node name="Slime2" parent="Units/EnemyUnits" unique_id=1330794216 instance=ExtResource("3_a2e2y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
-unit_name = "Slime Two"
 role = ExtResource("5_5qq3q")
 current_position = 1
 
 [node name="Slime3" parent="Units/EnemyUnits" unique_id=222735450 instance=ExtResource("3_a2e2y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.1)
-unit_name = "Slime Three"
 role = ExtResource("5_5qq3q")
 current_position = 2
 
@@ -218,6 +212,7 @@ patch_margin_right = 20
 patch_margin_bottom = 20
 
 [node name="ActionSelect" type="Control" parent="CombatOverlay/BaseUI" unique_id=80503736]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 15
@@ -408,8 +403,6 @@ offset_left = 288.0
 offset_top = 272.0
 offset_right = -208.0
 offset_bottom = -40.0
-grow_horizontal = 2
-grow_vertical = 2
 combat_manager = NodePath("../../../../CombatManager")
 info_panel = NodePath("../InfoPanel")
 move_id = 2
@@ -430,7 +423,6 @@ info_panel = NodePath("../InfoPanel")
 move_id = 3
 
 [node name="TargetSelect" type="Control" parent="CombatOverlay/BaseUI" unique_id=1007161829]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -438,83 +430,63 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PlayerPrimary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1654964177 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
+[node name="PlayerPrimary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1654964177 instance=ExtResource("19_lef5q")]
 layout_mode = 1
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 176.0
+offset_left = 168.0
 offset_top = 280.0
-offset_right = -368.0
+offset_right = -376.0
 offset_bottom = -48.0
-grow_horizontal = 2
-grow_vertical = 2
 theme = ExtResource("20_ff51q")
-combat_manager = NodePath("../../../../CombatManager")
-is_player = true
 
-[node name="PlayerSecondary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=84436576 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
+[node name="PlayerSecondary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=84436576 instance=ExtResource("19_lef5q")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 176.0
+offset_left = 168.0
 offset_top = 224.0
-offset_right = -368.0
+offset_right = -376.0
 offset_bottom = -104.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("20_ff51q")
-combat_manager = NodePath("../../../../CombatManager")
-position_id = 1
-is_player = true
 
-[node name="PlayerBackline" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1055610896 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
+[node name="PlayerBackline" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1055610896 instance=ExtResource("19_lef5q")]
 layout_mode = 1
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 56.0
 offset_top = 256.0
 offset_right = -488.0
 offset_bottom = -72.0
-grow_horizontal = 2
-grow_vertical = 2
 theme = ExtResource("20_ff51q")
-combat_manager = NodePath("../../../../CombatManager")
-position_id = 2
-is_player = true
 
-[node name="EnemyPrimary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1290327799 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
+[node name="EnemyPrimary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1290327799 instance=ExtResource("19_lef5q")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 368.0
+offset_left = 376.0
 offset_top = 280.0
-offset_right = -176.0
+offset_right = -168.0
 offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("21_gcf8m")
-combat_manager = NodePath("../../../../CombatManager")
 
-[node name="EnemySecondary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1227903302 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
+[node name="EnemySecondary" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1227903302 instance=ExtResource("19_lef5q")]
 layout_mode = 1
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 368.0
+offset_left = 376.0
 offset_top = 224.0
-offset_right = -176.0
+offset_right = -168.0
 offset_bottom = -104.0
-grow_horizontal = 2
-grow_vertical = 2
 theme = ExtResource("21_gcf8m")
-combat_manager = NodePath("../../../../CombatManager")
-position_id = 1
 
-[node name="EnemyBackline" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1384011392 node_paths=PackedStringArray("combat_manager") instance=ExtResource("19_lef5q")]
+[node name="EnemyBackline" parent="CombatOverlay/BaseUI/TargetSelect" unique_id=1384011392 instance=ExtResource("19_lef5q")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -526,8 +498,6 @@ offset_bottom = -72.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("21_gcf8m")
-combat_manager = NodePath("../../../../CombatManager")
-position_id = 2
 
 [node name="UseItem" type="Control" parent="CombatOverlay/BaseUI" unique_id=1103714832 node_paths=PackedStringArray("default_menu")]
 visible = false
