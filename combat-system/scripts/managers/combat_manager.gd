@@ -61,10 +61,10 @@ func initialize_combat():
 	for u in unit_list:
 		u.combat_manager = self
 	
-	if get_unit_at_position(Unit.Position.PRIMARY, true).incapacitated == false:
-		current_unit = get_unit_at_position(Unit.Position.PRIMARY, true)
+	if player_primary.current_unit.incapacitated == false:
+		current_unit = player_primary.current_unit
 	else:
-		current_unit = get_unit_at_position(Unit.Position.SECONDARY, true)
+		current_unit = player_secondary.current_unit
 
 ## Sets up combat, which includes setting necessary variables for incapacitated and enemy units, as well as handling enemy move selection
 func combat_setup():
@@ -97,19 +97,19 @@ func combat_end():
 	# reset combat manager
 	pass
 
-func get_unit_at_position(position_to_find : Unit.Position, is_player_unit : bool) -> Unit:
-	var found_unit : Unit
-	
-	match is_player_unit:
-		true:
-			for p in player_units:
-				if p.current_position == position_to_find:
-					found_unit = p
-		false:
-			for e in enemy_units:
-				if e.current_position == position_to_find:
-					found_unit = e
-		_:
-			print("ERROR. How the fuck are you seeing this? It's a boolean.")
-	
-	return found_unit
+#func get_unit_at_position(position_to_find : Unit.Position, is_player_unit : bool) -> Unit:
+	#var found_unit : Unit
+	#
+	#match is_player_unit:
+		#true:
+			#for p in player_units:
+				#if p.current_position == position_to_find:
+					#found_unit = p
+		#false:
+			#for e in enemy_units:
+				#if e.current_position == position_to_find:
+					#found_unit = e
+		#_:
+			#print("ERROR. How the fuck are you seeing this? It's a boolean.")
+	#
+	#return found_unit

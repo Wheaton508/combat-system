@@ -108,7 +108,7 @@ func move_action(target: Unit, move: Move):
 						damage_dealt = 1
 				
 				animated_sprite.play("Attack01")
-				print(str(name) + " attacking " + str(target.name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
+				print(str(unit_name) + " attacking " + str(target.unit_name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
 			move.Move_Type.MAGIC:
 				# Checks if move is healing or offensive magic
 				if "Healing" in move.attack_types:
@@ -116,7 +116,7 @@ func move_action(target: Unit, move: Move):
 					if damage_healed < 10:
 						damage_healed = 10
 					animated_sprite.play("Attack01")
-					print(str(name) + " healing " + str(target.name) + " with " + str(move.name) + " for " + str(damage_healed) + "!")
+					print(str(unit_name) + " healing " + str(target.unit_name) + " with " + str(move.name) + " for " + str(damage_healed) + "!")
 				else:
 					if target.protecting == true:
 						damage_dealt = 0

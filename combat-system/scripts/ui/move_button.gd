@@ -46,29 +46,22 @@ func _on_mouse_entered() -> void:
 		
 		match stored_move.targeting_type:
 			Move.Targeting_Type.SINGLE:
-				for u in combat_manager.enemy_units:
-					if u.current_position == Unit.Position.PRIMARY or u.current_position == Unit.Position.SECONDARY:
-						u.indicator.visible = true # add desynch if possible
+				# I'd like to add desynch between these two, just to differentiate between
+				combat_manager.enemy_primary.current_unit.indicator.visible = true
+				combat_manager.enemy_secondary.current_unit.indicator.visible = true
 			Move.Targeting_Type.SPREAD:
-				for u in combat_manager.enemy_units:
-					if u.current_position == Unit.Position.PRIMARY or u.current_position == Unit.Position.SECONDARY:
-						u.indicator.visible = true
+				combat_manager.enemy_primary.current_unit.indicator.visible = true
+				combat_manager.enemy_secondary.current_unit.indicator.visible = true
 			Move.Targeting_Type.SELF:
 				combat_manager.current_unit.indicator.visible = true
 			Move.Targeting_Type.ALLY:
-				var unit_ref : Unit
-				
 				if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
-					unit_ref = combat_manager.get_unit_at_position(Unit.Position.SECONDARY, true)
+					combat_manager.enemy_secondary.current_unit.indicator.visible = true
 				else:
-					unit_ref = combat_manager.get_unit_at_position(Unit.Position.PRIMARY, true)
-				
-				unit_ref.indicator.visible = true
-				unit_ref = null
+					combat_manager.enemy_primary.current_unit.indicator.visible = true
 			Move.Targeting_Type.TEAM:
-				for u in combat_manager.player_units:
-					if u.current_position == Unit.Position.PRIMARY or Unit.Position.SECONDARY:
-						u.indicator.visible = true
+				combat_manager.player_primary.current_unit.indicator.visible = true
+				combat_manager.player_secondary.current_unit.indicator.visible = true
 			Move.Targeting_Type.FIELD:
 				# turn on indicator for all other units
 				pass
@@ -97,32 +90,35 @@ func _on_pressed() -> void:
 			target_menu.visible = true
 			get_parent().visible = false
 		Move.Targeting_Type.SPREAD:
-			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.PRIMARY, false))
-			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.SECONDARY, false))
+			combat_manager.current_unit.current_targets.append(combat_manager.enemy_primary)
+			combat_manager.current_unit.current_targets.append(combat_manager.enemy_secondary)
 			to_next_phase()
 		Move.Targeting_Type.SELF:
-			combat_manager.current_unit.current_targets.append(combat_manager.current_unit)
+			if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
+				combat_manager.current_unit.current_targets.append(combat_manager.player_primary)
+			else:
+				combat_manager.current_unit.current_targets.append(combat_manager.player_secondary)
 			to_next_phase()
 		Move.Targeting_Type.ALLY:
 			if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
-				combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.SECONDARY, true))
+				combat_manager.current_unit.current_targets.append(combat_manager.player_secondary)
 			else:
-				combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.PRIMARY, true))
+				combat_manager.current_unit.current_targets.append(combat_manager.player_primary)
 			to_next_phase()
 		Move.Targeting_Type.TEAM:
-			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.PRIMARY, true))
-			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.SECONDARY, true))
+			combat_manager.current_unit.current_targets.append(combat_manager.player_primary)
+			combat_manager.current_unit.current_targets.append(combat_manager.player_secondary)
 			to_next_phase()
 		Move.Targeting_Type.FIELD:
 			# Add enemies to targeting
-			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.PRIMARY, false))
-			combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.SECONDARY, false))
+			combat_manager.current_unit.current_targets.append(combat_manager.enemy_primary)
+			combat_manager.current_unit.current_targets.append(combat_manager.enemy_secondary)
 			
 			# Add ally to targeting
 			if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
-				combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.SECONDARY, true))
+				combat_manager.current_unit.current_targets.append(combat_manager.player_secondary)
 			else:
-				combat_manager.current_unit.current_targets.append(combat_manager.get_unit_at_position(Unit.Position.PRIMARY, true))
+				combat_manager.current_unit.current_targets.append(combat_manager.player_primary)
 			to_next_phase()
 		_:
 			print("ERROR. No valid targeting type.")
@@ -138,7 +134,7 @@ func to_next_phase():
 	info_panel.move_data.text = ""
 	
 	if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
-		combat_manager.current_unit = combat_manager.get_unit_at_position(Unit.Position.SECONDARY, true)
+		combat_manager.current_unit = combat_manager.player_secondary.current_unit
 		action_menu.visible = true
 		get_parent().visible = false
 	else:

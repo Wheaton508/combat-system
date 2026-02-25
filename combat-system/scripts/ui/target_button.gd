@@ -20,13 +20,13 @@ func _on_visibility_changed() -> void:
 
 
 func _on_pressed() -> void:
-	# Instead of getting the unit, make current_targets a list of strings, and then swicth on strings and get_unit_at_pos depending on that for targeting. solves any issues regarding targets moving or dying
 	combat_manager.current_unit.current_targets.append(board_position)
 	
 	if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
-		combat_manager.current_unit = combat_manager.get_unit_at_position(Unit.Position.SECONDARY, true)
+		combat_manager.current_unit = combat_manager.player_secondary.current_unit
 		action_menu.visible = true
 		get_parent().visible = false
+		print("Current unit is now " + str(combat_manager.current_unit))
 	else:
 		combat_manager.combat_setup()
 		get_parent().visible = false
