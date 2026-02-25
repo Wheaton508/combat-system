@@ -6,5 +6,5 @@
 script = ExtResource("1_hlpf6")
 name = "Skeleton Brawler"
 weapon_types = Array[String](["Sword"])
-weaknesses = Array[String](["Crush", "Light"])
+weaknesses = Array[String](["Smash", "Light"])
 metadata/_custom_type_script = "uid://dvpk6sp6cueqp"

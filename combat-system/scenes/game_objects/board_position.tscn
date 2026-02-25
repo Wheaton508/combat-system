@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ne1lqgyy1y5m"]
+
+[ext_resource type="Script" uid="uid://vx150gc4yqrx" path="res://scripts/game_objects/board_position.gd" id="1_07eso"]
+
+[node name="BoardPosition" type="Node3D" unique_id=608379235]
+script = ExtResource("1_07eso")

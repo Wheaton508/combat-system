@@ -6,5 +6,5 @@
 script = ExtResource("1_ny3xt")
 name = "Templar"
 weapon_types = Array[String](["Lance"])
-weaknesses = Array[String](["Stab", "Crush", "Lightning", "Dark"])
+weaknesses = Array[String](["Stab", "Smash", "Lightning", "Dark"])
 metadata/_custom_type_script = "uid://dvpk6sp6cueqp"

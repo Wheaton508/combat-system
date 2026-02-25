@@ -48,15 +48,19 @@ var mag_cd : int
 var mag_def_cd : int
 var spd_cd : int
 
+# current_pos will only be used for initializing units in combat_setup
 @export var current_position : Position # THIS WILL EVENTUALLY BE CHANGED WHEN I DO ACTUAL UNIT GENERATION. For now I have to set it manually.
 var current_action : Action
 var current_move : Move
-var current_targets : Array[Unit]
+var current_targets : Array[BoardPosition]
 var has_acted := false
 var incapacitated := false
 var protecting := false
 
 var initialized := false
+
+var combat_manager : CombatManager
+var is_player : bool
 
 
 # =================================================================================================
@@ -68,8 +72,10 @@ func take_turn():
 	
 	match current_action:
 		Action.MOVE:
-			for u in current_targets:
-				move_action(u, current_move) # I want to clean this up eventually, maybe even attack both targets simultaneously, but for now this works
+			# Play animation
+			# Attack all targets simultaneously
+			for p in current_targets:
+				move_action(p.current_unit, current_move) # I want to clean this up eventually, maybe even attack both targets simultaneously, but for now this works
 		Action.ITEM:
 			item_action()
 		Action.SWAP:
