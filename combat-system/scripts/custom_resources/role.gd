@@ -9,23 +9,24 @@ class_name Role
 @export var weapon_types : Array[String]
 @export var weaknesses : Array[String]
 
-## The unit this class is attached to will inherit these stats as their own on initialization.
+## The unit this class is attached to will get base stats based upon these ranks on initialization.
 @export_group("Base Stats")
-var base_hp : int
-var base_atk : int
-var base_def : int
-var base_mag : int
-var base_mag_def : int
-var base_spd : int
+@export var hp_rank : String
+@export var atk_rank : String
+@export var def_rank : String
+@export var mag_rank : String
+@export var mag_def_rank : String
+@export var spd_rank : String
 
-## The unit this class is attached to will inherit these growth rates as their own on initialization.
-@export_group("Base Growths")
-var base_hp_growth : int
-var base_atk_growth : int
-var base_def_growth : int
-var base_mag_growth : int
-var base_mag_def_growth : int
-var base_spd_growth : int
+# Currently unused. Only needed if I choose to separate base and growth stat ranks, which for now I'm not doing
+## The unit this class is attached to will get base stats based upon these ranks on initialization.
+#@export_group("Base Growths")
+#@export var hp_growth_rank : String
+#@export var atk_growth_rank : String
+#@export var def_growth_rank : String
+#@export var mag_growth_rank : String
+#@export var mag_growth_def_rank : String
+#@export var spd_growth_rank : String
 
 
 # =================================================================================================

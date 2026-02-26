@@ -5,7 +5,21 @@ class_name EnemyUnit
 # =================================================================================================
 
 
-# i need some sort of spawn function that takes in unit level and set the unit's stats based on their class's growth rates
+func _ready() -> void:
+	super()
+	
+	if level > 1:
+		autolevel(level - 1)
+
+func autolevel(levels_to_give: int):
+	while levels_to_give > 0:
+		hp += increase_stat(hp_growth)
+		atk += increase_stat(atk_growth)
+		def += increase_stat(def_growth)
+		mag += increase_stat(mag_growth)
+		mag_def += increase_stat(mag_def_growth)
+		spd_growth += increase_stat(spd_growth)
+		levels_to_give -= 1
 
 func random_move(target_list : Array[PlayerUnit]):
 	current_action = Action.MOVE
