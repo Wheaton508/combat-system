@@ -133,7 +133,7 @@ func to_next_phase():
 	info_panel.move_description.text = ""
 	info_panel.move_data.text = ""
 	
-	if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
+	if combat_manager.current_unit.current_position == Unit.Position.PRIMARY and combat_manager.player_secondary.current_unit.incapacitated == false:
 		combat_manager.current_unit = combat_manager.player_secondary.current_unit
 		action_menu.visible = true
 		get_parent().visible = false

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://cd5mi6dcyebxy"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_g182r"]
+
+[resource]
+script = ExtResource("1_g182r")
+name = "Thrust"
+short_name = "Thrust"
+tier = 2
+power = 40
+accuracy = 95
+weapon_types = Array[String](["Sword"])
+attack_types = Array[String](["Stab"])
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"

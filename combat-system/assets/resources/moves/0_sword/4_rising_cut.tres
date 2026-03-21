@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://rtu22qpge31e"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_kgg2k"]
+
+[resource]
+script = ExtResource("1_kgg2k")
+name = "Rising Cut"
+short_name = "R. Cut"
+tier = 3
+power = 60
+accuracy = 90
+weapon_types = Array[String](["Sword"])
+attack_types = Array[String](["Slash"])
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"

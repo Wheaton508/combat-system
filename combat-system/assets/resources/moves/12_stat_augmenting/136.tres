@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://b2n4edx2p6xr3"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_6r2b8"]
+
+[resource]
+script = ExtResource("1_6r2b8")
+move_type = 3
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"

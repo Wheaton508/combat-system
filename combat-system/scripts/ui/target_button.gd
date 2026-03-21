@@ -22,7 +22,7 @@ func _on_visibility_changed() -> void:
 func _on_pressed() -> void:
 	combat_manager.current_unit.current_targets.append(board_position)
 	
-	if combat_manager.current_unit.current_position == Unit.Position.PRIMARY:
+	if combat_manager.current_unit.current_position == Unit.Position.PRIMARY and combat_manager.player_secondary.current_unit.incapacitated == false:
 		combat_manager.current_unit = combat_manager.player_secondary.current_unit
 		action_menu.visible = true
 		get_parent().visible = false

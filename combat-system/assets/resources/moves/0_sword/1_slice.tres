@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://cvjftdu63cl3n"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_wctak"]
+
+[resource]
+script = ExtResource("1_wctak")
+name = "Slice"
+short_name = "Slice"
+tier = 2
+power = 40
+accuracy = 95
+weapon_types = Array[String](["Sword"])
+attack_types = Array[String](["Slash"])
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"

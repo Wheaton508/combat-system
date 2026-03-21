@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://c7x4tg8q5cuw7"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_rgqxp"]
+
+[resource]
+script = ExtResource("1_rgqxp")
+weapon_types = Array[String](["Bow"])
+attack_types = Array[String](["Stab"])
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"

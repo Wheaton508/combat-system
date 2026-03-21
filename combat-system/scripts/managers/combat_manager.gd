@@ -75,7 +75,7 @@ func combat_setup():
 	
 	# Enemy move selection - only happens for units that aren't backline or incapacitated, so that they can't move after swaps or revives
 	for e in enemy_units:
-		if e.has_acted != true:
+		if e.has_acted == false and e.incapacitated == false:
 			e.select_move()
 	
 	combat_start()
@@ -95,7 +95,10 @@ func combat_end():
 	# end of combat effects
 	
 	# reset combat manager
-	pass
+	if player_primary.current_unit.incapacitated == false:
+		current_unit = player_primary.current_unit
+	else:
+		current_unit = player_secondary.current_unit
 
 #func get_unit_at_position(position_to_find : Unit.Position, is_player_unit : bool) -> Unit:
 	#var found_unit : Unit

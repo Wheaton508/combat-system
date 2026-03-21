@@ -24,6 +24,8 @@ func autolevel(levels_to_give: int):
 		mag_def += increase_stat(mag_def_growth)
 		spd_growth += increase_stat(spd_growth)
 		levels_to_give -= 1
+	
+	current_hp = hp
 
 func select_move():
 	match ai_type:

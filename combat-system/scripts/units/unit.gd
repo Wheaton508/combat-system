@@ -57,6 +57,7 @@ var spd_cd : int
 
 # current_pos will only be used for initializing units in combat_setup
 @export var current_position : Position # THIS WILL EVENTUALLY BE CHANGED WHEN I DO ACTUAL UNIT GENERATION. For now I have to set it manually.
+var current_hp : int
 var current_action : Action
 var current_move : Move
 var current_targets : Array[BoardPosition]
@@ -76,6 +77,7 @@ func _ready() -> void:
 	if not initialized:
 		# Set base stats.
 		hp = set_stat(role.hp_rank, true, true)
+		current_hp = hp
 		atk = set_stat(role.atk_rank, false, true)
 		def = set_stat(role.def_rank, false, true)
 		mag = set_stat(role.mag_rank, false, true)
@@ -138,6 +140,14 @@ func move_action(target: Unit, move: Move):
 				
 				animated_sprite.play("Attack01")
 				print(str(unit_name) + " attacking " + str(target.unit_name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
+				target.current_hp -= damage_dealt
+				if target.current_hp <= 0:
+					target.current_hp = 0
+					target.incapacitated = true
+					target.animated_sprite.play("Death")
+				else:
+					print(str(target.current_hp) + "/" + str(target.hp) + " left!")
+			
 			move.Move_Type.MAGIC:
 				# Checks if move is healing or offensive magic
 				if "Healing" in move.attack_types:
@@ -146,6 +156,10 @@ func move_action(target: Unit, move: Move):
 						damage_healed = 10
 					animated_sprite.play("Attack01")
 					print(str(unit_name) + " healing " + str(target.unit_name) + " with " + str(move.name) + " for " + str(damage_healed) + "!")
+					
+					target.current_hp += damage_healed
+					if target.current_hp > target.hp:
+						current_hp = target.hp
 				else:
 					if target.protecting == true:
 						damage_dealt = 0
@@ -157,6 +171,14 @@ func move_action(target: Unit, move: Move):
 					
 					animated_sprite.play("Attack01")
 					print(str(name) + " attacking " + str(target.name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
+					target.current_hp -= damage_dealt
+					if target.current_hp <= 0:
+						target.current_hp = 0
+						target.incapacitated = true
+						target.animated_sprite.play("Death")
+					else:
+						print(str(target.current_hp) + "/" + str(target.hp) + " left!")
+				
 			move.Move_Type.STATUS:
 				move_effect(target, move)
 				pass

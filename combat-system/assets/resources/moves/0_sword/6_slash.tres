@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://bc4t6p8338ihu"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_qf312"]
+
+[resource]
+script = ExtResource("1_qf312")
+name = "Cut"
+short_name = "Cut"
+power = 20
+accuracy = 100
+weapon_types = Array[String](["Sword"])
+attack_types = Array[String](["Slash"])
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"
