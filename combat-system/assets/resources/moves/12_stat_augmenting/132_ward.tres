@@ -11,4 +11,7 @@ accuracy = 101
 move_type = 3
 targeting_type = 2
 move_effect = 1
+affected_stat = 4
+stat_stage = 1.25
+duration = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

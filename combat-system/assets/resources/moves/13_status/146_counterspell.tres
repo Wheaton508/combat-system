@@ -11,4 +11,5 @@ tier = 3
 accuracy = 101
 priority = -3
 move_type = 3
+move_effect = 17
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

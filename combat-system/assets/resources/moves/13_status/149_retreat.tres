@@ -12,4 +12,5 @@ accuracy = 101
 priority = 3
 move_type = 3
 targeting_type = 2
+move_effect = 19
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

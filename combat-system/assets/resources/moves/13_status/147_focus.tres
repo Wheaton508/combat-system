@@ -10,4 +10,5 @@ description = "Next attack will always hit."
 tier = 3
 accuracy = 101
 move_type = 3
+move_effect = 20
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -13,4 +13,5 @@ move_type = 2
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Healing"])
 targeting_type = 3
+move_effect = 10
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

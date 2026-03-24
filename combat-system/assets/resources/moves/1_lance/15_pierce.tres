@@ -12,4 +12,5 @@ power = 50
 accuracy = 95
 weapon_types = Array[String](["Lance"])
 attack_types = Array[String](["Stab"])
+move_effect = 5
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

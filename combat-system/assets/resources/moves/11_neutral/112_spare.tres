@@ -9,4 +9,5 @@ short_name = "Spare"
 description = "Cannot kill the opponent."
 weapon_types = Array[String](["Misc"])
 attack_types = Array[String](["Neutral"])
+move_effect = 14
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

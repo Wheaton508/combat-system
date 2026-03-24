@@ -10,4 +10,7 @@ description = "Foe's Spd- for three turns."
 accuracy = 100
 move_type = 3
 move_effect = 2
+affected_stat = 5
+stat_stage = 0.75
+duration = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

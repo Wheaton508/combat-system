@@ -13,4 +13,5 @@ accuracy = 90
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Light"])
+move_effect = 11
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

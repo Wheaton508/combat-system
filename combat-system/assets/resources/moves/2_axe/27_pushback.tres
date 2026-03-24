@@ -13,4 +13,5 @@ accuracy = 90
 priority = -2
 weapon_types = Array[String](["Axe"])
 attack_types = Array[String](["Smash"])
+move_effect = 6
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"
