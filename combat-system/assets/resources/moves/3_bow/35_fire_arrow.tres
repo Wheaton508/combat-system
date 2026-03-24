@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_vpq5s")
+name = "Fire Arrow"
+short_name = "F. Arrow"
+tier = 2
+power = 30
+accuracy = 95
 weapon_types = Array[String](["Bow"])
-attack_types = Array[String](["Stab"])
+attack_types = Array[String](["Stab", "Fire"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

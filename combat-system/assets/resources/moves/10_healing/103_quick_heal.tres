@@ -4,7 +4,15 @@
 
 [resource]
 script = ExtResource("1_ty8f6")
+name = "Quick Heal"
+short_name = "Q. Heal"
+description = "Increased priority."
+tier = 3
+power = 15
+accuracy = 101
+priority = 1
 move_type = 2
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Healing"])
+targeting_type = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

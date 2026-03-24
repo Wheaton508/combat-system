@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_w77ty")
+name = "Cleave"
+short_name = "Cleave"
+tier = 4
+power = 80
+accuracy = 85
 weapon_types = Array[String](["Axe"])
-attack_types = Array[String](["Smash"])
+attack_types = Array[String](["Slash"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

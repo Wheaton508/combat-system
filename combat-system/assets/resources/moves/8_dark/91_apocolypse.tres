@@ -4,7 +4,13 @@
 
 [resource]
 script = ExtResource("1_vlkpr")
+name = "Apocolypse"
+short_name = "Apocolypse"
+tier = 5
+power = 70
+accuracy = 75
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Dark"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

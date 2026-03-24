@@ -4,5 +4,14 @@
 
 [resource]
 script = ExtResource("1_bq43a")
+name = "Aggrivate"
+short_name = "Aggro"
+description = "Draws in opponent attacks. Moves first."
+tier = 5
+accuracy = 101
+priority = 2
 move_type = 3
+targeting_type = 1
+move_effect = 4
+fails_in_succession = true
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

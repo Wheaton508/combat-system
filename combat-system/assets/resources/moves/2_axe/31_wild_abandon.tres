@@ -4,6 +4,13 @@
 
 [resource]
 script = ExtResource("1_rvtj2")
+name = "Wild Abandon"
+short_name = "Wild Abndn"
+description = "Strikes field."
+tier = 4
+power = 65
+accuracy = 85
 weapon_types = Array[String](["Axe"])
-attack_types = Array[String](["Smash"])
+attack_types = Array[String](["Slash", "Smash"])
+targeting_type = 5
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

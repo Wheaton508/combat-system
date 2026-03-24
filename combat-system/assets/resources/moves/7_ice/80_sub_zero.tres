@@ -4,7 +4,12 @@
 
 [resource]
 script = ExtResource("1_q7mhw")
+name = "Sub-Zero"
+short_name = "Sub-Zero"
+tier = 5
+power = 90
+accuracy = 80
 move_type = 1
 weapon_types = Array[String](["Magic"])
-attack_types = Array[String](["Wind"])
+attack_types = Array[String](["Ice"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

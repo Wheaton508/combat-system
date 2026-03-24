@@ -4,7 +4,11 @@
 
 [resource]
 script = ExtResource("1_kxsa0")
-move_type = 1
+name = "Fire Smack"
+short_name = "F. Smack"
+tier = 3
+power = 50
+accuracy = 95
 weapon_types = Array[String](["Magic"])
-attack_types = Array[String](["Fire"])
+attack_types = Array[String](["Smash", "Fire"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

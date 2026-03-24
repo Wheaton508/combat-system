@@ -4,7 +4,14 @@
 
 [resource]
 script = ExtResource("1_ris0q")
+name = "Blizzard"
+short_name = "Blizzard"
+description = "Strikes both foes."
+tier = 4
+power = 50
+accuracy = 85
 move_type = 1
 weapon_types = Array[String](["Magic"])
-attack_types = Array[String](["Wind"])
+attack_types = Array[String](["Ice"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

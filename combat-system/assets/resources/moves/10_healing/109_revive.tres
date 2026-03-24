@@ -4,7 +4,12 @@
 
 [resource]
 script = ExtResource("1_uffye")
+name = "Revive"
+short_name = "Revive"
+description = "Transfers half of HP to downed ally."
+accuracy = 50
 move_type = 2
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Healing"])
+targeting_type = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,6 +4,10 @@
 
 [resource]
 script = ExtResource("1_ypn17")
+name = "Flux"
+short_name = "Flux"
+power = 30
+accuracy = 95
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Dark"])

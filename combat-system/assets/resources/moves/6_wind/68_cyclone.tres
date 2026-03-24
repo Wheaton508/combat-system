@@ -4,7 +4,14 @@
 
 [resource]
 script = ExtResource("1_7xgl5")
+name = "Cyclone"
+short_name = "Cyclone"
+description = "Strikes both foes."
+tier = 3
+power = 35
+accuracy = 90
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Wind"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_1ir85")
+name = "Illume"
+short_name = "Illume"
+tier = 2
+power = 40
+accuracy = 100
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Light"])

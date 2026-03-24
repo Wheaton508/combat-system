@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://chh2hyn0ruej2"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_b6gk8"]
+
+[resource]
+script = ExtResource("1_b6gk8")
+description = "Both foes' Mag- for three turns."
+tier = 3
+accuracy = 90
+move_type = 3
+targeting_type = 1
+move_effect = 2
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,6 +4,13 @@
 
 [resource]
 script = ExtResource("1_awkxf")
+name = "Dual Bolt"
+short_name = "D. Bolt"
+description = "Strikes Both"
+tier = 5
+power = 50
+accuracy = 80
 weapon_types = Array[String](["Bow"])
 attack_types = Array[String](["Stab"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

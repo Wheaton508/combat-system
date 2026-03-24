@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_em173")
+name = "Chop"
+short_name = "Chop"
+tier = 2
+power = 40
+accuracy = 95
 weapon_types = Array[String](["Axe"])
-attack_types = Array[String](["Smash"])
+attack_types = Array[String](["Slash"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

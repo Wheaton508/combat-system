@@ -4,5 +4,13 @@
 
 [resource]
 script = ExtResource("1_npxo7")
+name = "Surge Protector"
+short_name = "Surge Prot."
+description = "Protects self and ally. Mag- for three turns."
+tier = 3
+accuracy = 101
+priority = 3
 move_type = 3
+targeting_type = 4
+fails_in_succession = true
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

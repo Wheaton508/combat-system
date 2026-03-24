@@ -4,6 +4,12 @@
 
 [resource]
 script = ExtResource("1_etr3c")
+name = "Incinerate"
+short_name = "Incinerate"
+description = "Removes target's item on hit."
+tier = 2
+power = 35
+accuracy = 95
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Fire"])

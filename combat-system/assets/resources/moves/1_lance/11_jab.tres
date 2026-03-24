@@ -4,6 +4,10 @@
 
 [resource]
 script = ExtResource("1_cv28v")
+name = "Jab"
+short_name = "Jab"
+power = 20
+accuracy = 100
 weapon_types = Array[String](["Lance"])
 attack_types = Array[String](["Stab"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -1,9 +1,14 @@
 [gd_resource type="Resource" script_class="Move" format=3 uid="uid://bdj86vs36q6kc"]
 
-[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_h2ea6"]
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_buo7x"]
 
 [resource]
-script = ExtResource("1_h2ea6")
+script = ExtResource("1_buo7x")
+name = "Giant Smash"
+short_name = "G. Smash"
+tier = 3
+power = 60
+accuracy = 90
 weapon_types = Array[String](["Axe"])
 attack_types = Array[String](["Smash"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

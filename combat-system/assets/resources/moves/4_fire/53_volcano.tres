@@ -4,7 +4,14 @@
 
 [resource]
 script = ExtResource("1_mmerx")
+name = "Volcano"
+short_name = "Volcano"
+description = "Strikes both foes."
+tier = 5
+power = 60
+accuracy = 80
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Fire"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

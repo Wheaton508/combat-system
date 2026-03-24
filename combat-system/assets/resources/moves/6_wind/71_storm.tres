@@ -4,7 +4,12 @@
 
 [resource]
 script = ExtResource("1_kwqk6")
+name = "Storm"
+short_name = "Storm"
+tier = 4
+power = 75
+accuracy = 85
 move_type = 1
 weapon_types = Array[String](["Magic"])
-attack_types = Array[String](["Wind"])
+attack_types = Array[String](["Lightning", "Wind"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

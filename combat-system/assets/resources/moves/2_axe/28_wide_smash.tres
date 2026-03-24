@@ -4,6 +4,13 @@
 
 [resource]
 script = ExtResource("1_vvfb1")
+name = "Wide Smash"
+short_name = "W. Smash"
+description = "Strikes both foes."
+tier = 3
+power = 35
+accuracy = 90
 weapon_types = Array[String](["Axe"])
 attack_types = Array[String](["Smash"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

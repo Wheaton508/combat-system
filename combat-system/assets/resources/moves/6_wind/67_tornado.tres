@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_3ofti")
+name = "Tornado"
+short_name = "Tornado"
+tier = 3
+power = 60
+accuracy = 90
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Wind"])

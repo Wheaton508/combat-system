@@ -4,6 +4,10 @@
 
 [resource]
 script = ExtResource("1_fs04i")
+name = "Shine"
+short_name = "Shine"
+power = 20
+accuracy = 100
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Light"])

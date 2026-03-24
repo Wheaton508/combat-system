@@ -4,6 +4,13 @@
 
 [resource]
 script = ExtResource("1_3bs3o")
+name = "Quick Arrow"
+short_name = "Q. Arrow"
+description = "Increased priority."
+tier = 3
+power = 45
+accuracy = 90
+priority = 1
 weapon_types = Array[String](["Bow"])
 attack_types = Array[String](["Stab"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

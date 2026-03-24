@@ -4,7 +4,12 @@
 
 [resource]
 script = ExtResource("1_0yrg3")
+name = "Evil Smack"
+short_name = "E. Smack"
+tier = 3
+power = 60
+accuracy = 90
 move_type = 1
 weapon_types = Array[String](["Magic"])
-attack_types = Array[String](["Dark"])
+attack_types = Array[String](["Smash", "Dark"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

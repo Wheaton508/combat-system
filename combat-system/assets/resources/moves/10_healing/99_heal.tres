@@ -4,7 +4,12 @@
 
 [resource]
 script = ExtResource("1_e2yd3")
+name = "Heal"
+short_name = "Heal"
+power = 25
+accuracy = 101
 move_type = 2
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Healing"])
+targeting_type = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

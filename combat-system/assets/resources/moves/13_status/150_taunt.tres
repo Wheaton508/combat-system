@@ -4,5 +4,13 @@
 
 [resource]
 script = ExtResource("1_sd3mw")
+name = "Taunt"
+short_name = "Taunt"
+description = "Draws in opponent attacks."
+tier = 4
+accuracy = 101
 move_type = 3
+targeting_type = 1
+move_effect = 4
+fails_in_succession = true
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

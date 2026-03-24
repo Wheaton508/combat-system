@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_fc1ee")
+name = "Shadow Bolt"
+short_name = "S. Bolt"
+tier = 5
+power = 85
+accuracy = 80
 weapon_types = Array[String](["Bow"])
-attack_types = Array[String](["Stab"])
+attack_types = Array[String](["Stab", "Shadow"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

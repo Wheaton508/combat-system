@@ -4,7 +4,12 @@
 
 [resource]
 script = ExtResource("1_jm2bj")
+name = "Ice Burn"
+short_name = "Ice Burn"
+tier = 4
+power = 70
+accuracy = 85
 move_type = 1
 weapon_types = Array[String](["Magic"])
-attack_types = Array[String](["Wind"])
+attack_types = Array[String](["Fire", "Ice"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,6 +4,10 @@
 
 [resource]
 script = ExtResource("1_utwkj")
+name = "Heavy Smack"
+short_name = "H. Smack"
+power = 40
+accuracy = 100
 weapon_types = Array[String](["Misc"])
-attack_types = Array[String](["Neutral"])
+attack_types = Array[String](["Smash"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_u3stl")
+name = "Ruin"
+short_name = "Ruin"
+tier = 4
+power = 80
+accuracy = 80
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Dark"])

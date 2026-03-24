@@ -4,6 +4,12 @@
 
 [resource]
 script = ExtResource("1_e7mfp")
+name = "Nosferatu"
+short_name = "Nosferatu"
+description = "Drains health on hit."
+tier = 4
+power = 70
+accuracy = 75
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Dark"])

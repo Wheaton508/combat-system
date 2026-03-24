@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://br1cvchougdjw"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_wbiic"]
+
+[resource]
+script = ExtResource("1_wbiic")
+description = "Both foes' Res- for three turns."
+tier = 3
+accuracy = 90
+move_type = 3
+targeting_type = 1
+move_effect = 2
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"

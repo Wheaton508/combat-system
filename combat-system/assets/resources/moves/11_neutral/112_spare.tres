@@ -4,6 +4,9 @@
 
 [resource]
 script = ExtResource("1_b4ogp")
+name = "Spare"
+short_name = "Spare"
+description = "Cannot kill the opponent."
 weapon_types = Array[String](["Misc"])
 attack_types = Array[String](["Neutral"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,7 +4,14 @@
 
 [resource]
 script = ExtResource("1_skxus")
+name = "Livewire"
+short_name = "Livewire"
+description = "Strikes field."
+tier = 2
+power = 30
+accuracy = 95
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Lightning"])
+targeting_type = 5
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,5 +4,11 @@
 
 [resource]
 script = ExtResource("1_8s6sf")
+name = "Counter"
+short_name = "Counter"
+description = "Returns physical damage taken."
+tier = 2
+accuracy = 101
+priority = -3
 move_type = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

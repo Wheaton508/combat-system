@@ -4,5 +4,10 @@
 
 [resource]
 script = ExtResource("1_sgvdo")
+name = "Ensnare"
+short_name = "Ensnare"
+description = "Foe's Spd- for three turns."
+accuracy = 100
 move_type = 3
+move_effect = 2
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

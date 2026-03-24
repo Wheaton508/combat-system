@@ -4,5 +4,12 @@
 
 [resource]
 script = ExtResource("1_sqa15")
+name = "Great Ward"
+short_name = "G. Ward"
+description = "Res++ for three turns."
+tier = 3
+accuracy = 101
 move_type = 3
+targeting_type = 2
+move_effect = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

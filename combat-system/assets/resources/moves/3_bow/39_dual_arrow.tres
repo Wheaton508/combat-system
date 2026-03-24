@@ -4,6 +4,13 @@
 
 [resource]
 script = ExtResource("1_nvudj")
+name = "Dual Arrow"
+short_name = "D. Arrow"
+description = "Strikes both foes."
+tier = 3
+power = 35
+accuracy = 90
 weapon_types = Array[String](["Bow"])
 attack_types = Array[String](["Stab"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

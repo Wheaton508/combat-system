@@ -4,5 +4,10 @@
 
 [resource]
 script = ExtResource("1_ykmtq")
+name = "Hex"
+short_name = "Hex"
+description = "Foe's Res- for three turns."
+accuracy = 100
 move_type = 3
+move_effect = 2
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

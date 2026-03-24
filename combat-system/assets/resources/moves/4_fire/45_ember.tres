@@ -1,9 +1,13 @@
 [gd_resource type="Resource" script_class="Move" format=3 uid="uid://b51g74n1cmbxb"]
 
-[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_c8b2p"]
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_d4wh4"]
 
 [resource]
-script = ExtResource("1_c8b2p")
+script = ExtResource("1_d4wh4")
+name = "Ember"
+short_name = "Ember"
+power = 20
+accuracy = 100
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Fire"])

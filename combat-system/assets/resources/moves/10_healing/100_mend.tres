@@ -4,7 +4,13 @@
 
 [resource]
 script = ExtResource("1_tnkau")
+name = "Mend"
+short_name = "Mend"
+tier = 2
+power = 50
+accuracy = 101
 move_type = 2
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Healing"])
+targeting_type = 2
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

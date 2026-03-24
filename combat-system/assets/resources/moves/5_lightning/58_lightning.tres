@@ -4,7 +4,15 @@
 
 [resource]
 script = ExtResource("1_86bav")
+name = "Lightning"
+short_name = "Lightning"
+description = "Increased priority. Strikes both foes."
+tier = 3
+power = 35
+accuracy = 85
+priority = 1
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Lightning"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

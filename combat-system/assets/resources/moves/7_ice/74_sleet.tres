@@ -4,7 +4,12 @@
 
 [resource]
 script = ExtResource("1_6im0g")
+name = "Sleet"
+short_name = "Sleet"
+tier = 2
+power = 40
+accuracy = 95
 move_type = 1
 weapon_types = Array[String](["Magic"])
-attack_types = Array[String](["Wind"])
+attack_types = Array[String](["Ice"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

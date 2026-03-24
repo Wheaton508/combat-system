@@ -4,5 +4,11 @@
 
 [resource]
 script = ExtResource("1_xu5em")
+name = "Counterspell"
+short_name = "Counterspell"
+description = "Returns magical damage taken."
+tier = 3
+accuracy = 101
+priority = -3
 move_type = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

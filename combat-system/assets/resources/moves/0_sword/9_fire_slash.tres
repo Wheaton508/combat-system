@@ -4,10 +4,11 @@
 
 [resource]
 script = ExtResource("1_tpf2u")
-name = "Cut"
-short_name = "Cut"
-power = 20
-accuracy = 100
+name = "Fire Slash"
+short_name = "F. Slash"
+tier = 5
+power = 95
+accuracy = 80
 weapon_types = Array[String](["Sword"])
-attack_types = Array[String](["Slash"])
+attack_types = Array[String](["Slash", "Fire"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

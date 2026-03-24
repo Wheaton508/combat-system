@@ -4,6 +4,13 @@
 
 [resource]
 script = ExtResource("1_tkhmq")
+name = "Parting Blow"
+short_name = "P. Blow"
+description = "Moves last."
+tier = 2
+power = 50
+accuracy = 100
+priority = -2
 weapon_types = Array[String](["Axe"])
 attack_types = Array[String](["Smash"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

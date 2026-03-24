@@ -4,10 +4,13 @@
 
 [resource]
 script = ExtResource("1_lbaxs")
-name = "Cut"
-short_name = "Cut"
-power = 20
-accuracy = 100
+name = "Heavy Slash"
+short_name = "H. Slash"
+description = "Decreased priority."
+tier = 5
+power = 110
+accuracy = 80
+priority = -1
 weapon_types = Array[String](["Sword"])
-attack_types = Array[String](["Slash"])
+attack_types = Array[String](["Slash", "Smash"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

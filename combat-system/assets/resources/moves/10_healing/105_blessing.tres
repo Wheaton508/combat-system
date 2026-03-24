@@ -4,7 +4,14 @@
 
 [resource]
 script = ExtResource("1_71e8h")
+name = "Blessing"
+short_name = "Blessing"
+description = "Removes debuffs."
+tier = 3
+power = 20
+accuracy = 101
 move_type = 2
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Healing"])
+targeting_type = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

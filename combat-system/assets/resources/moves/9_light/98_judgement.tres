@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_8vru0")
+name = "Judgement"
+short_name = "Judgement"
+tier = 5
+power = 100
+accuracy = 85
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Light"])

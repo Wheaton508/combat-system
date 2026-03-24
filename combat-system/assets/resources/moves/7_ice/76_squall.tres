@@ -4,7 +4,14 @@
 
 [resource]
 script = ExtResource("1_yqbkc")
+name = "Squall"
+short_name = "Squall"
+description = "Increased priority."
+tier = 3
+power = 50
+accuracy = 90
+priority = 1
 move_type = 1
 weapon_types = Array[String](["Magic"])
-attack_types = Array[String](["Wind"])
+attack_types = Array[String](["Wind", "Ice"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

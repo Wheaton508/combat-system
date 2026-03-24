@@ -4,6 +4,10 @@
 
 [resource]
 script = ExtResource("1_ekluv")
+name = "Hit"
+short_name = "Hit"
+power = 20
+accuracy = 100
 weapon_types = Array[String](["Misc"])
 attack_types = Array[String](["Neutral"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_s6sgn")
+name = "Holy Lance"
+short_name = "Holy Lance"
+tier = 5
+power = 90
+accuracy = 90
 weapon_types = Array[String](["Lance"])
-attack_types = Array[String](["Stab"])
+attack_types = Array[String](["Stab", "Light"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,6 +4,13 @@
 
 [resource]
 script = ExtResource("1_vxofn")
+name = "Charge"
+short_name = "Charge"
+description = "Increased priority."
+tier = 2
+power = 30
+accuracy = 95
+priority = 1
 weapon_types = Array[String](["Lance"])
 attack_types = Array[String](["Stab"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

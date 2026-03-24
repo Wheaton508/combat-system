@@ -4,7 +4,13 @@
 
 [resource]
 script = ExtResource("1_8hdkv")
+name = "Recover"
+short_name = "Recover"
+tier = 3
+power = 75
+accuracy = 101
 move_type = 2
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Healing"])
+targeting_type = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

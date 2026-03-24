@@ -4,5 +4,12 @@
 
 [resource]
 script = ExtResource("1_dbtl0")
+name = "Retreat"
+short_name = "Retreat"
+description = "Swaps into backline. Moves first."
+tier = 3
+accuracy = 101
+priority = 3
 move_type = 3
+targeting_type = 2
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_foyo6")
+name = "Impale"
+short_name = "Impale"
+tier = 4
+power = 100
+accuracy = 75
 weapon_types = Array[String](["Lance"])
 attack_types = Array[String](["Stab"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

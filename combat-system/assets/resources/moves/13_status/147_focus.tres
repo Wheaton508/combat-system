@@ -4,5 +4,10 @@
 
 [resource]
 script = ExtResource("1_e03kg")
+name = "Focus"
+short_name = "Focus"
+description = "Next attack will always hit."
+tier = 3
+accuracy = 101
 move_type = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,5 +4,11 @@
 
 [resource]
 script = ExtResource("1_1orxh")
+name = "Rouse"
+short_name = "Rouse"
+description = "Atk+ for three turns."
+accuracy = 101
 move_type = 3
+targeting_type = 2
+move_effect = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

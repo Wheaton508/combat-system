@@ -4,10 +4,11 @@
 
 [resource]
 script = ExtResource("1_ihiur")
-name = "Cut"
-short_name = "Cut"
-power = 20
-accuracy = 100
+name = "Bladestorm"
+short_name = "Bladestorm"
+tier = 5
+power = 90
+accuracy = 85
 weapon_types = Array[String](["Sword"])
-attack_types = Array[String](["Slash"])
+attack_types = Array[String](["Stab", "Wind"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

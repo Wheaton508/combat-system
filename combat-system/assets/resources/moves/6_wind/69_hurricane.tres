@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://epo633scu5pf"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_hmxfc"]
+
+[resource]
+script = ExtResource("1_hmxfc")
+name = "Hurricane"
+short_name = "Hurricane"
+description = "Strikes both foes."
+tier = 4
+power = 45
+accuracy = 85
+move_type = 1
+weapon_types = Array[String](["Magic"])
+attack_types = Array[String](["Wind"])
+targeting_type = 1
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"

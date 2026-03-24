@@ -4,7 +4,13 @@
 
 [resource]
 script = ExtResource("1_t2fuo")
+name = "Sacrifice"
+short_name = "Sacrifice"
+description = "Sets own HP to 1 to fully restore ally."
+tier = 4
+accuracy = 101
 move_type = 2
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Healing"])
+targeting_type = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

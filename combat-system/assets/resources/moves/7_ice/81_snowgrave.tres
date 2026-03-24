@@ -4,7 +4,12 @@
 
 [resource]
 script = ExtResource("1_38jma")
+name = "Snowgrave"
+short_name = "Snowgrave"
+tier = 5
+power = 120
+accuracy = 70
 move_type = 1
 weapon_types = Array[String](["Magic"])
-attack_types = Array[String](["Wind"])
+attack_types = Array[String](["Ice"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

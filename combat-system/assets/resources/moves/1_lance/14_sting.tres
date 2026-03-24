@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_cieu6")
+name = "Sting"
+short_name = "Sting"
+tier = 3
+power = 60
+accuracy = 90
 weapon_types = Array[String](["Lance"])
 attack_types = Array[String](["Stab"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

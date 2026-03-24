@@ -4,7 +4,14 @@
 
 [resource]
 script = ExtResource("1_6lx6k")
+name = "Black Hole"
+short_name = "Black Hole"
+description = "Traps foes on hit. Strikes field."
+tier = 4
+power = 60
+accuracy = 85
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Dark"])
+targeting_type = 5
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

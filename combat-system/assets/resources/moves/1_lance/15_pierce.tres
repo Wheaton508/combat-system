@@ -4,6 +4,12 @@
 
 [resource]
 script = ExtResource("1_mkp2t")
+name = "Pierce"
+short_name = "Pierce"
+description = "Ignores stat changes."
+tier = 3
+power = 50
+accuracy = 95
 weapon_types = Array[String](["Lance"])
 attack_types = Array[String](["Stab"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

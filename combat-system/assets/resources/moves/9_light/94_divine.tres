@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_rn5by")
+name = "Divine"
+short_name = "Divine"
+tier = 3
+power = 60
+accuracy = 95
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Light"])

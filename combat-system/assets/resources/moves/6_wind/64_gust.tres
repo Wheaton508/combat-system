@@ -4,7 +4,14 @@
 
 [resource]
 script = ExtResource("1_kkvmb")
+name = "Gust"
+short_name = "Gust"
+description = "Strikes both foes."
+tier = 2
+power = 25
+accuracy = 95
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Wind"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_cn0ll")
+name = "Heavy Crush"
+short_name = "H. Crush"
+tier = 4
+power = 80
+accuracy = 85
 weapon_types = Array[String](["Axe"])
 attack_types = Array[String](["Smash"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

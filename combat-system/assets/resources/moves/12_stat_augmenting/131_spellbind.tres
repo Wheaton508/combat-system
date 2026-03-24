@@ -4,5 +4,11 @@
 
 [resource]
 script = ExtResource("1_jlakk")
+name = "Spellbind"
+short_name = "Spellbind"
+description = "Foe's Mag-- for three turns."
+tier = 3
+accuracy = 95
 move_type = 3
+move_effect = 2
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

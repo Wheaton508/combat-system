@@ -4,10 +4,13 @@
 
 [resource]
 script = ExtResource("1_rhea6")
-name = "Cut"
-short_name = "Cut"
-power = 20
-accuracy = 100
+name = "Sweeping Edge"
+short_name = "S. Edge"
+description = "Strikes both foes."
+tier = 3
+power = 35
+accuracy = 90
 weapon_types = Array[String](["Sword"])
 attack_types = Array[String](["Slash"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

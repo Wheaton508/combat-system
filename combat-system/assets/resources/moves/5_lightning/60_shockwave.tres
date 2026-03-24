@@ -4,7 +4,14 @@
 
 [resource]
 script = ExtResource("1_h8v4q")
+name = "Shockwave"
+short_name = "Shockwave"
+description = "Strikes both foes."
+tier = 4
+power = 45
+accuracy = 85
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Lightning"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

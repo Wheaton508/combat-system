@@ -4,7 +4,14 @@
 
 [resource]
 script = ExtResource("1_eis2o")
+name = "Singe"
+short_name = "Singe"
+description = "Strikes both."
+tier = 2
+power = 25
+accuracy = 95
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Fire"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

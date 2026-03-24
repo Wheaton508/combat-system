@@ -4,6 +4,12 @@
 
 [resource]
 script = ExtResource("1_p6fgm")
+name = "Breeze"
+short_name = "Breeze"
+description = "Increased priority."
+power = 15
+accuracy = 100
+priority = 1
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Wind"])

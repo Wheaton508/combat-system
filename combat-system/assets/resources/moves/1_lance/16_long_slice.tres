@@ -4,6 +4,13 @@
 
 [resource]
 script = ExtResource("1_6rhdb")
+name = "Long Slice"
+short_name = "L. Slice"
+description = "Strikes both foes."
+tier = 3
+power = 35
+accuracy = 90
 weapon_types = Array[String](["Lance"])
-attack_types = Array[String](["Stab"])
+attack_types = Array[String](["Slash"])
+targeting_type = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

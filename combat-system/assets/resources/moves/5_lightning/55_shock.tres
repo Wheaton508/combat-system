@@ -4,6 +4,12 @@
 
 [resource]
 script = ExtResource("1_da0i3")
+name = "Shock"
+short_name = "Shock"
+description = "Increased priority."
+power = 30
+accuracy = 95
+priority = 1
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Lightning"])

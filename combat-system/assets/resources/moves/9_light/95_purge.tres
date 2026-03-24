@@ -4,6 +4,12 @@
 
 [resource]
 script = ExtResource("1_mo3rv")
+name = "Purge"
+short_name = "Purge"
+description = "Removes stat changes on hit."
+tier = 3
+power = 55
+accuracy = 90
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Light"])

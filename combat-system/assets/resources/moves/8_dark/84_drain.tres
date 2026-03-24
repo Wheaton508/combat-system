@@ -4,6 +4,12 @@
 
 [resource]
 script = ExtResource("1_ocsd3")
+name = "Drain"
+short_name = "Drain"
+description = "Drains health on hit."
+tier = 2
+power = 40
+accuracy = 85
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Dark"])

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://1h62kax8qfyb"]
+
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="1_ws55b"]
+
+[resource]
+script = ExtResource("1_ws55b")
+description = "Team's Mag+ for three turns."
+tier = 3
+accuracy = 101
+move_type = 3
+targeting_type = 4
+move_effect = 1
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"

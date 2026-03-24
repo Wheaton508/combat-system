@@ -4,5 +4,12 @@
 
 [resource]
 script = ExtResource("1_7ypi6")
+name = "War Cry"
+short_name = "War Cry"
+description = "Atk++ for three turns."
+tier = 3
+accuracy = 101
 move_type = 3
+targeting_type = 2
+move_effect = 1
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

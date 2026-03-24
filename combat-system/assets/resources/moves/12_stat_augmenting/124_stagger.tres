@@ -4,5 +4,12 @@
 
 [resource]
 script = ExtResource("1_wgeef")
+name = "Stagger"
+short_name = "Stagger"
+description = "Both foes' Def- for three turns."
+tier = 3
+accuracy = 90
 move_type = 3
+targeting_type = 1
+move_effect = 2
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

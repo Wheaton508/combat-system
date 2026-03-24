@@ -4,5 +4,11 @@
 
 [resource]
 script = ExtResource("1_l4hj3")
+name = "Shatter"
+short_name = "Shatter"
+description = "Foe's Def-- for three turns."
+tier = 3
+accuracy = 95
 move_type = 3
+move_effect = 2
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

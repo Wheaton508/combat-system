@@ -7,14 +7,14 @@ enum Move_Type {PHYSICAL, MAGIC, HEALING, STATUS}
 enum Targeting_Type {SINGLE, SPREAD, SELF, ALLY, TEAM, FIELD}
 enum Move_Effect {NONE, BUFF, DEBUFF, PROTECT, REDIRECT}
 
-@export_group("Move Details")
+#@export_group("Move Details")
 @export var name : String
 ## Maximum of eight characters (I think)
 @export var short_name : String
 @export var description : String
 @export var tier := 1
 
-@export_group("Move Stats")
+#@export_group("Move Stats")
 @export var power := 0
 @export var accuracy := 0
 @export var priority := 0

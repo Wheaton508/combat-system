@@ -4,6 +4,13 @@
 
 [resource]
 script = ExtResource("1_jnfyh")
+name = "Gale"
+short_name = "Gale"
+description = "Moves first."
+tier = 2
+power = 30
+accuracy = 95
+priority = 2
 move_type = 1
 weapon_types = Array[String](["Magic"])
 attack_types = Array[String](["Wind"])

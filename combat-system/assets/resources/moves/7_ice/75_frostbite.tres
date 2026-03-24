@@ -4,7 +4,13 @@
 
 [resource]
 script = ExtResource("1_sy06d")
+name = "Frostbite"
+short_name = "Frostbite"
+description = "Spd- for two turns on hit."
+tier = 2
+power = 30
+accuracy = 90
 move_type = 1
 weapon_types = Array[String](["Magic"])
-attack_types = Array[String](["Wind"])
+attack_types = Array[String](["Ice"])
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

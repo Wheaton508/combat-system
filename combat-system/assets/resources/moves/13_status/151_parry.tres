@@ -4,5 +4,13 @@
 
 [resource]
 script = ExtResource("1_k1dxr")
+name = "Parry"
+short_name = "Parry"
+description = "Dodges physical and inflicts Def- on attackers."
+tier = 4
+accuracy = 101
+priority = 3
 move_type = 3
+targeting_type = 2
+fails_in_succession = true
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"
