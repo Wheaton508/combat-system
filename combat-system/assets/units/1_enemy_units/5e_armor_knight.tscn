@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bpy07u4vgj4mw"]
+
+[ext_resource type="Script" uid="uid://cc68narx07e1t" path="res://scripts/units/enemy_unit.gd" id="1_bmrwa"]
+[ext_resource type="Resource" uid="uid://b5tbmuhmaf6wd" path="res://assets/resources/roles/5_armor_knight_role.tres" id="2_2bjju"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_3upfr"]
+[ext_resource type="SpriteFrames" uid="uid://c74ik5g7483oo" path="res://assets/sprite_frames/5_sf_armor_knight.tres" id="2_hyn6h"]
+
+[node name="Unit" type="Node3D" unique_id=2021740730 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_bmrwa")
+role = ExtResource("2_2bjju")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1890203869]
+offset = Vector2(0, 7)
+flip_h = true
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_hyn6h")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_3upfr")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

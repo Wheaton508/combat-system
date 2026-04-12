@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cbi2quk3tvluv"]
+
+[ext_resource type="Script" uid="uid://d38v53j52u1ie" path="res://scripts/units/player_unit.gd" id="1_nl1yk"]
+[ext_resource type="SpriteFrames" uid="uid://dck0s6761lvgl" path="res://assets/sprite_frames/16_sf_skeleton_knight.tres" id="2_diuaa"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_hilbv"]
+[ext_resource type="Resource" uid="uid://d22gq0w7asglt" path="res://assets/resources/roles/16_skeleton_knight_role.tres" id="2_neq8p"]
+
+[node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_nl1yk")
+role = ExtResource("2_neq8p")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=812299299]
+offset = Vector2(0, 7)
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_diuaa")
+animation = &"Idle"
+autoplay = "Idle"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": ["main", "effect"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://imports/character_sprites/Skeleton Knight.aseprite",
+"source_uid": 3711220244441819479
+}
+metadata/_aseprite_wizard_source_file_hash_ = "7d4af0e0ddb7cf7404e3d9dcd49fbc9a"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_hilbv")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

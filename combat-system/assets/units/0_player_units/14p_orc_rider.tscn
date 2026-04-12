@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dmew5k6rk2g1q"]
+
+[ext_resource type="Script" uid="uid://d38v53j52u1ie" path="res://scripts/units/player_unit.gd" id="1_xv3xc"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_0vguq"]
+[ext_resource type="Resource" uid="uid://cs7nb4qh37y3d" path="res://assets/resources/roles/14_orc_rider_role.tres" id="2_c4slb"]
+[ext_resource type="SpriteFrames" uid="uid://des53lk53w7el" path="res://assets/sprite_frames/14_sf_orc_rider.tres" id="2_ly0xw"]
+
+[node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_xv3xc")
+role = ExtResource("2_c4slb")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=812299299]
+offset = Vector2(0, 7)
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_ly0xw")
+animation = &"Idle"
+autoplay = "Idle"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": ["main", "effect"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://imports/character_sprites/Orc Rider.aseprite",
+"source_uid": 2656636698741035187
+}
+metadata/_aseprite_wizard_source_file_hash_ = "8765a4808156e2b3f47975504e105dba"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_0vguq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

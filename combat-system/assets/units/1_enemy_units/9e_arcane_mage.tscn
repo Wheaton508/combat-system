@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b84ywlvfk5ajp"]
+
+[ext_resource type="Script" uid="uid://cc68narx07e1t" path="res://scripts/units/enemy_unit.gd" id="1_2qqug"]
+[ext_resource type="Resource" uid="uid://chslwi0dqymjx" path="res://assets/resources/roles/9_arcane_mage_role.tres" id="2_d1v3q"]
+[ext_resource type="SpriteFrames" uid="uid://k1bepjd4a71q" path="res://assets/sprite_frames/9_sf_arcane_mage.tres" id="2_hhq7t"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_tm5bc"]
+
+[node name="Unit" type="Node3D" unique_id=2021740730 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_2qqug")
+role = ExtResource("2_d1v3q")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1890203869]
+offset = Vector2(0, 7)
+flip_h = true
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_hhq7t")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_tm5bc")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

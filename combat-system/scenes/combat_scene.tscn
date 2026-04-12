@@ -1,60 +1,48 @@
 [gd_scene format=3 uid="uid://dl2t55wpkhhgg"]
 
 [ext_resource type="Script" uid="uid://d1t2en52jouks" path="res://scripts/managers/combat_manager.gd" id="1_ik0t7"]
-[ext_resource type="PackedScene" uid="uid://deh1dhnm15maf" path="res://assets/units/0_player_units/1_test_knight.tscn" id="2_m17q1"]
 [ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="3_6r8bj"]
-[ext_resource type="PackedScene" uid="uid://cpr7da4xkv7iu" path="res://assets/units/1_enemy_units/1_test_slime.tscn" id="3_a2e2y"]
-[ext_resource type="Resource" uid="uid://dbvglovprgxmn" path="res://assets/resources/roles/1_knight_role.tres" id="3_g0m11"]
+[ext_resource type="Resource" uid="uid://cagsnt4ody0ro" path="res://assets/resources/moves/1_lance/14_sting.tres" id="4_cto7h"]
 [ext_resource type="Resource" uid="uid://bmbwhtanedqcc" path="res://assets/resources/moves/0_sword/3_quick_cut.tres" id="4_da1ml"]
 [ext_resource type="Texture2D" uid="uid://c670mmwjvyi2h" path="res://imports/fantasy_ui/ui/UI assets (2x).png" id="4_m2d54"]
-[ext_resource type="Resource" uid="uid://cfk8pr6mg8ndf" path="res://assets/resources/roles/10_slime_role.tres" id="5_5qq3q"]
+[ext_resource type="Resource" uid="uid://v07wd2rj2adi" path="res://assets/resources/moves/1_lance/13_charge.tres" id="5_iwqrp"]
 [ext_resource type="Script" uid="uid://dscpe3dx674ow" path="res://scripts/ui/menu.gd" id="6_0vylu"]
+[ext_resource type="Resource" uid="uid://bihlkv5yyagm5" path="res://assets/resources/moves/13_status/144_block.tres" id="6_36hrl"]
 [ext_resource type="PackedScene" uid="uid://vnhrqkgsl3g0" path="res://scenes/ui/selection_button.tscn" id="6_ikfks"]
+[ext_resource type="PackedScene" uid="uid://dnii7lvwkedp6" path="res://assets/units/0_player_units/3p_templar.tscn" id="6_iwqrp"]
 [ext_resource type="PackedScene" uid="uid://hkn13w46xd8m" path="res://scenes/ui/move_button.tscn" id="7_0vylu"]
 [ext_resource type="FontFile" uid="uid://bmj6c7pbnucom" path="res://imports/fantasy_ui/fonts/FantasyRPGtitle (size 11).ttf" id="7_2edba"]
+[ext_resource type="PackedScene" uid="uid://2bnk85vbvlts" path="res://assets/units/0_player_units/7p_red_mage.tscn" id="7_36hrl"]
 [ext_resource type="Script" uid="uid://dk13m2h2ab0ju" path="res://scripts/ui/move_info_panel.gd" id="7_ivkwx"]
+[ext_resource type="Resource" uid="uid://dqbxmccahdtew" path="res://assets/resources/moves/12_stat_augmenting/132_ward.tres" id="7_tvfrr"]
 [ext_resource type="FontFile" uid="uid://bqk8rlhovw02r" path="res://imports/fantasy_ui/fonts/FantasyRPGtext (size 8).ttf" id="8_6ovae"]
+[ext_resource type="PackedScene" uid="uid://be3dhast0uoju" path="res://assets/units/0_player_units/10p_cleric.tscn" id="8_tvfrr"]
+[ext_resource type="Resource" uid="uid://hd7tdh73v3h2" path="res://assets/resources/moves/4_fire/48_fireball.tres" id="9_25p22"]
+[ext_resource type="Resource" uid="uid://dnxcdxc6kegvm" path="res://assets/resources/moves/4_fire/46_singe.tres" id="10_cqnbx"]
 [ext_resource type="PackedScene" uid="uid://b7v78bnd3a0eg" path="res://imports/prototype_kit/floor-square.glb" id="11_da1ml"]
+[ext_resource type="PackedScene" uid="uid://cuc8v0c6qdv11" path="res://assets/units/1_enemy_units/12e_orc_knight.tscn" id="11_ebgdu"]
+[ext_resource type="Resource" uid="uid://li5gmpl3aw2x" path="res://assets/resources/moves/5_lightning/54_jolt.tres" id="11_wajlj"]
+[ext_resource type="Resource" uid="uid://1h62kax8qfyb" path="res://assets/resources/moves/12_stat_augmenting/128_.tres" id="12_6bby6"]
+[ext_resource type="PackedScene" uid="uid://dn8mpyllnqqcy" path="res://assets/units/1_enemy_units/17e_skeleton_brawler.tscn" id="12_62tjo"]
 [ext_resource type="PackedScene" uid="uid://ne1lqgyy1y5m" path="res://scenes/game_objects/board_position.tscn" id="12_gcf8m"]
+[ext_resource type="PackedScene" uid="uid://dq5ddrtvc5jdk" path="res://assets/units/1_enemy_units/19e_werewolf.tscn" id="13_ygsf8"]
+[ext_resource type="Resource" uid="uid://cn10r0i2clss7" path="res://assets/resources/moves/10_healing/100_mend.tres" id="14_k0l64"]
+[ext_resource type="Resource" uid="uid://csdtut1mt0h1e" path="res://assets/resources/moves/10_healing/101_restore.tres" id="15_8rui0"]
+[ext_resource type="Resource" uid="uid://csd57p6wijqtm" path="res://assets/resources/moves/9_light/93_illume.tres" id="16_n4rgw"]
+[ext_resource type="Resource" uid="uid://wks15ttsu34s" path="res://assets/resources/moves/13_status/149_retreat.tres" id="17_3l6dc"]
+[ext_resource type="Resource" uid="uid://bdj86vs36q6kc" path="res://assets/resources/moves/2_axe/26_giant_smash.tres" id="19_5ece6"]
 [ext_resource type="PackedScene" uid="uid://dtjugfsf6srpy" path="res://scenes/ui/target_button.tscn" id="19_lef5q"]
+[ext_resource type="Resource" uid="uid://b2g8p8h8f5bb4" path="res://assets/resources/moves/2_axe/25_parting_blow.tres" id="20_7yp61"]
 [ext_resource type="Theme" uid="uid://0ft0qaa6iuqg" path="res://assets/themes/blue_button.tres" id="20_ff51q"]
 [ext_resource type="Theme" uid="uid://0klntfi72n1q" path="res://assets/themes/red_button.tres" id="21_gcf8m"]
-
-[sub_resource type="Resource" id="Resource_lef5q"]
-script = ExtResource("3_6r8bj")
-name = "Test Crush"
-short_name = "Test Crush"
-description = "This move tests crushing"
-power = 40
-accuracy = 100
-weapon_types = Array[String](["Misc"])
-attack_types = Array[String](["Crush"])
-targeting_type = 1
-metadata/_custom_type_script = "uid://djpghqhlqpxlp"
-
-[sub_resource type="Resource" id="Resource_aepks"]
-script = ExtResource("3_6r8bj")
-name = "Test Heal"
-short_name = "Test Heal"
-description = "This move tests healing"
-power = 20
-accuracy = 101
-move_type = 1
-weapon_types = Array[String](["Magic"])
-attack_types = Array[String](["Healing"])
-targeting_type = 3
-metadata/_custom_type_script = "uid://djpghqhlqpxlp"
-
-[sub_resource type="Resource" id="Resource_ff51q"]
-script = ExtResource("3_6r8bj")
-name = "Protect"
-short_name = "Protect"
-description = "Always wear protection"
-accuracy = 101
-move_type = 2
-targeting_type = 2
-move_effect = 3
-metadata/_custom_type_script = "uid://djpghqhlqpxlp"
+[ext_resource type="Resource" uid="uid://b1fdciy1lwhfh" path="res://assets/resources/moves/2_axe/24_chop.tres" id="21_p5c4r"]
+[ext_resource type="Resource" uid="uid://cwojo5wascwba" path="res://assets/resources/moves/12_stat_augmenting/125_shatter.tres" id="22_ojdhy"]
+[ext_resource type="Resource" uid="uid://dm24mo3ccacim" path="res://assets/resources/moves/0_sword/5_sweeping_edge.tres" id="24_uloel"]
+[ext_resource type="Resource" uid="uid://cjyaj7u6vfc8x" path="res://assets/resources/moves/12_stat_augmenting/114_rouse.tres" id="26_hpck0"]
+[ext_resource type="Resource" uid="uid://8kn7emn2lxe6" path="res://assets/resources/moves/13_status/147_focus.tres" id="27_w8n38"]
+[ext_resource type="Resource" uid="uid://cvjftdu63cl3n" path="res://assets/resources/moves/0_sword/1_slice.tres" id="29_3djiu"]
+[ext_resource type="Resource" uid="uid://diaaq5g6cnnde" path="res://assets/resources/moves/12_stat_augmenting/115_daunt.tres" id="30_oqi3m"]
+[ext_resource type="Resource" uid="uid://dsya2soq28gf1" path="res://assets/resources/moves/13_status/150_taunt.tres" id="31_d6omg"]
 
 [node name="CombatScene" type="Node3D" unique_id=380080171]
 
@@ -65,43 +53,40 @@ script = ExtResource("1_ik0t7")
 
 [node name="PlayerUnits" type="Node" parent="Units" unique_id=257558678]
 
-[node name="Knight" parent="Units/PlayerUnits" unique_id=287831804 instance=ExtResource("2_m17q1")]
+[node name="Unit" parent="Units/PlayerUnits" unique_id=1763975509 instance=ExtResource("6_iwqrp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.1)
-unit_name = "Knight One"
-moves = Array[ExtResource("3_6r8bj")]([ExtResource("4_da1ml"), SubResource("Resource_lef5q"), SubResource("Resource_aepks"), SubResource("Resource_ff51q")])
-role = ExtResource("3_g0m11")
+unit_name = "Templar"
+moves = Array[ExtResource("3_6r8bj")]([ExtResource("4_cto7h"), ExtResource("5_iwqrp"), ExtResource("6_36hrl"), ExtResource("7_tvfrr")])
 
-[node name="Knight2" parent="Units/PlayerUnits" unique_id=1909121839 instance=ExtResource("2_m17q1")]
+[node name="Unit2" parent="Units/PlayerUnits" unique_id=1355522445 instance=ExtResource("7_36hrl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.2)
-unit_name = "Knight Two"
-moves = Array[ExtResource("3_6r8bj")]([ExtResource("4_da1ml"), SubResource("Resource_lef5q"), SubResource("Resource_aepks"), SubResource("Resource_ff51q")])
-role = ExtResource("3_g0m11")
+unit_name = "Red Mage"
+moves = Array[ExtResource("3_6r8bj")]([ExtResource("9_25p22"), ExtResource("10_cqnbx"), ExtResource("11_wajlj"), ExtResource("12_6bby6")])
 current_position = 1
 
-[node name="Knight3" parent="Units/PlayerUnits" unique_id=2047959139 instance=ExtResource("2_m17q1")]
+[node name="Unit3" parent="Units/PlayerUnits" unique_id=1154460365 instance=ExtResource("8_tvfrr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -0.1)
-unit_name = "Knight Three"
-moves = Array[ExtResource("3_6r8bj")]([ExtResource("4_da1ml"), SubResource("Resource_lef5q"), SubResource("Resource_aepks"), SubResource("Resource_ff51q")])
-role = ExtResource("3_g0m11")
+unit_name = "Cleric"
+moves = Array[ExtResource("3_6r8bj")]([ExtResource("14_k0l64"), ExtResource("15_8rui0"), ExtResource("16_n4rgw"), ExtResource("17_3l6dc")])
 current_position = 2
 
 [node name="EnemyUnits" type="Node" parent="Units" unique_id=1082379289]
 
-[node name="Slime" parent="Units/EnemyUnits" unique_id=1446500193 instance=ExtResource("3_a2e2y")]
+[node name="Unit4" parent="Units/EnemyUnits" unique_id=2021740730 instance=ExtResource("11_ebgdu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.1)
-unit_name = "Slime One"
-role = ExtResource("5_5qq3q")
+unit_name = "Orc"
+moves = Array[ExtResource("3_6r8bj")]([ExtResource("19_5ece6"), ExtResource("20_7yp61"), ExtResource("21_p5c4r"), ExtResource("22_ojdhy")])
 
-[node name="Slime2" parent="Units/EnemyUnits" unique_id=1330794216 instance=ExtResource("3_a2e2y")]
+[node name="Unit5" parent="Units/EnemyUnits" unique_id=471627839 instance=ExtResource("13_ygsf8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.2)
-unit_name = "Slime Two"
-role = ExtResource("5_5qq3q")
+unit_name = "Wolf"
+moves = Array[ExtResource("3_6r8bj")]([ExtResource("24_uloel"), ExtResource("4_da1ml"), ExtResource("26_hpck0"), ExtResource("27_w8n38")])
 current_position = 1
 
-[node name="Slime3" parent="Units/EnemyUnits" unique_id=222735450 instance=ExtResource("3_a2e2y")]
+[node name="Unit6" parent="Units/EnemyUnits" unique_id=1241388306 instance=ExtResource("12_62tjo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.1)
-unit_name = "Slime Three"
-role = ExtResource("5_5qq3q")
+unit_name = "Skeleton"
+moves = Array[ExtResource("3_6r8bj")]([ExtResource("29_3djiu"), ExtResource("24_uloel"), ExtResource("30_oqi3m"), ExtResource("31_d6omg")])
 current_position = 2
 
 [node name="Environment" type="Node" parent="." unique_id=83981617]

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://be3dhast0uoju"]
+
+[ext_resource type="Script" uid="uid://d38v53j52u1ie" path="res://scripts/units/player_unit.gd" id="1_1yxyw"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_e1m15"]
+[ext_resource type="Resource" uid="uid://dt76i2jrnhk5f" path="res://assets/resources/roles/10_cleric_role.tres" id="2_hub5n"]
+[ext_resource type="SpriteFrames" uid="uid://cjmj3mslngjcy" path="res://assets/sprite_frames/10_sf_cleric.tres" id="2_jca7d"]
+
+[node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_1yxyw")
+role = ExtResource("2_hub5n")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=812299299]
+offset = Vector2(0, 7)
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_jca7d")
+animation = &"Idle"
+autoplay = "Idle"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": ["main", "effect"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://imports/character_sprites/Cleric.aseprite",
+"source_uid": 2539301417424286354
+}
+metadata/_aseprite_wizard_source_file_hash_ = "e66fa46969a933e79a9dd0170d3c7abe"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_e1m15")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

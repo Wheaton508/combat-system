@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://84465ut4yiqq"]
+
+[ext_resource type="Script" uid="uid://d38v53j52u1ie" path="res://scripts/units/player_unit.gd" id="1_6yi3b"]
+[ext_resource type="Resource" uid="uid://db5y3a8o5sk1x" path="res://assets/resources/roles/19_werewolf_role.tres" id="2_aedng"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_uds3l"]
+[ext_resource type="SpriteFrames" uid="uid://sgiip3qrrobm" path="res://assets/sprite_frames/19_sf_werewolf.tres" id="3_aedng"]
+
+[node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_6yi3b")
+role = ExtResource("2_aedng")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=812299299]
+offset = Vector2(0, 7)
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("3_aedng")
+animation = &"Idle"
+autoplay = "Idle"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": ["main", "effect"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://imports/character_sprites/Werewolf.aseprite",
+"source_uid": 7359037078947360601
+}
+metadata/_aseprite_wizard_source_file_hash_ = "128c17ed115a72963d1cbdbd96efe518"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_uds3l")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

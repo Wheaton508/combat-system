@@ -21,7 +21,7 @@ func autolevel(levels_to_give: int):
 		atk += increase_stat(atk_growth)
 		def += increase_stat(def_growth)
 		mag += increase_stat(mag_growth)
-		mag_def += increase_stat(mag_def_growth)
+		res += increase_stat(res_growth)
 		spd_growth += increase_stat(spd_growth)
 		levels_to_give -= 1
 	

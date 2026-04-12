@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dnii7lvwkedp6"]
+
+[ext_resource type="Script" uid="uid://d38v53j52u1ie" path="res://scripts/units/player_unit.gd" id="1_akmr3"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_v2gmo"]
+[ext_resource type="SpriteFrames" uid="uid://csi26b1ku63cc" path="res://assets/sprite_frames/3_sf_templar.tres" id="2_vbh4u"]
+[ext_resource type="Resource" uid="uid://cdc2mgq56nfjq" path="res://assets/resources/roles/3_templar_role.tres" id="2_yww1k"]
+
+[node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_akmr3")
+role = ExtResource("2_yww1k")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=812299299]
+offset = Vector2(0, 7)
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_vbh4u")
+animation = &"Attack01"
+autoplay = "Idle"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": ["main", "effect"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://imports/character_sprites/Templar.aseprite",
+"source_uid": 8702099334243668250
+}
+metadata/_aseprite_wizard_source_file_hash_ = "8c69396956e6c48cecdc174f1aaa70c3"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_v2gmo")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

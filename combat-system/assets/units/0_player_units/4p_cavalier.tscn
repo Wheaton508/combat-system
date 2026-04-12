@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://yve4fftirr2f"]
+
+[ext_resource type="Script" uid="uid://d38v53j52u1ie" path="res://scripts/units/player_unit.gd" id="1_36b5k"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_7fib0"]
+[ext_resource type="Resource" uid="uid://c2x8j2obcaycw" path="res://assets/resources/roles/4_cavalier_role.tres" id="2_qtrk2"]
+[ext_resource type="SpriteFrames" uid="uid://cljh0m0jt7rc5" path="res://assets/sprite_frames/4_sf_cavalier.tres" id="3_qtrk2"]
+
+[node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_36b5k")
+role = ExtResource("2_qtrk2")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=812299299]
+offset = Vector2(0, 7)
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("3_qtrk2")
+animation = &"Idle"
+autoplay = "Idle"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": ["main", "effect"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://imports/character_sprites/Cavalier.aseprite",
+"source_uid": 2832935185210170463
+}
+metadata/_aseprite_wizard_source_file_hash_ = "937f6c9a85bf687de9804f1e265d388d"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_7fib0")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

@@ -13,6 +13,6 @@ move_type = 3
 targeting_type = 1
 move_effect = 2
 affected_stat = 2
-stat_stage = 0.75
+stat_stage = -1
 duration = 3
 metadata/_custom_type_script = "uid://djpghqhlqpxlp"

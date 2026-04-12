@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://phfp5mwp3ryu"]
+
+[ext_resource type="Script" uid="uid://d38v53j52u1ie" path="res://scripts/units/player_unit.gd" id="1_xcg3w"]
+[ext_resource type="Resource" uid="uid://b5tbmuhmaf6wd" path="res://assets/resources/roles/5_armor_knight_role.tres" id="2_4pcsn"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_mm60p"]
+[ext_resource type="SpriteFrames" uid="uid://c74ik5g7483oo" path="res://assets/sprite_frames/5_sf_armor_knight.tres" id="3_4pcsn"]
+
+[node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_xcg3w")
+role = ExtResource("2_4pcsn")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=812299299]
+offset = Vector2(0, 7)
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("3_4pcsn")
+animation = &"Idle"
+autoplay = "Idle"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": ["main", "effect"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://imports/character_sprites/Armor Knight.aseprite",
+"source_uid": 8497523777669746300
+}
+metadata/_aseprite_wizard_source_file_hash_ = "e50b81a13aab681460f2df1278adcd84"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_mm60p")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bcgb6nnjx7tdq"
+path="res://.godot/imported/Cleric.aseprite-c6295f3e684bc94ad09cd05e7431bc07.res"
+
+[deps]
+
+source_file="res://imports/character_sprites/Cleric.aseprite"
+dest_files=["res://.godot/imported/Cleric.aseprite-c6295f3e684bc94ad09cd05e7431bc07.res"]
+
+[params]
+

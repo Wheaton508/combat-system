@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://rijke6n8kx36"
+path="res://.godot/imported/Blue Mage.aseprite-3b37bd0cb61396de84c16f17167c3766.res"
+
+[deps]
+
+source_file="res://imports/character_sprites/Blue Mage.aseprite"
+dest_files=["res://.godot/imported/Blue Mage.aseprite-3b37bd0cb61396de84c16f17167c3766.res"]
+
+[params]
+

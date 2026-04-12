@@ -2,13 +2,13 @@
 
 importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
-uid="uid://bhr6x7bmtl11u"
-path="res://.godot/imported/Orc rider.aseprite-b8a472ef0fc4fa5a0fe70d87e0753261.res"
+uid="uid://bd35ohsomlff4"
+path="res://.godot/imported/Orc Rider.aseprite-3ce630497faffca860c5c80a63de7b52.res"
 
 [deps]
 
-source_file="res://imports/character_sprites/Orc rider.aseprite"
-dest_files=["res://.godot/imported/Orc rider.aseprite-b8a472ef0fc4fa5a0fe70d87e0753261.res"]
+source_file="res://imports/character_sprites/Orc Rider.aseprite"
+dest_files=["res://.godot/imported/Orc Rider.aseprite-3ce630497faffca860c5c80a63de7b52.res"]
 
 [params]
 

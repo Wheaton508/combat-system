@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dslqch4gpi0aj"]
+
+[ext_resource type="Script" uid="uid://d38v53j52u1ie" path="res://scripts/units/player_unit.gd" id="1_2vu1k"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_6bvw2"]
+[ext_resource type="Resource" uid="uid://gavnnpcvcrix" path="res://assets/resources/roles/17_skeleton_brawler_role.tres" id="2_cwu7k"]
+[ext_resource type="SpriteFrames" uid="uid://b1dmieoid81f6" path="res://assets/sprite_frames/17_sf_skeleton_brawler.tres" id="2_e73fl"]
+
+[node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_2vu1k")
+role = ExtResource("2_cwu7k")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=812299299]
+offset = Vector2(0, 7)
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_e73fl")
+animation = &"Idle"
+autoplay = "Idle"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": ["main", "effect"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://imports/character_sprites/Skeleton Brawler.aseprite",
+"source_uid": 1056549273335531037
+}
+metadata/_aseprite_wizard_source_file_hash_ = "4dc9fecd0e7643271bb5d80f6d3e9ba0"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_6bvw2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

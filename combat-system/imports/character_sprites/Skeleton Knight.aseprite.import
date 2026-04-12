@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bs40ixa1fybwx"
+path="res://.godot/imported/Skeleton Knight.aseprite-416f514f2c90dd83c3f924f8b6645ccf.res"
+
+[deps]
+
+source_file="res://imports/character_sprites/Skeleton Knight.aseprite"
+dest_files=["res://.godot/imported/Skeleton Knight.aseprite-416f514f2c90dd83c3f924f8b6645ccf.res"]
+
+[params]
+

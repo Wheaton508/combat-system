@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b5d3o3f1iwu27"]
+
+[ext_resource type="Script" uid="uid://d38v53j52u1ie" path="res://scripts/units/player_unit.gd" id="1_lpe6u"]
+[ext_resource type="SpriteFrames" uid="uid://5b2wypp5cu2u" path="res://assets/sprite_frames/2_sf_fencer.tres" id="2_c1uya"]
+[ext_resource type="Resource" uid="uid://h7pxwpmif7ay" path="res://assets/resources/roles/2_fencer_role.tres" id="2_d61r7"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_y7205"]
+
+[node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_lpe6u")
+role = ExtResource("2_d61r7")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=812299299]
+offset = Vector2(0, 7)
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_c1uya")
+animation = &"Idle"
+autoplay = "Idle"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"output_section": false,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": ["main", "effect"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://imports/character_sprites/Fencer.aseprite",
+"source_uid": 8348767350169465277
+}
+metadata/_aseprite_wizard_source_file_hash_ = "eb784b7cc52c5b191db07283d41bcdfc"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_y7205")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

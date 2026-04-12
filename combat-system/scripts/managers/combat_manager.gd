@@ -16,6 +16,9 @@ var enemy_units : Array[EnemyUnit]
 var unit_list : Array[Unit]
 var current_unit : PlayerUnit
 
+var next_unit : Unit
+var end_combat := false
+
 
 # =================================================================================================
 
@@ -81,9 +84,11 @@ func combat_setup():
 	combat_start()
 
 func combat_start():
-	# loop through unit list, find fastest unit, make them take their turn, repeat
-	for u in unit_list:
-		u.take_turn()
+	while end_combat == false:
+		next_unit = get_next_unit()
+		if end_combat == false:
+			next_unit.take_turn()
+			await get_tree().create_timer(1).timeout
 	
 	combat_end()
 
@@ -116,3 +121,30 @@ func combat_end():
 			#print("ERROR. How the fuck are you seeing this? It's a boolean.")
 	#
 	#return found_unit
+
+func get_next_unit() -> Unit:
+	var unit : Unit
+	unit = null
+	
+	for u in unit_list:
+		if u.has_acted == false:
+			if unit == null:
+				unit = u
+			else:
+				if u.current_move.priority > unit.current_move.priority:
+					unit = u
+				elif u.current_move.priority == unit.current_move.priority:
+					var u_eff_spd = u.spd * u.spd_buff
+					var unit_eff_spd = unit.spd * unit.spd_buff
+					
+					if u_eff_spd > unit_eff_spd:
+						unit = u
+					# Randomly chooses which unit to go next if speed is exactly the same
+					elif u_eff_spd == unit_eff_spd:
+						if randi_range(0, 1) == 0:
+							unit = u
+	
+	if unit == null:
+		end_combat = true
+	
+	return unit

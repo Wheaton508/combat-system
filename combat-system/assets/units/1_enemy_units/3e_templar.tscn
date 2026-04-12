@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c2xuoj3u66m5y"]
+
+[ext_resource type="Script" uid="uid://cc68narx07e1t" path="res://scripts/units/enemy_unit.gd" id="1_sl047"]
+[ext_resource type="SpriteFrames" uid="uid://csi26b1ku63cc" path="res://assets/sprite_frames/3_sf_templar.tres" id="2_51v4v"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_x02fw"]
+[ext_resource type="Resource" uid="uid://cdc2mgq56nfjq" path="res://assets/resources/roles/3_templar_role.tres" id="2_ymqif"]
+
+[node name="Unit" type="Node3D" unique_id=2021740730 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_sl047")
+role = ExtResource("2_ymqif")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1890203869]
+offset = Vector2(0, 7)
+flip_h = true
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_51v4v")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_x02fw")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false

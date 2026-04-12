@@ -15,7 +15,7 @@ class_name Role
 @export var atk_rank : String
 @export var def_rank : String
 @export var mag_rank : String
-@export var mag_def_rank : String
+@export var res_rank : String
 @export var spd_rank : String
 
 # Currently unused. Only needed if I choose to separate base and growth stat ranks, which for now I'm not doing

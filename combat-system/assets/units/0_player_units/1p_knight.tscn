@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://deh1dhnm15maf"]
+
+[ext_resource type="Script" uid="uid://d38v53j52u1ie" path="res://scripts/units/player_unit.gd" id="1_lywc2"]
+[ext_resource type="Script" uid="uid://djpghqhlqpxlp" path="res://scripts/custom_resources/move.gd" id="2_05hpn"]
+[ext_resource type="SpriteFrames" uid="uid://cxks03gs2ynl" path="res://assets/sprite_frames/1_sf_knight.tres" id="2_80pr4"]
+[ext_resource type="Resource" uid="uid://bmbwhtanedqcc" path="res://assets/resources/moves/0_sword/3_quick_cut.tres" id="3_imlo0"]
+[ext_resource type="Resource" uid="uid://dbvglovprgxmn" path="res://assets/resources/roles/1_knight_role.tres" id="4_cd2ds"]
+[ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="7_2bspm"]
+
+[sub_resource type="Resource" id="Resource_lef5q"]
+script = ExtResource("2_05hpn")
+name = "Test Crush"
+short_name = "Test Crush"
+description = "This move tests crushing"
+power = 40
+accuracy = 100
+weapon_types = Array[String](["Misc"])
+attack_types = Array[String](["Crush"])
+targeting_type = 1
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"
+
+[sub_resource type="Resource" id="Resource_aepks"]
+script = ExtResource("2_05hpn")
+name = "Test Heal"
+short_name = "Test Heal"
+description = "This move tests healing"
+power = 20
+accuracy = 101
+move_type = 1
+weapon_types = Array[String](["Magic"])
+attack_types = Array[String](["Healing"])
+targeting_type = 3
+metadata/_custom_type_script = "uid://djpghqhlqpxlp"
+
+[node name="Unit" type="Node3D" unique_id=1909121839 node_paths=PackedStringArray("animated_sprite", "indicator")]
+script = ExtResource("1_lywc2")
+moves = Array[ExtResource("2_05hpn")]([ExtResource("3_imlo0"), SubResource("Resource_lef5q"), SubResource("Resource_aepks"), null])
+role = ExtResource("4_cd2ds")
+animated_sprite = NodePath("AnimatedSprite3D")
+indicator = NodePath("Indicator")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=577222760]
+offset = Vector2(0, 7)
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_80pr4")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.28675544
+
+[node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("7_2bspm")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
+visible = false
