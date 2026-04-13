@@ -18,8 +18,10 @@ shaded = true
 alpha_cut = 2
 texture_filter = 0
 sprite_frames = ExtResource("3_aedng")
-animation = &"Idle"
+animation = &"Walk"
 autoplay = "Idle"
+frame = 7
+frame_progress = 1.0
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "pending_changes": {}

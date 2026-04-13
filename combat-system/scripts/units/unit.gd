@@ -151,13 +151,14 @@ func move_action(target: Unit, move: Move):
 					if damage_dealt < 1:
 						damage_dealt = 1
 				
-				animated_sprite.play("Attack01")
+				await play_animation("Attack01")
+				await target.play_animation("Hurt")
 				print(str(unit_name) + " attacking " + str(target.unit_name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
 				target.current_hp -= damage_dealt
 				if target.current_hp <= 0:
 					target.current_hp = 0
 					target.incapacitated = true
-					target.animated_sprite.play("Death")
+					target.play_animation("Death")
 				else:
 					print(str(target.current_hp) + "/" + str(target.hp) + " left!")
 			
@@ -167,7 +168,7 @@ func move_action(target: Unit, move: Move):
 					damage_healed = int((10 + (mag * (1 + (move.power / 100)))) * randf_range(0.9, 1.1))
 					if damage_healed < 10:
 						damage_healed = 10
-					animated_sprite.play("Attack01")
+					play_animation("Attack01")
 					print(str(unit_name) + " healing " + str(target.unit_name) + " with " + str(move.name) + " for " + str(damage_healed) + "!")
 					
 					target.current_hp += damage_healed
@@ -182,23 +183,25 @@ func move_action(target: Unit, move: Move):
 						if damage_dealt < 1:
 							damage_dealt = 1
 					
-					animated_sprite.play("Attack01")
+					await play_animation("Attack01")
+					await target.play_animation("Hurt")
 					print(str(name) + " attacking " + str(target.name) + " with " + str(move.name) + " for " + str(damage_dealt) + "!")
 					target.current_hp -= damage_dealt
 					if target.current_hp <= 0:
 						target.current_hp = 0
 						target.incapacitated = true
-						target.animated_sprite.play("Death")
+						target.play_animation("Death")
 					else:
 						print(str(target.current_hp) + "/" + str(target.hp) + " left!")
 				
 			move.Move_Type.STATUS:
 				move_effect(target, move)
-				pass
+				print (unit_name + " used " + move.name + "!")
 			_:
 				print("ERROR. Move selection failed.")
 	else: 
-		print(str(name) + " missed!")
+		await play_animation("Attack01")
+		print(str(unit_name) + " missed!")
 
 func calculate_weakness(target: Unit, move: Move) -> float:
 	var weakness_mod := 1.0
@@ -498,3 +501,31 @@ func reset_variables():
 	current_targets.clear()
 	has_acted = false
 	protecting = false
+
+## Animation name can be one of: Attack01, Attack02, Attack03, Hurt, Death, Idle, Walk
+func play_animation(animation_name : String):
+	match animation_name:
+		"Attack01":
+			animated_sprite.play("Attack01")
+			await animated_sprite.animation_finished
+			animated_sprite.play("Idle")
+		"Attack02":
+			animated_sprite.play("Attack02")
+			await animated_sprite.animation_finished
+			animated_sprite.play("Idle")
+		"Attack03":
+			animated_sprite.play("Attack03")
+			await animated_sprite.animation_finished
+			animated_sprite.play("Idle")
+		"Death":
+			animated_sprite.play("Death")
+		"Hurt":
+			animated_sprite.play("Hurt")
+			await animated_sprite.animation_finished
+			animated_sprite.play("Idle")
+		"Idle":
+			animated_sprite.play("Idle")
+		"Walk":
+			animated_sprite.play("Walk")
+		_:
+			print("ERROR. INVALID ANIMATION CALL FROM " + unit_name)
