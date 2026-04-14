@@ -124,7 +124,51 @@ func take_turn():
 		_:
 			print("ERROR. Ending turn.")
 
-func move_action(target: Unit, move: Move):
+func move_action(target : Unit, move : Move):
+	var damage_dealt : int
+	var damage_healed : int
+	var accuracy_check : int
+	
+	# Accuracy check
+	if move.accuracy == 101 or focusing == true:
+		accuracy_check = 101
+	elif target.parrying == true and move.move_type == Move.Move_Type.PHYSICAL:
+		accuracy_check = 0
+		debuff_stat(self, Move.Stat.DEFENSE, -1, 2)
+	else:
+		accuracy_check = randi_range(0, 100)
+	
+	if accuracy_check <= move.accuracy:
+		await play_animation("Attack01")
+		
+		if move.move_type == Move.Move_Type.HEALING:
+			damage_healed = calculate_damage(target, move)
+			while damage_healed > 0:
+				target.current_hp += 1
+				damage_healed -= 1
+				if target.current_hp == target.hp:
+					damage_healed == 0
+			
+		elif move.move_type == Move.Move_Type.STATUS:
+			move_effect(target, move)
+		else:
+			await target.play_animation("Hurt")
+			
+			damage_dealt = calculate_damage(target, move)
+			while damage_dealt > 0:
+				target.current_hp -= 1
+				damage_healed -= 1
+				if target.current_hp == target.hp:
+					damage_dealt == 0
+			
+			if target.current_hp == 0:
+				target.incapacitated == true
+				await target.play_animation("Death")
+	else:
+		await play_animation("Attack01")
+		print(unit_name + " missed!")
+
+func move_action_old(target: Unit, move: Move):
 	var damage_dealt : int
 	var damage_healed : int
 	var accuracy_check : int
@@ -529,3 +573,34 @@ func play_animation(animation_name : String):
 			animated_sprite.play("Walk")
 		_:
 			print("ERROR. INVALID ANIMATION CALL FROM " + unit_name)
+
+func calculate_damage(target : Unit, move : Move) -> int:
+	var damage : int
+	
+	var eff_power : int
+	var eff_reduction : int
+	var weakness := calculate_weakness(target, move)
+	
+	match move.move_type:
+		Move.Move_Type.PHYSICAL:
+			eff_power = atk * atk_buff
+			eff_reduction = target.def * target.def_buff
+			
+			# Will change this
+			damage = (eff_power - eff_reduction) * weakness
+			if damage < 0:
+				damage = 1
+		Move.Move_Type.MAGIC:
+			eff_power = mag * mag_buff
+			eff_reduction = target.res * target.res_buff
+			
+			# Will change this
+			damage = (eff_power - eff_reduction) * weakness
+			if damage < 0:
+				damage = 1
+		Move.Move_Type.HEALING:
+			damage = 10
+		_:
+			print("ERROR. Invalid move type.")
+	
+	return damage
