@@ -3,7 +3,7 @@ class_name TargetButton
 
 @export_group("Node References")
 @export var combat_manager : CombatManager
-@export var action_menu : Control
+@export var ui_manager : UIManager
 @export var board_position : BoardPosition
 
 var stored_unit : Unit
@@ -24,10 +24,9 @@ func _on_pressed() -> void:
 	
 	if combat_manager.current_unit.current_position == Unit.Position.PRIMARY and combat_manager.player_secondary.current_unit.incapacitated == false:
 		combat_manager.current_unit = combat_manager.player_secondary.current_unit
-		action_menu.visible = true
-		get_parent().visible = false
+		ui_manager.proceed_menu("Action Select")
 		print("Current unit is now " + str(combat_manager.current_unit))
 	else:
 		combat_manager.combat_setup()
-		get_parent().visible = false
+		ui_manager.proceed_menu("Dialogue Box")
 		pass

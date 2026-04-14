@@ -6,6 +6,7 @@ class_name MoveButton
 
 @export_group("Node References")
 @export var combat_manager : CombatManager
+@export var ui_manager : UIManager
 @export var action_menu : Control
 @export var target_menu : Control
 @export var info_panel : MoveInfoPanel
@@ -87,8 +88,7 @@ func _on_pressed() -> void:
 	# Set targeting for current_unit
 	match stored_move.targeting_type:
 		Move.Targeting_Type.SINGLE:
-			target_menu.visible = true
-			get_parent().visible = false
+			ui_manager.proceed_menu("Target Select")
 		Move.Targeting_Type.SPREAD:
 			combat_manager.current_unit.current_targets.append(combat_manager.enemy_primary)
 			combat_manager.current_unit.current_targets.append(combat_manager.enemy_secondary)
@@ -139,7 +139,7 @@ func to_next_phase():
 		get_parent().visible = false
 	else:
 		combat_manager.combat_setup()
-		get_parent().visible = false
+		ui_manager.proceed_menu("Dialogue Box")
 		pass
 	
 	

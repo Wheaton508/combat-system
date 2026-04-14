@@ -1,12 +1,12 @@
 extends Button
 class_name SelectionButton
 
-@export var menu_to_open : Control
+@export var ui_manager : UIManager
+@export var menu_to_open : String
 
 
 # =================================================================================================
 
 
 func _on_pressed() -> void:
-	menu_to_open.visible = true
-	get_parent().visible = false
+	ui_manager.proceed_menu(menu_to_open)

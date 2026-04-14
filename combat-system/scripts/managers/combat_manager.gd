@@ -9,6 +9,7 @@ class_name CombatManager
 @onready var enemy_primary: BoardPosition = $"../Positions/EnemyPrimary"
 @onready var enemy_secondary: BoardPosition = $"../Positions/EnemySecondary"
 @onready var enemy_backline: BoardPosition = $"../Positions/EnemyBackline"
+@onready var ui_manager: UIManager = $"../CombatOverlay"
 
 @export_group("Unit Lists")
 var player_units : Array[PlayerUnit]
@@ -100,10 +101,15 @@ func combat_end():
 	# end of combat effects
 	
 	# reset combat manager
+	end_combat = false
+	
 	if player_primary.current_unit.incapacitated == false:
 		current_unit = player_primary.current_unit
 	else:
 		current_unit = player_secondary.current_unit
+	
+	ui_manager.proceed_menu("Action Select")
+	ui_manager.dialogue_box.visible = false
 
 #func get_unit_at_position(position_to_find : Unit.Position, is_player_unit : bool) -> Unit:
 	#var found_unit : Unit
