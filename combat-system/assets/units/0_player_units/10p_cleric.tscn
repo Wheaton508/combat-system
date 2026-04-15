@@ -4,12 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_e1m15"]
 [ext_resource type="Resource" uid="uid://dt76i2jrnhk5f" path="res://assets/resources/roles/10_cleric_role.tres" id="2_hub5n"]
 [ext_resource type="SpriteFrames" uid="uid://cjmj3mslngjcy" path="res://assets/sprite_frames/10_sf_cleric.tres" id="2_jca7d"]
+[ext_resource type="PackedScene" uid="uid://m8utmgpdbnri" path="res://scenes/game_objects/health_bar.tscn" id="5_hub5n"]
 
-[node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator")]
+[sub_resource type="ViewportTexture" id="ViewportTexture_230xv"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator", "health_bar")]
 script = ExtResource("1_1yxyw")
 role = ExtResource("2_hub5n")
 animated_sprite = NodePath("AnimatedSprite3D")
 indicator = NodePath("Indicator")
+health_bar = NodePath("SubViewport/HealthBar")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=812299299]
 offset = Vector2(0, 7)
@@ -43,3 +48,16 @@ metadata/_aseprite_wizard_source_file_hash_ = "e66fa46969a933e79a9dd0170d3c7abe"
 [node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_e1m15")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
 visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1661510737]
+transform = Transform3D(0.5, 0, 0, 0, 0.3399575, 0.36664546, 0, -0.36664546, 0.3399575, 0.075, 0.02, 0.125)
+texture_filter = 0
+texture = SubResource("ViewportTexture_230xv")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=103098258]
+transparent_bg = true
+size = Vector2i(48, 16)
+
+[node name="HealthBar" parent="SubViewport" unique_id=1168642059 instance=ExtResource("5_hub5n")]
+offset_right = 44.4
+offset_bottom = 15.296

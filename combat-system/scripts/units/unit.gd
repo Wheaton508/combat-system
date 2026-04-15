@@ -22,7 +22,8 @@ enum Action {MOVE, ITEM, SWAP}
 
 @export_group("Node References")
 @export var animated_sprite : AnimatedSprite3D
-@export var indicator :Node3D
+@export var indicator : Node3D
+@export var health_bar : TextureProgressBar
 
 # Unit stats. Directly affected by level ups and equipment.
 var level := 1
@@ -106,6 +107,9 @@ func _ready() -> void:
 		
 		print(unit_name + " initialized!")
 		initialized = true
+	
+	health_bar.max_value = hp
+	health_bar.value = health_bar.max_value
 
 # Set "has acted" for incapacitated units at the same time as backline units in case I ever add revives
 func take_turn():
@@ -132,9 +136,9 @@ func move_action(target : Unit, move : Move):
 	
 	# Accuracy check
 	if move.accuracy == 101 or focusing == true:
-		accuracy_check = 101
-	elif target.parrying == true and move.move_type == Move.Move_Type.PHYSICAL:
 		accuracy_check = 0
+	elif target.parrying == true and move.move_type == Move.Move_Type.PHYSICAL:
+		accuracy_check = 101
 		debuff_stat(self, Move.Stat.DEFENSE, -1, 2)
 	else:
 		accuracy_check = randi_range(0, 100)
@@ -144,11 +148,18 @@ func move_action(target : Unit, move : Move):
 		
 		if move.move_type == Move.Move_Type.HEALING:
 			damage_healed = calculate_damage(target, move)
-			while damage_healed > 0:
-				target.current_hp += 1
-				damage_healed -= 1
-				if target.current_hp == target.hp:
-					damage_healed == 0
+			target.current_hp += damage_healed
+			if target.current_hp > target.hp:
+				target.current_hp = target.hp
+			target.health_bar.value = target.current_hp
+			
+			# This looks cool but crashes the game rn
+			#while damage_healed > 0:
+				#target.current_hp += 1
+				#target.health_bar.value += 1
+				#damage_healed -= 1
+				#if target.current_hp == target.hp:
+					#damage_healed = 0
 			
 		elif move.move_type == Move.Move_Type.STATUS:
 			move_effect(target, move)
@@ -156,14 +167,21 @@ func move_action(target : Unit, move : Move):
 			await target.play_animation("Hurt")
 			
 			damage_dealt = calculate_damage(target, move)
-			while damage_dealt > 0:
-				target.current_hp -= 1
-				damage_healed -= 1
-				if target.current_hp == target.hp:
-					damage_dealt == 0
+			target.current_hp -= damage_dealt
+			if target.current_hp < 0:
+				target.current_hp = 0
+			target.health_bar.value = target.current_hp
+			
+			# This looks cool but crashes the game rn
+			#while damage_dealt > 0:
+				#target.current_hp -= 1
+				#target.health_bar.value -= 1
+				#damage_healed -= 1
+				#if target.current_hp == target.hp:
+					#damage_dealt = 0
 			
 			if target.current_hp == 0:
-				target.incapacitated == true
+				target.incapacitated = true
 				await target.play_animation("Death")
 	else:
 		await play_animation("Attack01")
@@ -603,4 +621,5 @@ func calculate_damage(target : Unit, move : Move) -> int:
 		_:
 			print("ERROR. Invalid move type.")
 	
+	damage = 5
 	return damage

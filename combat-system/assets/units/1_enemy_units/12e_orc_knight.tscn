@@ -4,12 +4,17 @@
 [ext_resource type="SpriteFrames" uid="uid://ckghtryw0afpl" path="res://assets/sprite_frames/12_sf_orc_knight.tres" id="2_8g2iy"]
 [ext_resource type="Resource" uid="uid://f1mrxn1e3bg7" path="res://assets/resources/roles/12_orc_knight_role.tres" id="2_kvrwm"]
 [ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_nljem"]
+[ext_resource type="PackedScene" uid="uid://m8utmgpdbnri" path="res://scenes/game_objects/health_bar.tscn" id="5_kvrwm"]
 
-[node name="Unit" type="Node3D" unique_id=2021740730 node_paths=PackedStringArray("animated_sprite", "indicator")]
+[sub_resource type="ViewportTexture" id="ViewportTexture_svv6p"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Unit" type="Node3D" unique_id=2021740730 node_paths=PackedStringArray("animated_sprite", "indicator", "health_bar")]
 script = ExtResource("1_ix2h6")
 role = ExtResource("2_kvrwm")
 animated_sprite = NodePath("AnimatedSprite3D")
 indicator = NodePath("Indicator")
+health_bar = NodePath("SubViewport/HealthBar")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1890203869]
 offset = Vector2(0, 7)
@@ -25,3 +30,16 @@ autoplay = "Idle"
 [node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_nljem")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
 visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=501452427]
+transform = Transform3D(0.5, 0, 0, 0, 0.3399575, 0.36664546, 0, -0.36664546, 0.3399575, 0.075, 0.02, 0.125)
+texture_filter = 0
+texture = SubResource("ViewportTexture_svv6p")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=58580330]
+transparent_bg = true
+size = Vector2i(48, 16)
+
+[node name="HealthBar" parent="SubViewport" unique_id=1168642059 instance=ExtResource("5_kvrwm")]
+offset_right = 44.4
+offset_bottom = 15.296
