@@ -44,6 +44,7 @@
 [ext_resource type="Resource" uid="uid://diaaq5g6cnnde" path="res://assets/resources/moves/12_stat_augmenting/115_daunt.tres" id="30_oqi3m"]
 [ext_resource type="Resource" uid="uid://dsya2soq28gf1" path="res://assets/resources/moves/13_status/150_taunt.tres" id="31_d6omg"]
 [ext_resource type="Script" uid="uid://bnmx6rvjtqugs" path="res://scripts/ui/ui_manager.gd" id="34_7yp61"]
+[ext_resource type="Script" uid="uid://d2bt1wgq7suvp" path="res://scripts/ui/dialogue_menu.gd" id="45_p5c4r"]
 
 [node name="CombatScene" type="Node3D" unique_id=380080171]
 
@@ -624,11 +625,34 @@ grow_vertical = 2
 script = ExtResource("6_0vylu")
 previous_menu = NodePath("../ActionSelect")
 
-[node name="DialogueBox" type="Control" parent="CombatOverlay/BaseUI" unique_id=1081834463]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("6_0vylu")
+[node name="DialogueBox" type="Control" parent="CombatOverlay/BaseUI" unique_id=1081834463 node_paths=PackedStringArray("dialogue")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("45_p5c4r")
+dialogue = NodePath("Dialogue")
+
+[node name="Dialogue" type="Label" parent="CombatOverlay/BaseUI/DialogueBox" unique_id=670012418]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.037
+anchor_top = 0.55600005
+anchor_right = 0.9620001
+anchor_bottom = 0.95600003
+offset_left = 24.32
+offset_top = 15.839981
+offset_right = -23.680054
+offset_bottom = -24.160004
+theme_override_colors/font_color = Color(0.38253573, 0.16529384, 0.08503703, 1)
+theme_override_fonts/font = ExtResource("8_6ovae")
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 3
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2002519459]
 transform = Transform3D(1, 0, 0, 0, 0.9063078, 0.4226183, 0, -0.4226183, 0.9063078, 0, 0.29, 0.81)
+
+[connection signal="visibility_changed" from="CombatOverlay/BaseUI/DialogueBox" to="CombatOverlay/BaseUI/DialogueBox" method="_on_visibility_changed"]

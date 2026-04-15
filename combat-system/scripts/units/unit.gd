@@ -116,7 +116,8 @@ func take_turn():
 			# Play animation
 			# Attack all targets simultaneously
 			for p in current_targets:
-				move_action(p.current_unit, current_move) # I want to clean this up eventually, maybe even attack both targets simultaneously, but for now this works
+				combat_manager.ui_manager.dialogue_box.dialogue.text = unit_name + " used " + current_move.name + "!"
+				move_action(p.current_unit, current_move)
 		Action.ITEM:
 			item_action()
 		Action.SWAP:
@@ -166,7 +167,6 @@ func move_action(target : Unit, move : Move):
 				await target.play_animation("Death")
 	else:
 		await play_animation("Attack01")
-		print(unit_name + " missed!")
 
 func move_action_old(target: Unit, move: Move):
 	var damage_dealt : int

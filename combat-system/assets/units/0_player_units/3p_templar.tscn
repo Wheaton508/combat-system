@@ -4,6 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://caqggnu7rmc0e" path="res://imports/prototype_kit/indicator-round-c.glb" id="2_v2gmo"]
 [ext_resource type="SpriteFrames" uid="uid://csi26b1ku63cc" path="res://assets/sprite_frames/3_sf_templar.tres" id="2_vbh4u"]
 [ext_resource type="Resource" uid="uid://cdc2mgq56nfjq" path="res://assets/resources/roles/3_templar_role.tres" id="2_yww1k"]
+[ext_resource type="PackedScene" uid="uid://m8utmgpdbnri" path="res://scenes/game_objects/health_bar.tscn" id="5_yww1k"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yww1k"]
+viewport_path = NodePath("SubViewport")
 
 [node name="Unit" type="Node3D" unique_id=1763975509 node_paths=PackedStringArray("animated_sprite", "indicator")]
 script = ExtResource("1_akmr3")
@@ -18,10 +22,10 @@ shaded = true
 alpha_cut = 2
 texture_filter = 0
 sprite_frames = ExtResource("2_vbh4u")
-animation = &"Walk"
+animation = &"Idle"
 autoplay = "Idle"
-frame = 3
-frame_progress = 0.6277253
+frame = 4
+frame_progress = 0.35017237
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": true,
 "pending_changes": {}
@@ -44,3 +48,16 @@ metadata/_aseprite_wizard_source_file_hash_ = "8c69396956e6c48cecdc174f1aaa70c3"
 [node name="Indicator" parent="." unique_id=329746738 instance=ExtResource("2_v2gmo")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
 visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=114966449]
+transform = Transform3D(0.5, 0, 0, 0, 0.3399575, 0.36664546, 0, -0.36664546, 0.3399575, 0.075, 0.02, 0.125)
+texture_filter = 0
+texture = SubResource("ViewportTexture_yww1k")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=228148789]
+transparent_bg = true
+size = Vector2i(48, 16)
+
+[node name="HealthBar" parent="SubViewport" unique_id=1168642059 instance=ExtResource("5_yww1k")]
+offset_right = 44.4
+offset_bottom = 15.296

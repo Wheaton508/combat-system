@@ -1,13 +1,13 @@
 extends CanvasLayer
 class_name UIManager
 
-@onready var action_select: Control = $BaseUI/ActionSelect
+@onready var action_select: Menu = $BaseUI/ActionSelect
 @onready var move_select: Menu = $BaseUI/MoveSelect
-@onready var target_select: Control = $BaseUI/TargetSelect
+@onready var target_select: Menu = $BaseUI/TargetSelect
 @onready var use_item: Menu = $BaseUI/UseItem
 @onready var confirm_swap: Menu = $BaseUI/ConfirmSwap
-@onready var unit_status: Control = $BaseUI/UnitStatus
-@onready var dialogue_box: Control = $BaseUI/DialogueBox
+@onready var unit_status: Menu = $BaseUI/UnitStatus
+@onready var dialogue_box: DialogueMenu = $BaseUI/DialogueBox
 
 var current_menu : Menu
 var menu_history : Array[String]

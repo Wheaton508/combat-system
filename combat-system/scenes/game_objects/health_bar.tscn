@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://m8utmgpdbnri"]
+
+[ext_resource type="Script" uid="uid://bn18g4ygy52wm" path="res://scripts/game_objects/health_bar.gd" id="1_nrjmx"]
+[ext_resource type="Texture2D" uid="uid://4sxrsm5s848g" path="res://imports/fantasy_ui/ui/individual_elements/1x/Slider03_Box.png" id="1_uu3wj"]
+[ext_resource type="Texture2D" uid="uid://b142hahh1mg5n" path="res://imports/fantasy_ui/ui/individual_elements/1x/Slider03_Bar04.png" id="2_h851u"]
+
+[node name="HealthBar" type="TextureProgressBar" unique_id=1168642059]
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.044000003
+offset_bottom = 0.1599989
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+texture_under = ExtResource("1_uu3wj")
+texture_progress = ExtResource("2_h851u")
+texture_progress_offset = Vector2(8, 7)
+script = ExtResource("1_nrjmx")
