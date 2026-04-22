@@ -94,11 +94,64 @@ func combat_start():
 	combat_end()
 
 func combat_end():
+	var temp_unit : Unit
+	
 	for u in unit_list:
-		u.has_acted = false
-		u.protecting = false
-		u.current_targets.clear()
+		u.reset_variables()
+	
 	# end of combat effects
+	
+	# Death check, if frontline unit is dead and backline is alive, swap them forward
+	if player_primary.current_unit.incapacitated == true and player_backline.current_unit.incapacitated == false:
+		temp_unit = player_primary.current_unit
+		
+		# Move backline unit
+		player_backline.current_unit.position = player_primary.position
+		player_backline.current_unit.current_position = Unit.Position.PRIMARY
+		player_primary.current_unit = player_backline.current_unit
+		
+		# Move frontline unit
+		temp_unit.position = player_backline.position
+		temp_unit.current_position = Unit.Position.BACKLINE
+		player_backline.current_unit = temp_unit
+	elif player_secondary.current_unit.incapacitated == true and player_backline.current_unit.incapacitated == false:
+		temp_unit = player_secondary.current_unit
+		
+		# Move backline unit
+		player_backline.current_unit.position = player_secondary.position
+		player_backline.current_unit.current_position = Unit.Position.SECONDARY
+		player_secondary.current_unit = player_backline.current_unit
+		
+		# Move frontline unit
+		temp_unit.position = player_backline.position
+		temp_unit.current_position = Unit.Position.BACKLINE
+		player_backline.current_unit = temp_unit
+	
+	if enemy_primary.current_unit.incapacitated == true and enemy_backline.current_unit.incapacitated == false:
+		temp_unit = enemy_primary.current_unit
+		
+		# Move backline unit
+		enemy_backline.current_unit.position = enemy_primary.position
+		enemy_backline.current_unit.current_position = Unit.Position.PRIMARY
+		enemy_primary.current_unit = enemy_backline.current_unit
+		
+		# Move frontline unit
+		temp_unit.position = enemy_backline.position
+		temp_unit.current_position = Unit.Position.BACKLINE
+		enemy_backline.current_unit = temp_unit
+		
+	elif enemy_secondary.current_unit.incapacitated == true and enemy_backline.current_unit.incapacitated == false:
+		temp_unit = enemy_secondary.current_unit
+		
+		# Move backline unit
+		enemy_backline.current_unit.position = enemy_secondary.position
+		enemy_backline.current_unit.current_position = Unit.Position.SECONDARY
+		enemy_secondary.current_unit = enemy_backline.current_unit
+		
+		# Move frontline unit
+		temp_unit.position = enemy_backline.position
+		temp_unit.current_position = Unit.Position.BACKLINE
+		enemy_backline.current_unit = temp_unit
 	
 	# reset combat manager
 	end_combat = false
@@ -130,6 +183,9 @@ func combat_end():
 
 func get_next_unit() -> Unit:
 	var unit : Unit
+	var u_priority : int
+	var unit_priority : int
+	
 	unit = null
 	
 	for u in unit_list:
@@ -137,11 +193,22 @@ func get_next_unit() -> Unit:
 			if unit == null:
 				unit = u
 			else:
-				if u.current_move.priority > unit.current_move.priority:
+				# Sets priority for each units based on move, or zero if swap/item
+				if u.current_action == Unit.Action.SWAP or u.current_action == Unit.Action.ITEM:
+					u_priority = 1
+				else:
+					u_priority = u.current_move.priority
+				
+				if unit.current_action == Unit.Action.SWAP or unit.current_action == Unit.Action.ITEM:
+					unit_priority = 0
+				else:
+					unit_priority = unit.current_move.priority
+				
+				if u_priority > unit_priority:
 					unit = u
-				elif u.current_move.priority == unit.current_move.priority:
-					var u_eff_spd = u.spd * u.spd_buff
-					var unit_eff_spd = unit.spd * unit.spd_buff
+				elif u_priority == unit_priority:
+					var u_eff_spd := u.spd * u.spd_buff
+					var unit_eff_spd := unit.spd * unit.spd_buff
 					
 					if u_eff_spd > unit_eff_spd:
 						unit = u

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bsylwh6neretf"]
+
+[ext_resource type="Theme" uid="uid://dxcbyf3qlsc8k" path="res://assets/themes/golden_button.tres" id="1_jvrv1"]
+[ext_resource type="Script" uid="uid://crh8putvh22xh" path="res://scripts/ui/swap_button.gd" id="2_e4sdo"]
+
+[node name="SwapButton" type="Button" unique_id=495775249]
+anchors_preset = -1
+anchor_right = 0.22500001
+anchor_bottom = 0.133
+offset_bottom = 0.11999893
+theme = ExtResource("1_jvrv1")
+text = "-"
+script = ExtResource("2_e4sdo")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

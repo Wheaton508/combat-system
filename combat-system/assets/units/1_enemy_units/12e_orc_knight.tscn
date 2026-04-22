@@ -32,7 +32,7 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.01, 0)
 visible = false
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=501452427]
-transform = Transform3D(0.5, 0, 0, 0, 0.3399575, 0.36664546, 0, -0.36664546, 0.3399575, 0.075, 0.02, 0.125)
+transform = Transform3D(0.5, 0, 0, 0, 0.3399575, 0.36664546, 0, -0.36664546, 0.3399575, -0.035, 0.02, 0.125)
 texture_filter = 0
 texture = SubResource("ViewportTexture_svv6p")
 

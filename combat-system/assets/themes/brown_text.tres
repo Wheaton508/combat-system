@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://bplw1rhiv7sk4"]
+
+[ext_resource type="FontFile" uid="uid://bmj6c7pbnucom" path="res://imports/fantasy_ui/fonts/FantasyRPGtitle (size 11).ttf" id="1_q8igb"]
+
+[resource]
+Label/colors/font_color = Color(0.38431373, 0.16470589, 0.08627451, 1)
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_q8igb")

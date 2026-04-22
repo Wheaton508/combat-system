@@ -10,7 +10,6 @@ class_name UIManager
 @onready var dialogue_box: DialogueMenu = $BaseUI/DialogueBox
 
 var current_menu : Menu
-var menu_history : Array[String]
 
 
 # =================================================================================================

@@ -135,11 +135,7 @@ func to_next_phase():
 	
 	if combat_manager.current_unit.current_position == Unit.Position.PRIMARY and combat_manager.player_secondary.current_unit.incapacitated == false:
 		combat_manager.current_unit = combat_manager.player_secondary.current_unit
-		action_menu.visible = true
-		get_parent().visible = false
+		ui_manager.proceed_menu("Action Select")
 	else:
 		combat_manager.combat_setup()
 		ui_manager.proceed_menu("Dialogue Box")
-		pass
-	
-	

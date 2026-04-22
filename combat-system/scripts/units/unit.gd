@@ -382,7 +382,49 @@ func item_action():
 	pass
 
 func swap_action():
-	pass
+	if self is PlayerUnit:
+		combat_manager.ui_manager.dialogue_box.dialogue.text = unit_name + " swapped with " + combat_manager.player_backline.current_unit.unit_name + "."
+		
+		# Set data for target
+		if current_position == Position.PRIMARY:
+			combat_manager.player_backline.current_unit.position = combat_manager.player_primary.position
+			combat_manager.player_backline.current_unit.current_position = Position.PRIMARY
+			combat_manager.player_primary.current_unit = combat_manager.player_backline.current_unit
+			# set pos unit
+		elif current_position == Position.SECONDARY:
+			combat_manager.player_backline.current_unit.position = combat_manager.player_secondary.position
+			combat_manager.player_backline.current_unit.current_position = Position.SECONDARY
+			combat_manager.player_secondary.current_unit = combat_manager.player_backline.current_unit
+		else:
+			print("ERROR. " + unit_name + " invalid swap position.")
+		
+		# Set data for self
+		position = combat_manager.player_backline.position
+		current_position = Position.BACKLINE
+		combat_manager.player_backline.current_unit = self
+	
+	else: # If unit is EnemyUnit
+		combat_manager.ui_manager.dialogue_box.dialogue.text = unit_name + " swapped with " + combat_manager.enemy_backline.current_unit.unit_name + "."
+		
+		# Set data for target
+		if current_position == Position.PRIMARY:
+			combat_manager.enemy_backline.current_unit.position = combat_manager.enemy_primary.position
+			combat_manager.enemy_backline.current_unit.current_position = Position.PRIMARY
+			combat_manager.enemy_primary.current_unit = combat_manager.enemy_backline.current_unit
+			# set pos unit
+		elif current_position == Position.SECONDARY:
+			combat_manager.enemy_backline.current_unit.position = combat_manager.enemy_secondary.position
+			combat_manager.enemy_backline.current_unit.current_position = Position.SECONDARY
+			combat_manager.enemy_secondary.current_unit = combat_manager.enemy_backline.current_unit
+		else:
+			print("ERROR. " + unit_name + " invalid swap position.")
+		
+		# Set data for self
+		position = combat_manager.enemy_backline.position
+		current_position = Position.BACKLINE
+		combat_manager.enemy_backline.current_unit = self
+	
+	await get_tree().create_timer(1.0).timeout
 
 func buff_stat(target: Unit, stat: Move.Stat, stage: int, duration: int):
 	match stat:
@@ -563,6 +605,8 @@ func reset_variables():
 	current_targets.clear()
 	has_acted = false
 	protecting = false
+	
+	# decrease counters and reset stats
 
 ## Animation name can be one of: Attack01, Attack02, Attack03, Hurt, Death, Idle, Walk
 func play_animation(animation_name : String):
