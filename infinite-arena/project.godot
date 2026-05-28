@@ -15,12 +15,9 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Infinite Arena"
+run/main_scene="uid://qh2uayd8vj1t"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-Global="*uid://wjwvgtv2je2d"
 
 [display]
 
@@ -28,6 +25,7 @@ window/size/viewport_width=640
 window/size/viewport_height=360
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://dsxw4s27fxba1"
 
 [editor_plugins]
 
@@ -38,6 +36,7 @@ enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
 folder_colors={
 "res://addons/AsepriteWizard/": "orange",
 "res://assets/": "red",
+"res://assets/themes/": "orange",
 "res://imports/": "red",
 "res://imports/fantasy_ui/": "orange",
 "res://imports/fantasy_ui/fonts/": "yellow",
@@ -45,7 +44,10 @@ folder_colors={
 "res://imports/fantasy_ui/ui/individual_images/": "green",
 "res://scenes/": "red",
 "res://scenes/game_scenes/": "orange",
-"res://scripts/": "red"
+"res://scenes/ui/": "orange",
+"res://scripts/": "red",
+"res://scripts/ui/": "orange",
+"res://scripts/ui/buttons/": "yellow"
 }
 
 [input]

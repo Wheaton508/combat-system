@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://c21f6vjh7htd5"]
+
+[ext_resource type="FontFile" uid="uid://l1xqc83y41p4" path="res://imports/fantasy_ui/fonts/FantasyRPGtext (size 8).ttf" id="1_6k6qv"]
+[ext_resource type="Texture2D" uid="uid://7r5phqtyw7qw" path="res://imports/fantasy_ui/ui/UI assets (1x).png" id="2_4wwkx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jk4ix"]
+texture = ExtResource("2_4wwkx")
+region_rect = Rect2(1, 162, 46, 13)
+
+[resource]
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_6k6qv")
+Button/styles/normal = SubResource("StyleBoxTexture_jk4ix")

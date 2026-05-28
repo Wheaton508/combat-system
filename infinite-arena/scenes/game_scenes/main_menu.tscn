@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://qh2uayd8vj1t"]
 
+[ext_resource type="FontFile" uid="uid://cs1c6un2wdiyl" path="res://imports/fantasy_ui/fonts/FantasyRPGtitle (size 11).ttf" id="1_3hng2"]
+[ext_resource type="Texture2D" uid="uid://bh74tbk8bkerl" path="res://imports/fantasy_ui/ui/UI assets (2x).png" id="2_idbya"]
+[ext_resource type="Theme" uid="uid://c21f6vjh7htd5" path="res://assets/themes/main_menu_button_big.tres" id="3_idbya"]
+[ext_resource type="Theme" uid="uid://g0v7wptephtk" path="res://assets/themes/main_menu_button_small.tres" id="4_vwayb"]
+
 [node name="MainMenu" type="Node3D" unique_id=712058389]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1337414225]
@@ -11,3 +16,94 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Menu" unique_id=661474769]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = -434.0
+offset_bottom = -295.0
+theme_override_fonts/font = ExtResource("1_3hng2")
+theme_override_font_sizes/font_size = 22
+text = "The Infinite
+Arena"
+horizontal_alignment = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Menu" unique_id=1711359500]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 80.0
+offset_right = -416.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_idbya")
+region_rect = Rect2(868, 2, 88, 90)
+patch_margin_left = 20
+patch_margin_top = 26
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="NewGame" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=1245183980]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 40.0
+offset_right = -34.0
+offset_bottom = -180.0
+theme = ExtResource("3_idbya")
+text = "New Game"
+
+[node name="Continue Game" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=1650690439]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 88.0
+offset_right = -34.0
+offset_bottom = -132.0
+theme = ExtResource("3_idbya")
+text = "Continue Game"
+
+[node name="Hall of Fame" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=290515528]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 136.0
+offset_right = -34.0
+offset_bottom = -84.0
+theme = ExtResource("3_idbya")
+text = "Hall of Fame"
+
+[node name="Options" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=197748402]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 200.0
+offset_right = -124.0
+offset_bottom = -33.0
+theme = ExtResource("4_vwayb")
+
+[node name="Exit" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=17402525]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = 200.0
+offset_right = -44.0
+offset_bottom = -33.0
+theme = ExtResource("4_vwayb")

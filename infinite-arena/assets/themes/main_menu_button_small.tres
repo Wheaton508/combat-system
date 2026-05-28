@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3 uid="uid://g0v7wptephtk"]
+
+[ext_resource type="Texture2D" uid="uid://7r5phqtyw7qw" path="res://imports/fantasy_ui/ui/UI assets (1x).png" id="1_m0htc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aeppi"]
+texture = ExtResource("1_m0htc")
+region_rect = Rect2(151, 162, 18, 13)
+
+[resource]
+Button/styles/normal = SubResource("StyleBoxTexture_aeppi")
