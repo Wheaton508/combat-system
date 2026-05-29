@@ -3,11 +3,25 @@
 [ext_resource type="FontFile" uid="uid://l1xqc83y41p4" path="res://imports/fantasy_ui/fonts/FantasyRPGtext (size 8).ttf" id="1_6k6qv"]
 [ext_resource type="Texture2D" uid="uid://7r5phqtyw7qw" path="res://imports/fantasy_ui/ui/UI assets (1x).png" id="2_4wwkx"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yunuv"]
+texture = ExtResource("2_4wwkx")
+region_rect = Rect2(96, 161, 48, 14)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wecw2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wecw2"]
+texture = ExtResource("2_4wwkx")
+region_rect = Rect2(48, 161, 48, 14)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jk4ix"]
 texture = ExtResource("2_4wwkx")
-region_rect = Rect2(1, 162, 46, 13)
+region_rect = Rect2(0, 161, 48, 14)
 
 [resource]
 Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_6k6qv")
+Button/styles/disabled = SubResource("StyleBoxTexture_yunuv")
+Button/styles/focus = SubResource("StyleBoxEmpty_wecw2")
+Button/styles/hover = SubResource("StyleBoxTexture_wecw2")
 Button/styles/normal = SubResource("StyleBoxTexture_jk4ix")
+Button/styles/pressed = SubResource("StyleBoxTexture_yunuv")

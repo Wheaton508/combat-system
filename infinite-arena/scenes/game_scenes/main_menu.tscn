@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bh74tbk8bkerl" path="res://imports/fantasy_ui/ui/UI assets (2x).png" id="2_idbya"]
 [ext_resource type="Theme" uid="uid://c21f6vjh7htd5" path="res://assets/themes/main_menu_button_big.tres" id="3_idbya"]
 [ext_resource type="Theme" uid="uid://g0v7wptephtk" path="res://assets/themes/main_menu_button_small.tres" id="4_vwayb"]
+[ext_resource type="Texture2D" uid="uid://c4uyfspbdu71d" path="res://imports/fantasy_ui/ui/individual_images/Gear.png" id="5_1l1qg"]
+[ext_resource type="Texture2D" uid="uid://d386ldmah2okr" path="res://imports/fantasy_ui/ui/individual_images/Close.png" id="6_aoq6b"]
 
 [node name="MainMenu" type="Node3D" unique_id=712058389]
 
@@ -55,35 +57,37 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 36.0
+offset_left = 32.0
 offset_top = 40.0
-offset_right = -34.0
-offset_bottom = -180.0
+offset_right = -32.0
+offset_bottom = -177.0
 theme = ExtResource("3_idbya")
 text = "New Game"
 
-[node name="Continue Game" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=1650690439]
+[node name="ContinueGame" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=1650690439]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 36.0
+offset_left = 32.0
 offset_top = 88.0
-offset_right = -34.0
-offset_bottom = -132.0
+offset_right = -32.0
+offset_bottom = -129.0
 theme = ExtResource("3_idbya")
+disabled = true
 text = "Continue Game"
 
-[node name="Hall of Fame" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=290515528]
+[node name="HallOfFame" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=290515528]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 36.0
+offset_left = 32.0
 offset_top = 136.0
-offset_right = -34.0
-offset_bottom = -84.0
+offset_right = -32.0
+offset_bottom = -81.0
 theme = ExtResource("3_idbya")
+disabled = true
 text = "Hall of Fame"
 
 [node name="Options" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=197748402]
@@ -91,19 +95,102 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 48.0
-offset_top = 200.0
-offset_right = -124.0
-offset_bottom = -33.0
+offset_left = 36.0
+offset_top = 196.0
+offset_right = -132.0
+offset_bottom = -35.0
 theme = ExtResource("4_vwayb")
+theme_override_constants/icon_max_width = 20
+icon = ExtResource("5_1l1qg")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Exit" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=17402525]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 128.0
-offset_top = 200.0
-offset_right = -44.0
-offset_bottom = -33.0
+offset_left = 132.0
+offset_top = 196.0
+offset_right = -36.0
+offset_bottom = -35.0
 theme = ExtResource("4_vwayb")
+theme_override_constants/icon_max_width = 15
+icon = ExtResource("6_aoq6b")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Options" type="Control" parent="CanvasLayer" unique_id=101896832]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Options" unique_id=343714253]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 80.0
+offset_right = -416.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_idbya")
+region_rect = Rect2(868, 2, 88, 90)
+patch_margin_left = 20
+patch_margin_top = 26
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="MusicSlider" type="HSlider" parent="CanvasLayer/Options/NinePatchRect" unique_id=1016660227]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 48.0
+offset_right = -130.0
+offset_bottom = -195.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SoundsSlider" type="HSlider" parent="CanvasLayer/Options/NinePatchRect" unique_id=424211712]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 96.0
+offset_right = -32.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DeleteSave" type="Button" parent="CanvasLayer/Options/NinePatchRect" unique_id=667348312]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 200.0
+offset_right = -37.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Delete Save Data"
+
+[node name="Back" type="Button" parent="CanvasLayer/Options/NinePatchRect" unique_id=1572493036]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -176.0
+offset_bottom = -227.0
+grow_horizontal = 2
+grow_vertical = 2
