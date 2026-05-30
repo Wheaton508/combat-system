@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://rtu22qpge31e"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_kgg2k"]
+
+[resource]
+script = ExtResource("1_kgg2k")
+id = 4
+tier = 3
+name = "Rising Cut"
+short_name = "R. Cut"
+power = 60
+accuracy = 90

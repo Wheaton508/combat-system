@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://bnne1tpp40d0n"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_cpkue"]
+
+[resource]
+script = ExtResource("1_cpkue")
+tier = 1
+name = "Cut"
+short_name = "Cut"
+power = 20
+accuracy = 100
+metadata/_custom_type_script = "uid://bqhdowc5xbfe0"

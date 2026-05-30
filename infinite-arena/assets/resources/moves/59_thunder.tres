@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://doo0x7yhjsv3s"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_8xyhb"]
+
+[resource]
+script = ExtResource("1_8xyhb")
+id = 59
+tier = 4
+name = "Thunder"
+short_name = "Thunder"
+power = 110
+accuracy = 75

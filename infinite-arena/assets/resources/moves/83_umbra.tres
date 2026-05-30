@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://dl1lkkwkak63l"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_s3miq"]
+
+[resource]
+script = ExtResource("1_s3miq")
+id = 83
+tier = 2
+name = "Umbra"
+short_name = "Umbra"
+power = 50
+accuracy = 90

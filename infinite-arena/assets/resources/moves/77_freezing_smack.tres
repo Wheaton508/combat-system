@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://c16x8lmbv6h44"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_bb73t"]
+
+[resource]
+script = ExtResource("1_bb73t")
+id = 77
+tier = 3
+name = "Freezing Smack"
+short_name = "F. Smack"
+power = 50
+accuracy = 95

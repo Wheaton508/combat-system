@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://dg0lyt80h2aie"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_qim15"]
+
+[resource]
+script = ExtResource("1_qim15")
+id = 121
+name = "Break"
+short_name = "Break"
+description = "Foe's Def- for three turns."
+accuracy = 100

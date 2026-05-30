@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://1ck57a738shv"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_w0oif"]
+
+[resource]
+script = ExtResource("1_w0oif")
+id = 129
+tier = 3
+name = "Enchant"
+short_name = "Enchant"
+description = "Mag++ for three turns."
+accuracy = 101

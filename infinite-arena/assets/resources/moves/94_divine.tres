@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://bt34nmitnttd8"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_rn5by"]
+
+[resource]
+script = ExtResource("1_rn5by")
+id = 94
+tier = 3
+name = "Divine"
+short_name = "Divine"
+power = 60
+accuracy = 95

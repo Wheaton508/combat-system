@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://djpdwhbucea0b"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_piptm"]
+
+[resource]
+script = ExtResource("1_piptm")
+id = 143
+tier = 3
+name = "Slowdown"
+short_name = "Slowdown"
+description = "Foe's Spd-- for three turns."
+accuracy = 95

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://bf8lh1eo84ua0"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_ihiur"]
+
+[resource]
+script = ExtResource("1_ihiur")
+id = 8
+tier = 5
+name = "Bladestorm"
+short_name = "Bladestorm"
+power = 90
+accuracy = 85

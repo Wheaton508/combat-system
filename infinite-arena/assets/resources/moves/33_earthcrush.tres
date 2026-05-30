@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://dmlmusedxbgtl"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_0y37q"]
+
+[resource]
+script = ExtResource("1_0y37q")
+id = 33
+tier = 5
+name = "Earthcrush"
+short_name = "Earthcrush"
+power = 100
+accuracy = 80

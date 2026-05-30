@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://dav4k0orllrho"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_xco8a"]
+
+[resource]
+script = ExtResource("1_xco8a")
+id = 85
+tier = 3
+name = "Eclipse"
+short_name = "Eclipse"
+description = "Strikes both foes."
+power = 70
+accuracy = 85

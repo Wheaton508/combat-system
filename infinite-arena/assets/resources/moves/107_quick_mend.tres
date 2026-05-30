@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://dy1vcew2qtpj7"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_wndnc"]
+
+[resource]
+script = ExtResource("1_wndnc")
+id = 107
+tier = 4
+name = "Quick Mend"
+short_name = "Q. Mend"
+description = "Increased priority."
+power = 30
+accuracy = 101
+priority = 1

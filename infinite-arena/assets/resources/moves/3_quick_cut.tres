@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://bmbwhtanedqcc"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_h0120"]
+
+[resource]
+script = ExtResource("1_h0120")
+id = 3
+tier = 2
+name = "Quick Cut"
+short_name = "Q. Cut"
+description = "Moves first."
+power = 30
+accuracy = 90
+priority = 2

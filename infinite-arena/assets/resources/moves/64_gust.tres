@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://b6lysojqgdhxd"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_kkvmb"]
+
+[resource]
+script = ExtResource("1_kkvmb")
+id = 64
+tier = 2
+name = "Gust"
+short_name = "Gust"
+description = "Strikes both foes."
+power = 25
+accuracy = 95

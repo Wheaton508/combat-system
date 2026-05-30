@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://dlsf2li0sjtd4"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_8s6sf"]
+
+[resource]
+script = ExtResource("1_8s6sf")
+id = 145
+tier = 2
+name = "Counter"
+short_name = "Counter"
+description = "Returns physical damage taken."
+accuracy = 101
+priority = -3

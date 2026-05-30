@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://cdso5u0ftssl3"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_n6xvg"]
+
+[resource]
+script = ExtResource("1_n6xvg")
+id = 72
+tier = 5
+name = "Maelstrom"
+short_name = "Maelstrom"
+description = "Strikes both foes."
+power = 60
+accuracy = 80

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://v07wd2rj2adi"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_vxofn"]
+
+[resource]
+script = ExtResource("1_vxofn")
+id = 13
+tier = 2
+name = "Charge"
+short_name = "Charge"
+description = "Increased priority."
+power = 30
+accuracy = 95
+priority = 1

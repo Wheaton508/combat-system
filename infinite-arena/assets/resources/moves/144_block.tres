@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://bihlkv5yyagm5"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_3ypxd"]
+
+[resource]
+script = ExtResource("1_3ypxd")
+id = 144
+tier = 2
+name = "Block"
+short_name = "Block"
+description = "Protect from all damage this turn."
+accuracy = 101
+priority = 3

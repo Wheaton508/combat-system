@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://c7w5ot4qnrjfr"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_86bav"]
+
+[resource]
+script = ExtResource("1_86bav")
+id = 58
+tier = 3
+name = "Lightning"
+short_name = "Lightning"
+description = "Increased priority. Strikes both foes."
+power = 35
+accuracy = 85
+priority = 1

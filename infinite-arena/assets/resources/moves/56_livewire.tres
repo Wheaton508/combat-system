@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://bvepgmkp7qpwy"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_skxus"]
+
+[resource]
+script = ExtResource("1_skxus")
+id = 56
+tier = 2
+name = "Livewire"
+short_name = "Livewire"
+description = "Strikes field."
+power = 30
+accuracy = 95

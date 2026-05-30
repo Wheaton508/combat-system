@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://3jpaod1bae4d"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_6lx6k"]
+
+[resource]
+script = ExtResource("1_6lx6k")
+id = 89
+tier = 4
+name = "Black Hole"
+short_name = "Black Hole"
+description = "Traps foes on hit. Strikes field."
+power = 60
+accuracy = 85

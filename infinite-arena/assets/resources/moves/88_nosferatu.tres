@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://byqe7rwm5kwvn"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_e7mfp"]
+
+[resource]
+script = ExtResource("1_e7mfp")
+id = 88
+tier = 4
+name = "Nosferatu"
+short_name = "Nosferatu"
+description = "Drains health on hit."
+power = 70
+accuracy = 75

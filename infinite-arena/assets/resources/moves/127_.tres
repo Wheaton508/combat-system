@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://clpniqkjvcuh7"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_o3tt5"]
+
+[resource]
+script = ExtResource("1_o3tt5")
+id = 127
+description = "Foe's Mag- for three turns."
+accuracy = 100

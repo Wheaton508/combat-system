@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://bemjhuq1iy335"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_npxo7"]
+
+[resource]
+script = ExtResource("1_npxo7")
+id = 148
+tier = 3
+name = "Surge Protector"
+short_name = "Surge Prot."
+description = "Protects self and ally. Mag- for three turns."
+accuracy = 101
+priority = 3

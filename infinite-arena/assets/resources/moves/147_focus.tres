@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://8kn7emn2lxe6"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_e03kg"]
+
+[resource]
+script = ExtResource("1_e03kg")
+id = 147
+tier = 3
+name = "Focus"
+short_name = "Focus"
+description = "Next attack will always hit."
+accuracy = 101

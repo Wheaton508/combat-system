@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://bx5p0bistbjrn"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_25p1k"]
+
+[resource]
+script = ExtResource("1_25p1k")
+id = 62
+tier = 5
+name = "Chain Lightning"
+short_name = "C. Light"
+description = "Increased priority. Strikes both foes."
+power = 55
+accuracy = 75
+priority = 1

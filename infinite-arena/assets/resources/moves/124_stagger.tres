@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://cb80gxs4ax7n5"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_wgeef"]
+
+[resource]
+script = ExtResource("1_wgeef")
+id = 124
+tier = 3
+name = "Stagger"
+short_name = "Stagger"
+description = "Both foes' Def- for three turns."
+accuracy = 90

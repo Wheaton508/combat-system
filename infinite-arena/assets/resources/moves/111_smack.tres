@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://2xs142cqyjyr"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_aigbv"]
+
+[resource]
+script = ExtResource("1_aigbv")
+id = 111
+name = "Smack"
+short_name = "Smack"
+power = 20
+accuracy = 100

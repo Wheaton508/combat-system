@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://cmgff470h7blg"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_t30n3"]
+
+[resource]
+script = ExtResource("1_t30n3")
+id = 123
+tier = 3
+name = "Bulwark"
+short_name = "Bulwark"
+description = "Def++ for three turns."
+accuracy = 101

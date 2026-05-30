@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://saigge7n4dhb"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_fs04i"]
+
+[resource]
+script = ExtResource("1_fs04i")
+id = 92
+name = "Shine"
+short_name = "Shine"
+power = 20
+accuracy = 100

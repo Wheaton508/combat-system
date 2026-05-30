@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://ctcnirxqjgfug"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_sqa15"]
+
+[resource]
+script = ExtResource("1_sqa15")
+id = 135
+tier = 3
+name = "Great Ward"
+short_name = "G. Ward"
+description = "Res++ for three turns."
+accuracy = 101

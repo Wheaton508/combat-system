@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://dwrc5gmym68cd"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_yqbkc"]
+
+[resource]
+script = ExtResource("1_yqbkc")
+id = 76
+tier = 3
+name = "Squall"
+short_name = "Squall"
+description = "Increased priority."
+power = 50
+accuracy = 90
+priority = 1

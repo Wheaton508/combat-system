@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://cpuqr2fu5ncls"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_3gvlj"]
+
+[resource]
+script = ExtResource("1_3gvlj")
+id = 108
+tier = 4
+name = "Rejuvinate"
+short_name = "Rejuvinate"
+description = "Heals self and ally."
+power = 40
+accuracy = 101

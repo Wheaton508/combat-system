@@ -8,6 +8,19 @@
 
 config_version=5
 
+[addons]
+
+resources_spreadsheet_view/array_color_tint=100.0
+resources_spreadsheet_view/color_rows=true
+resources_spreadsheet_view/array_min_width=128.0
+resources_spreadsheet_view/resource_preview_size=32.0
+resources_spreadsheet_view/clip_headers=false
+resources_spreadsheet_view/dupe_arrays=true
+resources_spreadsheet_view/context_menu_on_leftclick=false
+resources_spreadsheet_view/fold_docks=true
+resources_spreadsheet_view/resource_cell_label_mode=1
+resources_spreadsheet_view/freeze_first_column=true
+
 [animation]
 
 compatibility/default_parent_skeleton_in_mesh_instance_3d=true
@@ -33,13 +46,14 @@ mouse_cursor/custom_image="uid://dsxw4s27fxba1"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
-"res://addons/AsepriteWizard/": "orange",
 "res://assets/": "red",
+"res://assets/resources/": "red",
+"res://assets/resources/moves/": "orange",
 "res://assets/themes/": "orange",
 "res://imports/": "red",
 "res://imports/fantasy_ui/": "orange",
@@ -51,6 +65,7 @@ folder_colors={
 "res://scenes/management/": "orange",
 "res://scenes/ui/": "orange",
 "res://scripts/": "red",
+"res://scripts/custom_resources/": "orange",
 "res://scripts/management/": "orange",
 "res://scripts/ui/": "orange",
 "res://scripts/ui/buttons/": "yellow"

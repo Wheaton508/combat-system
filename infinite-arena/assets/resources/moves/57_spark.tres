@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://cr7wo2vohnyl8"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_pue8o"]
+
+[resource]
+script = ExtResource("1_pue8o")
+id = 57
+tier = 3
+name = "Spark"
+short_name = "Spark"
+power = 60
+accuracy = 90

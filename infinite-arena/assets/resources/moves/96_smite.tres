@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://da5df6a0ftb5w"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_aione"]
+
+[resource]
+script = ExtResource("1_aione")
+id = 96
+tier = 4
+name = "Smite"
+short_name = "Smite"
+power = 80
+accuracy = 90

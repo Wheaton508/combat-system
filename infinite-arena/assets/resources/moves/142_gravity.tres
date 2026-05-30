@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://btmyakuccbjyg"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_cpo3j"]
+
+[resource]
+script = ExtResource("1_cpo3j")
+id = 142
+tier = 3
+name = "Gravity"
+short_name = "Gravity"
+description = "Both foes' Spd- for three turns."
+accuracy = 90

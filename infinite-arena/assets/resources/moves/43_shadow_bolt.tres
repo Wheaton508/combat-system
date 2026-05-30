@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://c5b2l1b3ullpx"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_fc1ee"]
+
+[resource]
+script = ExtResource("1_fc1ee")
+id = 43
+tier = 5
+name = "Shadow Bolt"
+short_name = "S. Bolt"
+power = 85
+accuracy = 80

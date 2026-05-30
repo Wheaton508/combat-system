@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://7ou3bifthucy"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_uffye"]
+
+[resource]
+script = ExtResource("1_uffye")
+id = 109
+name = "Revive"
+short_name = "Revive"
+description = "Transfers half of HP to downed ally."
+accuracy = 50

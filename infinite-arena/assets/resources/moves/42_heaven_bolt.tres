@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://c7x4tg8q5cuw7"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_rgqxp"]
+
+[resource]
+script = ExtResource("1_rgqxp")
+id = 42
+tier = 5
+name = "Heaven Bolt"
+short_name = "H. Bolt"
+power = 85
+accuracy = 80

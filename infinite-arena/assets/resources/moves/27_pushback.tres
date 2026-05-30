@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://d1fpdt8wbu86x"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_4t3ql"]
+
+[resource]
+script = ExtResource("1_4t3ql")
+id = 27
+tier = 3
+name = "Pushback"
+short_name = "Pushback"
+description = "Forces target into backline. Moves last."
+power = 55
+accuracy = 90
+priority = -2

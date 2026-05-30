@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://dq68jpneuyidt"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_w77ty"]
+
+[resource]
+script = ExtResource("1_w77ty")
+id = 30
+tier = 4
+name = "Cleave"
+short_name = "Cleave"
+power = 80
+accuracy = 85

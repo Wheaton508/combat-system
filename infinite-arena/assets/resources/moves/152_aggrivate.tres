@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://dwu5cvcv8m0q8"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_bq43a"]
+
+[resource]
+script = ExtResource("1_bq43a")
+id = 152
+tier = 5
+name = "Aggrivate"
+short_name = "Aggro"
+description = "Draws in opponent attacks. Moves first."
+accuracy = 101
+priority = 2

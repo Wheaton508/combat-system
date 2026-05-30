@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" format=3 uid="uid://dwy37m03stlbo"]
+
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="1_o1prk"]
+
+[resource]
+script = ExtResource("1_o1prk")
+id = 51
+tier = 4
+name = "Supernova"
+short_name = "Supernova"
+description = "Strikes field."
+power = 65
+accuracy = 85
