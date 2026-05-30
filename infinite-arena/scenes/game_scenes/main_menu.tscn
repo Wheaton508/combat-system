@@ -71,6 +71,7 @@ offset_bottom = -177.0
 theme = ExtResource("3_idbya")
 text = "New Game"
 script = ExtResource("4_yok3e")
+scene_path_to_load = "res://scenes/game_scenes/test.tscn"
 
 [node name="ContinueGame" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=1650690439]
 layout_mode = 1
@@ -245,3 +246,5 @@ expand_icon = true
 script = ExtResource("6_xdjb4")
 menu_to_open = NodePath("../../../Menu")
 menu_to_close = NodePath("../..")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=382073331]
