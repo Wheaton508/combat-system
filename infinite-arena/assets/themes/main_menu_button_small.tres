@@ -6,8 +6,6 @@
 texture = ExtResource("1_m0htc")
 region_rect = Rect2(214, 161, 20, 14)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0htc"]
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0htc"]
 texture = ExtResource("1_m0htc")
 region_rect = Rect2(182, 161, 20, 14)
@@ -20,7 +18,7 @@ region_rect = Rect2(150, 161, 20, 14)
 Button/colors/icon_disabled_color = Color(0.74138474, 0.7413847, 0.74138457, 0.31764707)
 Button/colors/icon_pressed_color = Color(0.7411765, 0.7411765, 0.7411765, 0.31764707)
 Button/styles/disabled = SubResource("StyleBoxTexture_n86ca")
-Button/styles/focus = SubResource("StyleBoxEmpty_m0htc")
+Button/styles/focus = SubResource("StyleBoxTexture_m0htc")
 Button/styles/hover = SubResource("StyleBoxTexture_m0htc")
 Button/styles/normal = SubResource("StyleBoxTexture_aeppi")
 Button/styles/pressed = SubResource("StyleBoxTexture_n86ca")

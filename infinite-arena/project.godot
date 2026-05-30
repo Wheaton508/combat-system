@@ -15,9 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Infinite Arena"
-run/main_scene="uid://qh2uayd8vj1t"
+run/main_scene="uid://b5kfxqhxu2iek"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://wi688am38wei"
 
 [display]
 
@@ -44,8 +48,10 @@ folder_colors={
 "res://imports/fantasy_ui/ui/individual_images/": "green",
 "res://scenes/": "red",
 "res://scenes/game_scenes/": "orange",
+"res://scenes/management/": "orange",
 "res://scenes/ui/": "orange",
 "res://scripts/": "red",
+"res://scripts/management/": "orange",
 "res://scripts/ui/": "orange",
 "res://scripts/ui/buttons/": "yellow"
 }

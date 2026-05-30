@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b5kfxqhxu2iek"]
+
+[ext_resource type="Script" uid="uid://3npxn58wstyg" path="res://scripts/management/scene_manager.gd" id="1_1idum"]
+
+[node name="GameRoot" type="Node" unique_id=788018985]
+
+[node name="SceneManager" type="Node" parent="." unique_id=404785724]
+script = ExtResource("1_1idum")
+initial_scene = "res://scenes/game_scenes/main_menu.tscn"
+
+[node name="CurrentSceneHolder" type="Node" parent="SceneManager" unique_id=1292384826]
+
+[node name="SceneTransition" type="CanvasLayer" parent="SceneManager" unique_id=2080478561]
+visible = false
+
+[node name="BlackScreen" type="ColorRect" parent="SceneManager/SceneTransition" unique_id=1788875322]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AudioManager" type="Node" parent="." unique_id=997562286]

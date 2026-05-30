@@ -1,0 +1,24 @@
+[gd_resource type="Theme" format=3 uid="uid://15mvclwt1apy"]
+
+[ext_resource type="Texture2D" uid="uid://cml8vsqt1p3xe" path="res://imports/fantasy_ui/ui/individual_images/Slider02_Button_3x.png" id="1_yp8j5"]
+[ext_resource type="Texture2D" uid="uid://hovpmwjhvo0h" path="res://imports/fantasy_ui/ui/individual_images/Slider01_Bar07_3x.png" id="2_dujra"]
+[ext_resource type="Texture2D" uid="uid://c4v26o4r7v114" path="res://imports/fantasy_ui/ui/individual_images/Slider01_Box_3x.png" id="3_ycrrs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oltnd"]
+texture = ExtResource("2_dujra")
+axis_stretch_horizontal = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_je54c"]
+texture = ExtResource("3_ycrrs")
+texture_margin_left = 15.0
+texture_margin_top = 24.0
+texture_margin_right = 15.0
+texture_margin_bottom = 24.0
+
+[resource]
+HSlider/icons/grabber = ExtResource("1_yp8j5")
+HSlider/icons/grabber_disabled = ExtResource("1_yp8j5")
+HSlider/icons/grabber_highlight = ExtResource("1_yp8j5")
+HSlider/styles/grabber_area = SubResource("StyleBoxTexture_oltnd")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_oltnd")
+HSlider/styles/slider = SubResource("StyleBoxTexture_je54c")

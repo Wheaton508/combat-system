@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqn5cdjh6drfl"
-path="res://.godot/imported/Icon_19_Outline.png-edf812bdba78cdd0083d191b93664f06.ctex"
+uid="uid://caelj2qo8h7eg"
+path="res://.godot/imported/SFX.png-f445ea1665f3035ad579d4907cd75302.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imports/fantasy_ui/ui/individual_images/Icon_19_Outline.png"
-dest_files=["res://.godot/imported/Icon_19_Outline.png-edf812bdba78cdd0083d191b93664f06.ctex"]
+source_file="res://imports/fantasy_ui/ui/individual_images/SFX.png"
+dest_files=["res://.godot/imported/SFX.png-f445ea1665f3035ad579d4907cd75302.ctex"]
 
 [params]
 

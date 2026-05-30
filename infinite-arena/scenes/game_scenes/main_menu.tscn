@@ -4,23 +4,22 @@
 [ext_resource type="Texture2D" uid="uid://bh74tbk8bkerl" path="res://imports/fantasy_ui/ui/UI assets (2x).png" id="2_idbya"]
 [ext_resource type="Theme" uid="uid://c21f6vjh7htd5" path="res://assets/themes/main_menu_button_big.tres" id="3_idbya"]
 [ext_resource type="Theme" uid="uid://g0v7wptephtk" path="res://assets/themes/main_menu_button_small.tres" id="4_vwayb"]
+[ext_resource type="Script" uid="uid://c4rbiur8y83n5" path="res://scripts/ui/buttons/scene_change_button.gd" id="4_yok3e"]
 [ext_resource type="Texture2D" uid="uid://c4uyfspbdu71d" path="res://imports/fantasy_ui/ui/individual_images/Gear.png" id="5_1l1qg"]
 [ext_resource type="Texture2D" uid="uid://d386ldmah2okr" path="res://imports/fantasy_ui/ui/individual_images/Close.png" id="6_aoq6b"]
+[ext_resource type="Script" uid="uid://cmr5xt3tvl5fq" path="res://scripts/ui/buttons/menu_swap_button.gd" id="6_xdjb4"]
+[ext_resource type="Texture2D" uid="uid://cbqlscjcpwhmc" path="res://imports/fantasy_ui/ui/individual_images/Music.png" id="7_0ewu4"]
+[ext_resource type="Texture2D" uid="uid://bkwk1bd8uyi6m" path="res://imports/fantasy_ui/ui/individual_images/Tick02_Left.png" id="7_3g3ef"]
+[ext_resource type="Script" uid="uid://c2ldx5a5tv24a" path="res://scripts/ui/buttons/exit_game.gd" id="7_bqlkj"]
+[ext_resource type="Theme" uid="uid://15mvclwt1apy" path="res://assets/themes/menu_slider.tres" id="7_laijh"]
+[ext_resource type="Texture2D" uid="uid://caelj2qo8h7eg" path="res://imports/fantasy_ui/ui/individual_images/SFX.png" id="9_y13y0"]
+[ext_resource type="Theme" uid="uid://l2afu2wa0ewv" path="res://assets/themes/main_menu_button_red.tres" id="11_bqlkj"]
 
 [node name="MainMenu" type="Node3D" unique_id=712058389]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1337414225]
 
-[node name="Menu" type="Control" parent="CanvasLayer" unique_id=1159226071]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Menu" unique_id=661474769]
-layout_mode = 1
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=661474769]
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -33,6 +32,14 @@ theme_override_font_sizes/font_size = 22
 text = "The Infinite
 Arena"
 horizontal_alignment = 1
+
+[node name="Menu" type="Control" parent="CanvasLayer" unique_id=1159226071]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Menu" unique_id=1711359500]
 layout_mode = 1
@@ -63,6 +70,7 @@ offset_right = -32.0
 offset_bottom = -177.0
 theme = ExtResource("3_idbya")
 text = "New Game"
+script = ExtResource("4_yok3e")
 
 [node name="ContinueGame" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=1650690439]
 layout_mode = 1
@@ -90,7 +98,7 @@ theme = ExtResource("3_idbya")
 disabled = true
 text = "Hall of Fame"
 
-[node name="Options" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=197748402]
+[node name="Options" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=197748402 node_paths=PackedStringArray("menu_to_open", "menu_to_close")]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -104,6 +112,9 @@ theme_override_constants/icon_max_width = 20
 icon = ExtResource("5_1l1qg")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("6_xdjb4")
+menu_to_open = NodePath("../../../Options")
+menu_to_close = NodePath("../..")
 
 [node name="Exit" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=17402525]
 layout_mode = 1
@@ -119,8 +130,10 @@ theme_override_constants/icon_max_width = 15
 icon = ExtResource("6_aoq6b")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("7_bqlkj")
 
 [node name="Options" type="Control" parent="CanvasLayer" unique_id=101896832]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -146,29 +159,59 @@ patch_margin_top = 26
 patch_margin_right = 20
 patch_margin_bottom = 20
 
+[node name="MusicIcon" type="TextureRect" parent="CanvasLayer/Options/NinePatchRect" unique_id=323748921]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 24.0
+offset_right = -156.0
+offset_bottom = -195.0
+texture = ExtResource("7_0ewu4")
+
 [node name="MusicSlider" type="HSlider" parent="CanvasLayer/Options/NinePatchRect" unique_id=1016660227]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 32.0
-offset_top = 48.0
-offset_right = -130.0
-offset_bottom = -195.0
+offset_left = 52.0
+offset_top = 24.0
+offset_right = -18.0
+offset_bottom = -187.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("7_laijh")
+max_value = 1.0
+step = 0.1
+value = 0.5
 
-[node name="SoundsSlider" type="HSlider" parent="CanvasLayer/Options/NinePatchRect" unique_id=424211712]
+[node name="SoundIcon" type="TextureRect" parent="CanvasLayer/Options/NinePatchRect" unique_id=969481265]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 80.0
+offset_right = -156.0
+offset_bottom = -139.0
+texture = ExtResource("9_y13y0")
+
+[node name="SoundSlider" type="HSlider" parent="CanvasLayer/Options/NinePatchRect" unique_id=565885412]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 32.0
-offset_top = 96.0
-offset_right = -32.0
-offset_bottom = -147.0
+offset_left = 52.0
+offset_top = 80.0
+offset_right = -18.0
+offset_bottom = -131.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("7_laijh")
+max_value = 1.0
+step = 0.1
+value = 0.5
 
 [node name="DeleteSave" type="Button" parent="CanvasLayer/Options/NinePatchRect" unique_id=667348312]
 layout_mode = 1
@@ -176,21 +219,29 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 32.0
-offset_top = 200.0
-offset_right = -37.0
-offset_bottom = -28.0
+offset_top = 152.0
+offset_right = -32.0
+offset_bottom = -65.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Delete Save Data"
+theme = ExtResource("11_bqlkj")
+text = "Delete Data"
 
-[node name="Back" type="Button" parent="CanvasLayer/Options/NinePatchRect" unique_id=1572493036]
+[node name="Back" type="Button" parent="CanvasLayer/Options/NinePatchRect" unique_id=1572493036 node_paths=PackedStringArray("menu_to_open", "menu_to_close")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = 24.0
-offset_right = -176.0
-offset_bottom = -227.0
+offset_left = 16.0
+offset_top = 216.0
+offset_right = -152.0
+offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("4_vwayb")
+icon = ExtResource("7_3g3ef")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("6_xdjb4")
+menu_to_open = NodePath("../../../Menu")
+menu_to_close = NodePath("../..")
