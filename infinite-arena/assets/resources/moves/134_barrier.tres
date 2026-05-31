@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_fb5lx")
+display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 134
 tier = 3
 name = "Barrier"
 short_name = "Barrier"
 description = "Team's Res+ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 4

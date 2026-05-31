@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_h8v4q")
+display_color = Color(0.96862745, 0.79607844, 0.3019608, 1)
 id = 60
 tier = 4
 name = "Shockwave"
@@ -11,3 +12,6 @@ short_name = "Shockwave"
 description = "Strikes both foes."
 power = 45
 accuracy = 85
+damage_type = 1
+attack_elements = Array[int]([4])
+targeting = 1

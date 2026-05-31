@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_kkvmb")
+display_color = Color(0.3882353, 0.8235294, 0.5921569, 1)
 id = 64
 tier = 2
 name = "Gust"
@@ -11,3 +12,6 @@ short_name = "Gust"
 description = "Strikes both foes."
 power = 25
 accuracy = 95
+damage_type = 1
+attack_elements = Array[int]([5])
+targeting = 1

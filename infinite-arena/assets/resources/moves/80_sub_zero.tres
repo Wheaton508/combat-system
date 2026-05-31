@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_q7mhw")
+display_color = Color(0.3019608, 0.8156863, 0.88235295, 1)
 id = 80
 tier = 5
 name = "Sub-Zero"
 short_name = "Sub-Zero"
 power = 90
 accuracy = 80
+damage_type = 1
+attack_elements = Array[int]([6])

@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_6rhdb")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 16
 tier = 3
 name = "Long Slice"
@@ -11,3 +12,5 @@ short_name = "L. Slice"
 description = "Strikes both foes."
 power = 35
 accuracy = 90
+attack_elements = Array[int]([0])
+targeting = 1

@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_aione")
+display_color = Color(1, 0.8980392, 0.6, 1)
 id = 96
 tier = 4
 name = "Smite"
 short_name = "Smite"
 power = 80
 accuracy = 90
+damage_type = 1
+attack_elements = Array[int]([8])

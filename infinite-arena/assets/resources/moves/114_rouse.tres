@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_1orxh")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 114
 name = "Rouse"
 short_name = "Rouse"
 description = "Atk+ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 2

@@ -1,6 +1,95 @@
 {
   "column_properties": {
+    "res://.godot": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
+      }
+    },
+    "res://assets/resources/equipment/": {
+      "display_color": {
+        "visibility": 0
+      },
+      "metadata/_custom_type_script": {
+        "visibility": 0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0
+      },
+      "resource_name": {
+        "visibility": 0
+      }
+    },
+    "res://assets/resources/items/": {
+      "display_color": {
+        "visibility": 0
+      },
+      "metadata/_custom_type_script": {
+        "visibility": 0
+      },
+      "resource_local_to_scene": {
+        "visibility": 1
+      },
+      "resource_name": {
+        "visibility": 0
+      }
+    },
     "res://assets/resources/moves/": {
+      "accuracy": {
+        "visibility": 1.0
+      },
+      "attack_types": {
+        "visibility": 1.0
+      },
+      "damage_type": {
+        "visibility": 1.0
+      },
+      "description": {
+        "visibility": 1.0
+      },
+      "display_color": {
+        "visibility": 0.0
+      },
+      "id": {
+        "visibility": 1.0
+      },
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "name": {
+        "visibility": 1.0
+      },
+      "power": {
+        "visibility": 1.0
+      },
+      "priority": {
+        "visibility": 1.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 1
+      },
+      "resource_name": {
+        "visibility": 0
+      },
+      "resource_path": {
+        "visibility": 1.0
+      },
+      "short_name": {
+        "visibility": 1.0
+      },
+      "targeting": {
+        "visibility": 1.0
+      },
+      "tier": {
+        "visibility": 1.0
+      }
+    },
+    "res://example/Items/items/": {
       "metadata/_custom_type_script": {
         "visibility": 0
       },
@@ -35,9 +124,9 @@
     }
   },
   "recent_paths": [
-    "res://resources/",
-    "res://resources/moves/",
-    "res://assets/resources/moves/"
+    "res://assets/resources/moves/",
+    "res://assets/resources/equipment/",
+    "res://assets/resources/items/"
   ],
   "table_functions": {
     "filter": [

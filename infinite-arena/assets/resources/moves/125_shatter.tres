@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_l4hj3")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 125
 tier = 3
 name = "Shatter"
 short_name = "Shatter"
 description = "Foe's Def-- for three turns."
 accuracy = 95
+damage_type = 3

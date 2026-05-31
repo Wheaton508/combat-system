@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://5l5fjea288av"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_a27mo"]
+
+[resource]
+script = ExtResource("1_a27mo")
+display_color = Color(0.8, 0.6509804, 0.46666667, 1)
+id = 74
+tier = 1
+name = "Iron Rod"
+mag_buff = 7
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

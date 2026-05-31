@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_xu5em")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 146
 tier = 3
 name = "Counterspell"
@@ -11,3 +12,4 @@ short_name = "Counterspell"
 description = "Returns magical damage taken."
 accuracy = 101
 priority = -3
+damage_type = 3

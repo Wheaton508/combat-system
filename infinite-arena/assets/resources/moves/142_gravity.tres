@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_cpo3j")
+display_color = Color(0.3882353, 0.8235294, 0.5921569, 1)
 id = 142
 tier = 3
 name = "Gravity"
 short_name = "Gravity"
 description = "Both foes' Spd- for three turns."
 accuracy = 90
+damage_type = 3
+targeting = 1

@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_da0i3")
+display_color = Color(0.96862745, 0.79607844, 0.3019608, 1)
 id = 55
 name = "Shock"
 short_name = "Shock"
@@ -11,3 +12,5 @@ description = "Increased priority."
 power = 30
 accuracy = 95
 priority = 1
+damage_type = 1
+attack_elements = Array[int]([4])

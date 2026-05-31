@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://by2ukads77ncr"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_5y783"]
+
+[resource]
+script = ExtResource("1_5y783")
+display_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
+id = 18
+tier = 3
+name = "Winter Coat"
+def_buff = 5
+res_buff = 10
+elemental_protections = Array[int]([6])
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_s6sgn")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 20
 tier = 5
 name = "Holy Lance"
 short_name = "Holy Lance"
 power = 90
 accuracy = 90
+attack_elements = Array[int]([1, 8])

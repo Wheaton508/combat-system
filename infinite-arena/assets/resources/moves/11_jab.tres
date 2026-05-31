@@ -4,8 +4,10 @@
 
 [resource]
 script = ExtResource("1_cv28v")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 11
 name = "Jab"
 short_name = "Jab"
 power = 20
 accuracy = 100
+attack_elements = Array[int]([1])

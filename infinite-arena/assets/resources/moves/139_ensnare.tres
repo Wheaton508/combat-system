@@ -4,8 +4,10 @@
 
 [resource]
 script = ExtResource("1_sgvdo")
+display_color = Color(0.3882353, 0.8235294, 0.5921569, 1)
 id = 139
 name = "Ensnare"
 short_name = "Ensnare"
 description = "Foe's Spd- for three turns."
 accuracy = 100
+damage_type = 3

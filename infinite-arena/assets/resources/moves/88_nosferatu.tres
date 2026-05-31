@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_e7mfp")
+display_color = Color(0.40392157, 0.30588236, 0.654902, 1)
 id = 88
 tier = 4
 name = "Nosferatu"
@@ -11,3 +12,5 @@ short_name = "Nosferatu"
 description = "Drains health on hit."
 power = 70
 accuracy = 75
+damage_type = 1
+attack_elements = Array[int]([7])

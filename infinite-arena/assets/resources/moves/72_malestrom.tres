@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_n6xvg")
+display_color = Color(0.3882353, 0.8235294, 0.5921569, 1)
 id = 72
 tier = 5
 name = "Maelstrom"
@@ -11,3 +12,6 @@ short_name = "Maelstrom"
 description = "Strikes both foes."
 power = 60
 accuracy = 80
+damage_type = 1
+attack_elements = Array[int]([5])
+targeting = 1

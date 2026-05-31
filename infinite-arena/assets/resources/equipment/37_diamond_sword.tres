@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://dws2g74jgda5m"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_x8eho"]
+
+[resource]
+script = ExtResource("1_x8eho")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
+id = 37
+tier = 3
+name = "Diamond Sword"
+atk_buff = 35
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_jlakk")
+display_color = Color(0.5372549, 0.5372549, 0.92156863, 1)
 id = 131
 tier = 3
 name = "Spellbind"
 short_name = "Spellbind"
 description = "Foe's Mag-- for three turns."
 accuracy = 95
+damage_type = 3

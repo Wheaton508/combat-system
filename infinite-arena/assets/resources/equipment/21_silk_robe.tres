@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bywcjrm6x2hir"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_aetx1"]
+
+[resource]
+script = ExtResource("1_aetx1")
+display_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
+id = 21
+tier = 4
+name = "Silk Robe"
+def_buff = 7
+res_buff = 21
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

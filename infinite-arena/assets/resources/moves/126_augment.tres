@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_5eksw")
+display_color = Color(0.5372549, 0.5372549, 0.92156863, 1)
 id = 126
 name = "Augment"
 short_name = "Augment"
 description = "Mag+ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 2

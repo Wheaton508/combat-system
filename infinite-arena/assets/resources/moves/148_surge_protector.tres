@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_npxo7")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 148
 tier = 3
 name = "Surge Protector"
@@ -11,3 +12,5 @@ short_name = "Surge Prot."
 description = "Protects self and ally. Mag- for three turns."
 accuracy = 101
 priority = 3
+damage_type = 3
+targeting = 4

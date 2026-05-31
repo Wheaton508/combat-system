@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://ciw2t0ukrckdy"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_c1hk5"]
+
+[resource]
+script = ExtResource("1_c1hk5")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
+id = 3
+tier = 2
+name = "Cotton Hat"
+res_buff = 6
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

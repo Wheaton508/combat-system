@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_jm2bj")
+display_color = Color(0.3019608, 0.8156863, 0.88235295, 1)
 id = 78
 tier = 4
 name = "Ice Burn"
 short_name = "Ice Burn"
 power = 70
 accuracy = 85
+damage_type = 1
+attack_elements = Array[int]([3, 6])

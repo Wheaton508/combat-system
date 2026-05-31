@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_0y37q")
+display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 33
 tier = 5
 name = "Earthcrush"
 short_name = "Earthcrush"
 power = 100
 accuracy = 80
+attack_elements = Array[int]([2])

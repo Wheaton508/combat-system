@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_t30n3")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 123
 tier = 3
 name = "Bulwark"
 short_name = "Bulwark"
 description = "Def++ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 2

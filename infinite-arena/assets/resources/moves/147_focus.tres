@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_e03kg")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 147
 tier = 3
 name = "Focus"
 short_name = "Focus"
 description = "Next attack will always hit."
 accuracy = 101
+damage_type = 3
+targeting = 2

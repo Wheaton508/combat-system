@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_o1prk")
+display_color = Color(0.95686275, 0.39607844, 0.14117648, 1)
 id = 51
 tier = 4
 name = "Supernova"
@@ -11,3 +12,6 @@ short_name = "Supernova"
 description = "Strikes field."
 power = 65
 accuracy = 85
+damage_type = 1
+attack_elements = Array[int]([3])
+targeting = 5

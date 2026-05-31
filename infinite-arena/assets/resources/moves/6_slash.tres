@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_qf312")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 6
 tier = 4
 name = "Slash"
 short_name = "Slash"
 power = 80
 accuracy = 85
+attack_elements = Array[int]([0])

@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_cpkue")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 tier = 1
 name = "Cut"
 short_name = "Cut"
 power = 20
 accuracy = 100
+attack_elements = Array[int]([0])
 metadata/_custom_type_script = "uid://bqhdowc5xbfe0"

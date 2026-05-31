@@ -4,8 +4,10 @@
 
 [resource]
 script = ExtResource("1_qim15")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 121
 name = "Break"
 short_name = "Break"
 description = "Foe's Def- for three turns."
 accuracy = 100
+damage_type = 3

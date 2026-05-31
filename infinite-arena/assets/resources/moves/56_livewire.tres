@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_skxus")
+display_color = Color(0.96862745, 0.79607844, 0.3019608, 1)
 id = 56
 tier = 2
 name = "Livewire"
@@ -11,3 +12,6 @@ short_name = "Livewire"
 description = "Strikes field."
 power = 30
 accuracy = 95
+damage_type = 1
+attack_elements = Array[int]([4])
+targeting = 5

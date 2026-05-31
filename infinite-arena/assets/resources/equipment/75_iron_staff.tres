@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bumhkqaj8yefn"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_vesef"]
+
+[resource]
+script = ExtResource("1_vesef")
+display_color = Color(0.8, 0.6509804, 0.46666667, 1)
+id = 75
+tier = 1
+name = "Iron Staff"
+mag_buff = 5
+elemental_amplifications = Array[int]([9])
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

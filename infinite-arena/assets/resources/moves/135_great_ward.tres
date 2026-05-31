@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_sqa15")
+display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 135
 tier = 3
 name = "Great Ward"
 short_name = "G. Ward"
 description = "Res++ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 2

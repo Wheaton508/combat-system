@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_ynhru")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 116
 tier = 3
 name = "Rally"
 short_name = "Rally"
 description = "Team's Atk+ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 4

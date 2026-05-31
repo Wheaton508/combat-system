@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_5wxs7")
+display_color = Color(0.95686275, 0.39607844, 0.14117648, 1)
 id = 52
 tier = 5
 name = "Meteor"
 short_name = "Meteor"
 power = 100
 accuracy = 80
+damage_type = 1
+attack_elements = Array[int]([3])

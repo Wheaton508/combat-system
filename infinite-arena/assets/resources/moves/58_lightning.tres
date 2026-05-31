@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_86bav")
+display_color = Color(0.96862745, 0.79607844, 0.3019608, 1)
 id = 58
 tier = 3
 name = "Lightning"
@@ -12,3 +13,6 @@ description = "Increased priority. Strikes both foes."
 power = 35
 accuracy = 85
 priority = 1
+damage_type = 1
+attack_elements = Array[int]([4])
+targeting = 1

@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_eis2o")
+display_color = Color(0.95686275, 0.39607844, 0.14117648, 1)
 id = 46
 tier = 2
 name = "Singe"
@@ -11,3 +12,6 @@ short_name = "Singe"
 description = "Strikes both."
 power = 25
 accuracy = 95
+damage_type = 1
+attack_elements = Array[int]([3])
+targeting = 1

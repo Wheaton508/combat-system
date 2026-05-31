@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_mkp2t")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 15
 tier = 3
 name = "Pierce"
@@ -11,3 +12,4 @@ short_name = "Pierce"
 description = "Ignores stat changes."
 power = 50
 accuracy = 95
+attack_elements = Array[int]([1])

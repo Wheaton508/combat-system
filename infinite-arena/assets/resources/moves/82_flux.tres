@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_ypn17")
+display_color = Color(0.40392157, 0.30588236, 0.654902, 1)
 id = 82
 name = "Flux"
 short_name = "Flux"
 power = 30
 accuracy = 95
+damage_type = 1
+attack_elements = Array[int]([7])

@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_bq43a")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 152
 tier = 5
 name = "Aggrivate"
@@ -11,3 +12,4 @@ short_name = "Aggro"
 description = "Draws in opponent attacks. Moves first."
 accuracy = 101
 priority = 2
+targeting = 1

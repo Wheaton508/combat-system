@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_vlkpr")
+display_color = Color(0.40392157, 0.30588236, 0.654902, 1)
 id = 91
 tier = 5
 name = "Apocolypse"
 short_name = "Apocolypse"
 power = 70
 accuracy = 75
+damage_type = 1
+attack_elements = Array[int]([7])

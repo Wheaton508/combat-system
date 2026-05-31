@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_g182r")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 2
 tier = 2
 name = "Thrust"
 short_name = "Thrust"
 power = 40
 accuracy = 95
+attack_elements = Array[int]([1])

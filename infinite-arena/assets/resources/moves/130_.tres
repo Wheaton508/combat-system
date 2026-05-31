@@ -4,7 +4,10 @@
 
 [resource]
 script = ExtResource("1_b6gk8")
+display_color = Color(0.5372549, 0.5372549, 0.92156863, 1)
 id = 130
 tier = 3
 description = "Both foes' Mag- for three turns."
 accuracy = 90
+damage_type = 3
+targeting = 1

@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_0yrg3")
+display_color = Color(0.40392157, 0.30588236, 0.654902, 1)
 id = 86
 tier = 3
 name = "Evil Smack"
 short_name = "E. Smack"
 power = 60
 accuracy = 90
+attack_elements = Array[int]([2, 7])

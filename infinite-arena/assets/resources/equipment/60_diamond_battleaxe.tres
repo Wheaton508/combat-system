@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://ini0xiw7sbo2"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_y6mc4"]
+
+[resource]
+script = ExtResource("1_y6mc4")
+display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
+id = 60
+tier = 3
+name = "Diamond Battleaxe"
+atk_buff = 50
+spd_buff = -15
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

@@ -4,7 +4,9 @@
 
 [resource]
 script = ExtResource("1_b4ogp")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 112
 name = "Spare"
 short_name = "Spare"
 description = "Cannot kill the opponent."
+attack_elements = Array[int]([10])

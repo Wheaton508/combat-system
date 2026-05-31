@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://behj5gjdfm5r8"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_tmgep"]
+
+[resource]
+script = ExtResource("1_tmgep")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
+id = 31
+tier = 4
+name = "Titanium Boots"
+def_buff = 10
+res_buff = 3
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

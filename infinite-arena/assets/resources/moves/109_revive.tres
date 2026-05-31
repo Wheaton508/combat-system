@@ -4,8 +4,12 @@
 
 [resource]
 script = ExtResource("1_uffye")
+display_color = Color(0.5764706, 0.76862746, 0.49019608, 1)
 id = 109
 name = "Revive"
 short_name = "Revive"
 description = "Transfers half of HP to downed ally."
 accuracy = 50
+damage_type = 2
+attack_elements = Array[int]([9])
+targeting = 3

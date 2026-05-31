@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://c5jwtwnfyx8js"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_j8lad"]
+
+[resource]
+script = ExtResource("1_j8lad")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
+id = 30
+tier = 3
+name = "Jester's Shoes"
+description = "Randomly buffs and debuffs every battle."
+def_buff = -5
+res_buff = -5
+spd_buff = 7
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

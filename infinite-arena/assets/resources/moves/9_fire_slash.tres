@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_tpf2u")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 9
 tier = 5
 name = "Fire Slash"
 short_name = "F. Slash"
 power = 95
 accuracy = 80
+attack_elements = Array[int]([0, 3])

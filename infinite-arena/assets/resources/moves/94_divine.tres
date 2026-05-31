@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_rn5by")
+display_color = Color(1, 0.8980392, 0.6, 1)
 id = 94
 tier = 3
 name = "Divine"
 short_name = "Divine"
 power = 60
 accuracy = 95
+damage_type = 1
+attack_elements = Array[int]([8])

@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_tdrj3")
+display_color = Color(0.3882353, 0.8235294, 0.5921569, 1)
 id = 66
 tier = 2
 name = "Whirlwind"
@@ -12,3 +13,5 @@ description = "Forces target into backline. Moves last."
 power = 55
 accuracy = 90
 priority = -2
+damage_type = 1
+attack_elements = Array[int]([5])

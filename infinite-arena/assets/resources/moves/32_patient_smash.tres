@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_8wia5")
+display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 32
 tier = 4
 name = "Patient Smash"
@@ -12,3 +13,4 @@ description = "Decreased priority."
 power = 95
 accuracy = 90
 priority = -1
+attack_elements = Array[int]([2])

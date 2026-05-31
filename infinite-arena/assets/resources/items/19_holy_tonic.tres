@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dgj0umemdl8"]
+
+[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_wh1mm"]
+
+[resource]
+script = ExtResource("1_wh1mm")
+display_color = Color(0.7137255, 0.84313726, 0.65882355, 1)
+id = 19
+tier = 4
+name = "Holy Tonic"
+description = "Revives a fallen ally"
+metadata/_custom_type_script = "uid://bb2sj67lochp6"

@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_foyo6")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 18
 tier = 4
 name = "Impale"
 short_name = "Impale"
 power = 100
 accuracy = 75
+attack_elements = Array[int]([1])

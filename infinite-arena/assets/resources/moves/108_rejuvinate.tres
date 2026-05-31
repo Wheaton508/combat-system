@@ -4,10 +4,14 @@
 
 [resource]
 script = ExtResource("1_3gvlj")
+display_color = Color(0.5764706, 0.76862746, 0.49019608, 1)
 id = 108
 tier = 4
 name = "Rejuvinate"
 short_name = "Rejuvinate"
 description = "Heals self and ally."
-power = 40
+power = 45
 accuracy = 101
+damage_type = 2
+attack_elements = Array[int]([9])
+targeting = 4

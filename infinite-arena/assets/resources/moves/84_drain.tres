@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_ocsd3")
+display_color = Color(0.40392157, 0.30588236, 0.654902, 1)
 id = 84
 tier = 2
 name = "Drain"
@@ -11,3 +12,5 @@ short_name = "Drain"
 description = "Drains health on hit."
 power = 40
 accuracy = 85
+damage_type = 1
+attack_elements = Array[int]([7])

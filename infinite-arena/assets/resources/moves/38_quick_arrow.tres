@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_3bs3o")
+display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 38
 tier = 3
 name = "Quick Arrow"
@@ -12,3 +13,4 @@ description = "Increased priority."
 power = 45
 accuracy = 90
 priority = 1
+attack_elements = Array[int]([1])

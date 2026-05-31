@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_71e8h")
+display_color = Color(0.5764706, 0.76862746, 0.49019608, 1)
 id = 105
 tier = 3
 name = "Blessing"
@@ -11,3 +12,6 @@ short_name = "Blessing"
 description = "Removes debuffs."
 power = 20
 accuracy = 101
+damage_type = 2
+attack_elements = Array[int]([9])
+targeting = 3

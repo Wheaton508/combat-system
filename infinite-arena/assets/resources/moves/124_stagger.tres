@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_wgeef")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 124
 tier = 3
 name = "Stagger"
 short_name = "Stagger"
 description = "Both foes' Def- for three turns."
 accuracy = 90
+damage_type = 3
+targeting = 1

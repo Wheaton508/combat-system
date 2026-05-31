@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_6lx6k")
+display_color = Color(0.40392157, 0.30588236, 0.654902, 1)
 id = 89
 tier = 4
 name = "Black Hole"
@@ -11,3 +12,6 @@ short_name = "Black Hole"
 description = "Traps foes on hit. Strikes field."
 power = 60
 accuracy = 85
+damage_type = 1
+attack_elements = Array[int]([7])
+targeting = 5

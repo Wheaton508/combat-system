@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_wctak")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 1
 tier = 2
 name = "Slice"
 short_name = "Slice"
 power = 40
 accuracy = 95
+attack_elements = Array[int]([0])

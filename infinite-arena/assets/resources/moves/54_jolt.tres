@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_4nfco")
+display_color = Color(0.96862745, 0.79607844, 0.3019608, 1)
 id = 54
 name = "Jolt"
 short_name = "Jolt"
@@ -11,3 +12,5 @@ description = "Increased priority."
 power = 15
 accuracy = 100
 priority = 1
+damage_type = 1
+attack_elements = Array[int]([4])

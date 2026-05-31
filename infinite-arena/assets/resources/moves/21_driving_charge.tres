@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_sbau8")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 21
 tier = 5
 name = "Driving Charge"
@@ -12,3 +13,4 @@ description = "Increased priority."
 power = 85
 accuracy = 85
 priority = 1
+attack_elements = Array[int]([1])

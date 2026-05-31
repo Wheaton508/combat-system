@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_7ypi6")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 117
 tier = 3
 name = "War Cry"
 short_name = "War Cry"
 description = "Atk++ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 2

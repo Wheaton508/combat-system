@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_etr3c")
+display_color = Color(0.95686275, 0.39607844, 0.14117648, 1)
 id = 47
 tier = 2
 name = "Incinerate"
@@ -11,3 +12,5 @@ short_name = "Incinerate"
 description = "Removes target's item on hit."
 power = 35
 accuracy = 95
+damage_type = 1
+attack_elements = Array[int]([3])

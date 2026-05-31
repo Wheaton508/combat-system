@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_tkhmq")
+display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 25
 tier = 2
 name = "Parting Blow"
@@ -12,3 +13,4 @@ description = "Moves last."
 power = 50
 accuracy = 100
 priority = -2
+attack_elements = Array[int]([2])

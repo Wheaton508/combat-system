@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_ihiur")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 8
 tier = 5
 name = "Bladestorm"
 short_name = "Bladestorm"
 power = 90
 accuracy = 85
+attack_elements = Array[int]([1, 5])

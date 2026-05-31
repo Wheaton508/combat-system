@@ -4,8 +4,10 @@
 
 [resource]
 script = ExtResource("1_o8j66")
+display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 34
 name = "Arrow"
 short_name = "Arrow"
 power = 20
 accuracy = 100
+attack_elements = Array[int]([1])

@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_kgg2k")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 4
 tier = 3
 name = "Rising Cut"
 short_name = "R. Cut"
 power = 60
 accuracy = 90
+attack_elements = Array[int]([0])

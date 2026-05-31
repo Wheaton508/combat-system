@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_s3miq")
+display_color = Color(0.40392157, 0.30588236, 0.654902, 1)
 id = 83
 tier = 2
 name = "Umbra"
 short_name = "Umbra"
 power = 50
 accuracy = 90
+damage_type = 1
+attack_elements = Array[int]([7])

@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_d4wh4")
+display_color = Color(0.95686275, 0.39607844, 0.14117648, 1)
 id = 45
 name = "Ember"
 short_name = "Ember"
 power = 20
 accuracy = 100
+damage_type = 1
+attack_elements = Array[int]([3])

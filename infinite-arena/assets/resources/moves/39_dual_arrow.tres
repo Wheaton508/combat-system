@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_nvudj")
+display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 39
 tier = 3
 name = "Dual Arrow"
@@ -11,3 +12,5 @@ short_name = "D. Arrow"
 description = "Strikes both foes."
 power = 35
 accuracy = 90
+attack_elements = Array[int]([1])
+targeting = 1

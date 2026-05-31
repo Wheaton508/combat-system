@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_3ypxd")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 144
 tier = 2
 name = "Block"
@@ -11,3 +12,5 @@ short_name = "Block"
 description = "Protect from all damage this turn."
 accuracy = 101
 priority = 3
+damage_type = 3
+targeting = 2

@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_11iko")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 119
 tier = 3
 name = "Terrify"
 short_name = "Terrify"
 description = "Foe's Atk-- for three turns."
 accuracy = 95
+damage_type = 3

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://k3q7mcrdaucn"]
+
+[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_ixg4v"]
+
+[resource]
+script = ExtResource("1_ixg4v")
+display_color = Color(0.7137255, 0.84313726, 0.65882355, 1)
+id = 3
+tier = 1
+name = "Stonefish"
+metadata/_custom_type_script = "uid://bb2sj67lochp6"

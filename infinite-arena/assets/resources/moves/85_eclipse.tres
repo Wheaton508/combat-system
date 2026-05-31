@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_xco8a")
+display_color = Color(0.40392157, 0.30588236, 0.654902, 1)
 id = 85
 tier = 3
 name = "Eclipse"
@@ -11,3 +12,6 @@ short_name = "Eclipse"
 description = "Strikes both foes."
 power = 70
 accuracy = 85
+damage_type = 1
+attack_elements = Array[int]([7])
+targeting = 1

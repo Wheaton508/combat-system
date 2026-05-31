@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_4t3ql")
+display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 27
 tier = 3
 name = "Pushback"
@@ -12,3 +13,4 @@ description = "Forces target into backline. Moves last."
 power = 55
 accuracy = 90
 priority = -2
+attack_elements = Array[int]([2])

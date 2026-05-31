@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_8s6sf")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 145
 tier = 2
 name = "Counter"
@@ -11,3 +12,4 @@ short_name = "Counter"
 description = "Returns physical damage taken."
 accuracy = 101
 priority = -3
+damage_type = 3

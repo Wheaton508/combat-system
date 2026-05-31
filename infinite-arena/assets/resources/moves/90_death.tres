@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_alk1o")
+display_color = Color(0.40392157, 0.30588236, 0.654902, 1)
 id = 90
 tier = 5
 name = "Death"
 short_name = "Death"
 power = 110
 accuracy = 75
+damage_type = 1
+attack_elements = Array[int]([7])

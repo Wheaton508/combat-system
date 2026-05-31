@@ -4,8 +4,10 @@
 
 [resource]
 script = ExtResource("1_ykmtq")
+display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 133
 name = "Hex"
 short_name = "Hex"
 description = "Foe's Res- for three turns."
 accuracy = 100
+damage_type = 3

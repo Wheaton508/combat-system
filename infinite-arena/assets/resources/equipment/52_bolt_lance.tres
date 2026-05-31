@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cwvbs1v8a8oi8"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_mkyel"]
+
+[resource]
+script = ExtResource("1_mkyel")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
+id = 52
+tier = 4
+name = "Bolt Lance"
+description = "Targets Resistance. Lightning element."
+atk_buff = 30
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

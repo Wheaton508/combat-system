@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_awkxf")
+display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 44
 tier = 5
 name = "Dual Bolt"
@@ -11,3 +12,5 @@ short_name = "D. Bolt"
 description = "Strikes Both"
 power = 50
 accuracy = 80
+attack_elements = Array[int]([1])
+targeting = 1

@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_rhea6")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 5
 tier = 3
 name = "Sweeping Edge"
@@ -11,3 +12,5 @@ short_name = "S. Edge"
 description = "Strikes both foes."
 power = 35
 accuracy = 90
+attack_elements = Array[int]([0])
+targeting = 1

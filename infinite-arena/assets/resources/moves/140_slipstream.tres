@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_1mu8a")
+display_color = Color(0.3882353, 0.8235294, 0.5921569, 1)
 id = 140
 tier = 3
 name = "Slipstream"
 short_name = "Slipstream"
 description = "Team's Spd+ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 4

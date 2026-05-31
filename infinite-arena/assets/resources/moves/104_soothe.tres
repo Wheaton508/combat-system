@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_qoia1")
+display_color = Color(0.5764706, 0.76862746, 0.49019608, 1)
 id = 104
 tier = 3
 name = "Soothe"
@@ -11,3 +12,6 @@ short_name = "Soothe"
 description = "Heals self and ally."
 power = 30
 accuracy = 101
+damage_type = 2
+attack_elements = Array[int]([9])
+targeting = 4

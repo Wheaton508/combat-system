@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_ejevd")
+display_color = Color(0.3882353, 0.8235294, 0.5921569, 1)
 id = 70
 tier = 4
 name = "Tempest"
@@ -12,3 +13,5 @@ description = "Increased priority."
 power = 70
 accuracy = 85
 priority = 1
+damage_type = 1
+attack_elements = Array[int]([5])

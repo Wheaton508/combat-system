@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bsqjccfq6q0bj"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_yxji7"]
+
+[resource]
+script = ExtResource("1_yxji7")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
+id = 39
+tier = 3
+name = "Rapier"
+atk_buff = 25
+spd_buff = 15
+elemental_amplifications = Array[int]([1])
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

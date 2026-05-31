@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_oht4p")
+display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 132
 name = "Ward"
 short_name = "Ward"
 description = "Res+ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 2

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://tbweprl3llff"]
+
+[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_xu14c"]
+
+[resource]
+script = ExtResource("1_xu14c")
+display_color = Color(0.7137255, 0.84313726, 0.65882355, 1)
+id = 20
+tier = 4
+name = "Strange Potion"
+description = "Reverses buffs an debuffs"
+metadata/_custom_type_script = "uid://bb2sj67lochp6"

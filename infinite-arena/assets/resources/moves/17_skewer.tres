@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_o2kbg")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 17
 tier = 4
 name = "Skewer"
 short_name = "Skewer"
 power = 80
 accuracy = 85
+attack_elements = Array[int]([1])

@@ -4,8 +4,10 @@
 
 [resource]
 script = ExtResource("1_aigbv")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 111
 name = "Smack"
 short_name = "Smack"
 power = 20
 accuracy = 100
+attack_elements = Array[int]([10])

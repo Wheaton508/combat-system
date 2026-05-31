@@ -4,7 +4,10 @@
 
 [resource]
 script = ExtResource("1_ws55b")
+display_color = Color(0.5372549, 0.5372549, 0.92156863, 1)
 id = 128
 tier = 3
 description = "Team's Mag+ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 4

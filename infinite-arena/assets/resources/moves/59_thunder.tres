@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_8xyhb")
+display_color = Color(0.96862745, 0.79607844, 0.3019608, 1)
 id = 59
 tier = 4
 name = "Thunder"
 short_name = "Thunder"
 power = 110
 accuracy = 75
+damage_type = 1
+attack_elements = Array[int]([4])

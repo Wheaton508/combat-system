@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_8io1b")
+display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 37
 tier = 3
 name = "Bolt"
 short_name = "Bolt"
 power = 60
 accuracy = 90
+attack_elements = Array[int]([1])

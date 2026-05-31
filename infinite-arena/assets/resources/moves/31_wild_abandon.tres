@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_rvtj2")
+display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 31
 tier = 4
 name = "Wild Abandon"
@@ -11,3 +12,5 @@ short_name = "Wild Abndn"
 description = "Strikes field."
 power = 65
 accuracy = 85
+attack_elements = Array[int]([0, 2])
+targeting = 5

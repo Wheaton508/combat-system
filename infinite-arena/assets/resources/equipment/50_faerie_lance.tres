@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://0h4shjm5ow1k"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_k02ts"]
+
+[resource]
+script = ExtResource("1_k02ts")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
+id = 50
+tier = 3
+name = "Faerie Lance"
+description = "Restores 10% of max HP after every turn."
+atk_buff = 20
+res_buff = 20
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bpmqk8m6w2rhd"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_tiexu"]
+
+[resource]
+script = ExtResource("1_tiexu")
+display_color = Color(0.8, 0.6509804, 0.46666667, 1)
+id = 76
+tier = 2
+name = "Gold Rod"
+mag_buff = 22
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

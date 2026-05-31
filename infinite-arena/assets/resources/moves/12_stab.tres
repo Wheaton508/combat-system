@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_88cf3")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 12
 tier = 2
 name = "Stab"
 short_name = "Stab"
 power = 40
 accuracy = 95
+attack_elements = Array[int]([1])

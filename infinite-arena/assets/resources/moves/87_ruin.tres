@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_u3stl")
+display_color = Color(0.40392157, 0.30588236, 0.654902, 1)
 id = 87
 tier = 4
 name = "Ruin"
 short_name = "Ruin"
 power = 80
 accuracy = 80
+damage_type = 1
+attack_elements = Array[int]([7])

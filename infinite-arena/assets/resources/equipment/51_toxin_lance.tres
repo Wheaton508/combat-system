@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cug0coq58kpr0"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_py6uh"]
+
+[resource]
+script = ExtResource("1_py6uh")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
+id = 51
+tier = 4
+name = "Toxin Lance"
+description = "Debuffs target Defense on hit."
+atk_buff = 25
+def_buff = -15
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

@@ -4,9 +4,11 @@
 
 [resource]
 script = ExtResource("1_vpq5s")
+display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 35
 tier = 2
 name = "Fire Arrow"
 short_name = "F. Arrow"
 power = 30
 accuracy = 95
+attack_elements = Array[int]([1, 3])

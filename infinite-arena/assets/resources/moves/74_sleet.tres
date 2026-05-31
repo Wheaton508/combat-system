@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_6im0g")
+display_color = Color(0.3019608, 0.8156863, 0.88235295, 1)
 id = 74
 tier = 2
 name = "Sleet"
 short_name = "Sleet"
 power = 40
 accuracy = 95
+damage_type = 1
+attack_elements = Array[int]([6])

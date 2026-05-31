@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_3ofti")
+display_color = Color(0.3882353, 0.8235294, 0.5921569, 1)
 id = 67
 tier = 3
 name = "Tornado"
 short_name = "Tornado"
 power = 60
 accuracy = 90
+damage_type = 1
+attack_elements = Array[int]([5])

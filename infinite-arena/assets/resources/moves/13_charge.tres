@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_vxofn")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 13
 tier = 2
 name = "Charge"
@@ -12,3 +13,4 @@ description = "Increased priority."
 power = 30
 accuracy = 95
 priority = 1
+attack_elements = Array[int]([1])

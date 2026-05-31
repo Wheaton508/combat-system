@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_vvfb1")
+display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 28
 tier = 3
 name = "Wide Smash"
@@ -11,3 +12,5 @@ short_name = "W. Smash"
 description = "Strikes both foes."
 power = 35
 accuracy = 90
+attack_elements = Array[int]([2])
+targeting = 1

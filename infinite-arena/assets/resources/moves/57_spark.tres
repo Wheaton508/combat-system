@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_pue8o")
+display_color = Color(0.96862745, 0.79607844, 0.3019608, 1)
 id = 57
 tier = 3
 name = "Spark"
 short_name = "Spark"
 power = 60
 accuracy = 90
+damage_type = 1
+attack_elements = Array[int]([4])

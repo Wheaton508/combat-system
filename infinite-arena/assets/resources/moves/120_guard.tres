@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_ksqyt")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 120
 name = "Guard"
 short_name = "Guard"
 description = "Def+ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 2

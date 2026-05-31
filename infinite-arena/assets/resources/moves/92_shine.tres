@@ -4,8 +4,11 @@
 
 [resource]
 script = ExtResource("1_fs04i")
+display_color = Color(1, 0.8980392, 0.6, 1)
 id = 92
 name = "Shine"
 short_name = "Shine"
 power = 20
 accuracy = 100
+damage_type = 1
+attack_elements = Array[int]([8])

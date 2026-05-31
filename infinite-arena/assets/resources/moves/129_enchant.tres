@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_w0oif")
+display_color = Color(0.5372549, 0.5372549, 0.92156863, 1)
 id = 129
 tier = 3
 name = "Enchant"
 short_name = "Enchant"
 description = "Mag++ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 2

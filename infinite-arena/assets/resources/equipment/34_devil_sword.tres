@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://dl33jxturulft"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_tw0wa"]
+
+[resource]
+script = ExtResource("1_tw0wa")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
+id = 34
+tier = 1
+name = "Devil Sword"
+description = "Has a chance to damage the wielder instead of foe."
+atk_buff = 50
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

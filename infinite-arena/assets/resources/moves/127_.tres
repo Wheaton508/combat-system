@@ -4,6 +4,8 @@
 
 [resource]
 script = ExtResource("1_o3tt5")
+display_color = Color(0.5372549, 0.5372549, 0.92156863, 1)
 id = 127
 description = "Foe's Mag- for three turns."
 accuracy = 100
+damage_type = 3

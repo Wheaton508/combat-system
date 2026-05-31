@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_35bml")
+display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 122
 tier = 3
 name = "Fortify"
 short_name = "Fortidy"
 description = "Team's Def+ for three turns."
 accuracy = 101
+damage_type = 3
+targeting = 4

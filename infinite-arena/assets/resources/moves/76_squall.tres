@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_yqbkc")
+display_color = Color(0.3019608, 0.8156863, 0.88235295, 1)
 id = 76
 tier = 3
 name = "Squall"
@@ -12,3 +13,5 @@ description = "Increased priority."
 power = 50
 accuracy = 90
 priority = 1
+damage_type = 1
+attack_elements = Array[int]([5, 6])

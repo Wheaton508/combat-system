@@ -4,9 +4,13 @@
 
 [resource]
 script = ExtResource("1_t2fuo")
+display_color = Color(0.5764706, 0.76862746, 0.49019608, 1)
 id = 106
 tier = 4
 name = "Sacrifice"
 short_name = "Sacrifice"
 description = "Sets own HP to 1 to fully restore ally."
 accuracy = 101
+damage_type = 2
+attack_elements = Array[int]([9])
+targeting = 3

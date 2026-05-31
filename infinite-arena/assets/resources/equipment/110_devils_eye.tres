@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bx6lxu5jn5jjh"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_jldxg"]
+
+[resource]
+script = ExtResource("1_jldxg")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
+id = 110
+tier = 4
+name = "Devil's Eye"
+description = "Damages the user, but guarantees hits."
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

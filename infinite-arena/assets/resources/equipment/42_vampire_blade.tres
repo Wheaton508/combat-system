@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cuprvb1r8ldlx"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_ewpbd"]
+
+[resource]
+script = ExtResource("1_ewpbd")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
+id = 42
+tier = 4
+name = "Vampire Blade"
+description = "Drains 50% of damage dealt."
+atk_buff = 25
+def_buff = -10
+res_buff = -10
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_h0120")
+display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 3
 tier = 2
 name = "Quick Cut"
@@ -12,3 +13,4 @@ description = "Moves first."
 power = 30
 accuracy = 90
 priority = 2
+attack_elements = Array[int]([0])

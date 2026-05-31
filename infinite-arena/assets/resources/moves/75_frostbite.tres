@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_sy06d")
+display_color = Color(0.3019608, 0.8156863, 0.88235295, 1)
 id = 75
 tier = 2
 name = "Frostbite"
@@ -11,3 +12,5 @@ short_name = "Frostbite"
 description = "Spd- for two turns on hit."
 power = 30
 accuracy = 90
+damage_type = 1
+attack_elements = Array[int]([6])

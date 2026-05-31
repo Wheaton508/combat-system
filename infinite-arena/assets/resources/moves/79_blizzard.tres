@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_ris0q")
+display_color = Color(0.3019608, 0.8156863, 0.88235295, 1)
 id = 79
 tier = 4
 name = "Blizzard"
@@ -11,3 +12,6 @@ short_name = "Blizzard"
 description = "Strikes both foes."
 power = 50
 accuracy = 85
+damage_type = 1
+attack_elements = Array[int]([6])
+targeting = 1

@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_wndnc")
+display_color = Color(0.5764706, 0.76862746, 0.49019608, 1)
 id = 107
 tier = 4
 name = "Quick Mend"
@@ -12,3 +13,6 @@ description = "Increased priority."
 power = 30
 accuracy = 101
 priority = 1
+damage_type = 2
+attack_elements = Array[int]([9])
+targeting = 3

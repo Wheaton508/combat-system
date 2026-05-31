@@ -4,9 +4,13 @@
 
 [resource]
 script = ExtResource("1_tnkau")
+display_color = Color(0.5764706, 0.76862746, 0.49019608, 1)
 id = 100
 tier = 2
 name = "Mend"
 short_name = "Mend"
 power = 50
 accuracy = 101
+damage_type = 2
+attack_elements = Array[int]([9])
+targeting = 3

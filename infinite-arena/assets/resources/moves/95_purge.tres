@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_mo3rv")
+display_color = Color(1, 0.8980392, 0.6, 1)
 id = 95
 tier = 3
 name = "Purge"
@@ -11,3 +12,5 @@ short_name = "Purge"
 description = "Removes stat changes on hit."
 power = 55
 accuracy = 90
+damage_type = 1
+attack_elements = Array[int]([8])

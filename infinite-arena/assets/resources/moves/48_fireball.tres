@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_xs23v")
+display_color = Color(0.95686275, 0.39607844, 0.14117648, 1)
 id = 48
 tier = 3
 name = "Fireball"
 short_name = "Fireball"
 power = 60
 accuracy = 90
+damage_type = 1
+attack_elements = Array[int]([3])

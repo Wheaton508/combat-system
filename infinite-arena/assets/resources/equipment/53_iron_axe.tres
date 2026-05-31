@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://d0x62mjsiqghv"]
+
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_73owu"]
+
+[resource]
+script = ExtResource("1_73owu")
+display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
+id = 53
+tier = 1
+name = "Iron Axe"
+atk_buff = 10
+metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

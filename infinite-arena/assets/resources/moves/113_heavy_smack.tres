@@ -4,8 +4,10 @@
 
 [resource]
 script = ExtResource("1_utwkj")
+display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 113
 name = "Heavy Smack"
 short_name = "H. Smack"
 power = 40
 accuracy = 100
+attack_elements = Array[int]([2])

@@ -4,9 +4,13 @@
 
 [resource]
 script = ExtResource("1_8hdkv")
+display_color = Color(0.5764706, 0.76862746, 0.49019608, 1)
 id = 1102
 tier = 3
 name = "Recover"
 short_name = "Recover"
 power = 75
 accuracy = 101
+damage_type = 2
+attack_elements = Array[int]([9])
+targeting = 3
