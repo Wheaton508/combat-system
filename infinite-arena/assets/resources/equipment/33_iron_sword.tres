@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://pnlvwn70c0sp"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_dbvjy"]
+[ext_resource type="Texture2D" uid="uid://bmxnlgndtyjbh" path="res://imports/fantasy_sprites/weapons/33_iron_sword.png" id="2_wb5gq"]
 
 [resource]
 script = ExtResource("1_dbvjy")
 display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 33
 tier = 1
+sprite = ExtResource("2_wb5gq")
 name = "Iron Sword"
 atk_buff = 5
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

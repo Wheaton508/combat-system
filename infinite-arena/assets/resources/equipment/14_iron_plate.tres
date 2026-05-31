@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cg5g5rqxhut1v"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_o4ggc"]
+[ext_resource type="Texture2D" uid="uid://bwwijdp7e7r2b" path="res://imports/fantasy_sprites/armor/14_iron_plate.png" id="2_hinb4"]
 
 [resource]
 script = ExtResource("1_o4ggc")
 display_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 id = 14
 tier = 2
+sprite = ExtResource("2_hinb4")
 name = "Iron Plate"
 def_buff = 10
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

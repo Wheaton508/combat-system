@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bkwk1bd8uyi6m" path="res://imports/fantasy_ui/ui/individual_images/Tick02_Left.png" id="7_3g3ef"]
 [ext_resource type="Script" uid="uid://c2ldx5a5tv24a" path="res://scripts/ui/buttons/exit_game.gd" id="7_bqlkj"]
 [ext_resource type="Theme" uid="uid://15mvclwt1apy" path="res://assets/themes/menu_slider.tres" id="7_laijh"]
+[ext_resource type="Texture2D" uid="uid://cfcp1ieyaemoe" path="res://imports/fantasy_ui/ui/individual_images/Codex.png" id="8_wvfub"]
 [ext_resource type="Texture2D" uid="uid://caelj2qo8h7eg" path="res://imports/fantasy_ui/ui/individual_images/SFX.png" id="9_y13y0"]
 [ext_resource type="Theme" uid="uid://l2afu2wa0ewv" path="res://assets/themes/main_menu_button_red.tres" id="11_bqlkj"]
 
@@ -111,6 +112,25 @@ offset_bottom = -35.0
 theme = ExtResource("4_vwayb")
 theme_override_constants/icon_max_width = 20
 icon = ExtResource("5_1l1qg")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("6_xdjb4")
+menu_to_open = NodePath("../../../Options")
+menu_to_close = NodePath("../..")
+
+[node name="Codex" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=1028475818 node_paths=PackedStringArray("menu_to_open", "menu_to_close")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 84.0
+offset_top = 196.0
+offset_right = -84.0
+offset_bottom = -35.0
+theme = ExtResource("4_vwayb")
+theme_override_constants/icon_max_width = 20
+disabled = true
+icon = ExtResource("8_wvfub")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("6_xdjb4")
@@ -246,5 +266,12 @@ expand_icon = true
 script = ExtResource("6_xdjb4")
 menu_to_open = NodePath("../../../Menu")
 menu_to_close = NodePath("../..")
+
+[node name="Codex" type="Control" parent="CanvasLayer" unique_id=1760646266]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=382073331]

@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bv483k6k3pb8j"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_05s3y"]
+[ext_resource type="Texture2D" uid="uid://dag3ui34piqlt" path="res://imports/fantasy_sprites/armor/19_maid_dress.png" id="2_36j2p"]
 
 [resource]
 script = ExtResource("1_05s3y")
 display_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 id = 19
 tier = 3
+sprite = ExtResource("2_36j2p")
 name = "Maid Dress"
 mag_buff = 5
 res_buff = 10

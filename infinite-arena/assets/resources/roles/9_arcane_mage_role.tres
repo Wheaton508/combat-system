@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Role" format=3 uid="uid://chslwi0dqymjx"]
+
+[ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_m1gir"]
+
+[resource]
+script = ExtResource("1_m1gir")
+role_name = "Arcane Mage"
+weaknesses = Array[int]([1, 2, 3, 5])
+hp_rank = "A"
+atk_rank = "D"
+def_rank = "B"
+mag_rank = "S"
+res_rank = "B"
+spd_rank = "C"

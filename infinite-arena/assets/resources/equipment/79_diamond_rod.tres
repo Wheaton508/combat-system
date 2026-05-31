@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cfh5l6gebrul1"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_4yt0n"]
+[ext_resource type="Texture2D" uid="uid://huk78dk1yfhx" path="res://imports/fantasy_sprites/weapons/79_diamond_rod.png" id="2_tono0"]
 
 [resource]
 script = ExtResource("1_4yt0n")
 display_color = Color(0.8, 0.6509804, 0.46666667, 1)
 id = 79
 tier = 3
+sprite = ExtResource("2_tono0")
 name = "Diamond Rod"
 mag_buff = 37
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

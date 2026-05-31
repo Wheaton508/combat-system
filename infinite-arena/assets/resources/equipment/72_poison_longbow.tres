@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bpgyguwo5a4h1"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_31mji"]
+[ext_resource type="Texture2D" uid="uid://bva670wdcwwbv" path="res://imports/fantasy_sprites/weapons/72_poison_bow.png" id="2_4d10y"]
 
 [resource]
 script = ExtResource("1_31mji")
 display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 72
 tier = 4
+sprite = ExtResource("2_4d10y")
 name = "Poison Longbow"
 description = "Debuffs target Defense on hit."
 atk_buff = 35

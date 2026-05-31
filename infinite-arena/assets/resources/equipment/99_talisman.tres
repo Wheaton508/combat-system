@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://olwsjaq0ainy"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_qf3y5"]
+[ext_resource type="Texture2D" uid="uid://bcj1qmop1q8ah" path="res://imports/fantasy_sprites/equipment/99_talisman.png" id="2_dexhm"]
 
 [resource]
 script = ExtResource("1_qf3y5")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 99
 tier = 3
+sprite = ExtResource("2_dexhm")
 name = "Talisman"
 res_buff = 15
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

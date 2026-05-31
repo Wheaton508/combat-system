@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Role" format=3 uid="uid://cdc2mgq56nfjq"]
+
+[ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_ny3xt"]
+
+[resource]
+script = ExtResource("1_ny3xt")
+role_name = "Templar"
+weaknesses = Array[int]([1, 2, 4, 7])
+hp_rank = "B"
+atk_rank = "B"
+def_rank = "B"
+mag_rank = "A"
+res_rank = "A"
+spd_rank = "B"

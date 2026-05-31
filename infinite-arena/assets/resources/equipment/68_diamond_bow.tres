@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cq6yimi35kjh1"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_3tjqb"]
+[ext_resource type="Texture2D" uid="uid://diir56y5cxkpy" path="res://imports/fantasy_sprites/weapons/68_diamond_bow.png" id="2_3j778"]
 
 [resource]
 script = ExtResource("1_3tjqb")
 display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 68
 tier = 3
+sprite = ExtResource("2_3j778")
 name = "Diamond Bow"
 atk_buff = 35
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

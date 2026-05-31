@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://nfyrt7bx0ina"]
 
 [ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_81y6c"]
+[ext_resource type="Texture2D" uid="uid://c7ocpw0wf457i" path="res://imports/fantasy_sprites/items/15_chili_pepper.png" id="2_cf1u4"]
 
 [resource]
 script = ExtResource("1_81y6c")
 display_color = Color(0.7137255, 0.84313726, 0.65882355, 1)
 id = 15
 tier = 3
+sprite = ExtResource("2_cf1u4")
 name = "Chili Pepper"
 metadata/_custom_type_script = "uid://bb2sj67lochp6"

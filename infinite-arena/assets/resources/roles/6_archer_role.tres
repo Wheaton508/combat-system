@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Role" format=3 uid="uid://dv0s53i5reqjb"]
+
+[ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_bn643"]
+
+[resource]
+script = ExtResource("1_bn643")
+role_name = "Archer"
+weaknesses = Array[int]([0, 1, 5])
+hp_rank = "B"
+atk_rank = "B"
+def_rank = "C"
+mag_rank = "D"
+res_rank = "B"
+spd_rank = "S"

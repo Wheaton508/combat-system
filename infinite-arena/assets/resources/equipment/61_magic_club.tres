@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://binoi71mt4w8n"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_n1iw5"]
+[ext_resource type="Texture2D" uid="uid://diw8f3ycgycg3" path="res://imports/fantasy_sprites/weapons/61_magic_club.png" id="2_3k46o"]
 
 [resource]
 script = ExtResource("1_n1iw5")
 display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 61
 tier = 3
+sprite = ExtResource("2_3k46o")
 name = "Magic Club"
 atk_buff = 35
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

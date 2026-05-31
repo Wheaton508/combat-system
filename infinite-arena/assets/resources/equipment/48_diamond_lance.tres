@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://dyk2e1s4c864f"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_7q265"]
+[ext_resource type="Texture2D" uid="uid://bgn3btmn8qtv2" path="res://imports/fantasy_sprites/weapons/48_diamond_lance.png" id="2_w4xib"]
 
 [resource]
 script = ExtResource("1_7q265")
 display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 48
 tier = 3
+sprite = ExtResource("2_w4xib")
 name = "Diamond Lance"
 atk_buff = 37
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

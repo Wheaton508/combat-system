@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Role" format=3 uid="uid://f1mrxn1e3bg7"]
+
+[ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_s0k3v"]
+
+[resource]
+script = ExtResource("1_s0k3v")
+role_name = "Orc Knight"
+weaknesses = Array[int]([1, 3, 4])
+hp_rank = "A"
+atk_rank = "A"
+def_rank = "A"
+mag_rank = "D"
+res_rank = "C"
+spd_rank = "D"

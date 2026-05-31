@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bto8f0vx3l5u5"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_7uhst"]
+[ext_resource type="Texture2D" uid="uid://dfo57noxwc0jc" path="res://imports/fantasy_sprites/armor/2_iron_helm.png" id="2_44b12"]
 
 [resource]
 script = ExtResource("1_7uhst")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 2
 tier = 2
+sprite = ExtResource("2_44b12")
 name = "Iron Helm"
 def_buff = 6
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

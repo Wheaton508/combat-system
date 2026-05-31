@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://c4hhdsaxva1p6"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_8tr8f"]
+[ext_resource type="Texture2D" uid="uid://nhp3ee4sq4o1" path="res://imports/fantasy_sprites/armor/7_emerald_circlet.png" id="2_o8kmd"]
 
 [resource]
 script = ExtResource("1_8tr8f")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 7
 tier = 3
+sprite = ExtResource("2_o8kmd")
 name = "Emerald Circlet"
 def_buff = 3
 res_buff = 3

@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://57tcfx6bxr5r"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_eedjg"]
+[ext_resource type="Texture2D" uid="uid://2byxwgkawuqj" path="res://imports/fantasy_sprites/weapons/77_gold_staff.png" id="2_jukm5"]
 
 [resource]
 script = ExtResource("1_eedjg")
 display_color = Color(0.8, 0.6509804, 0.46666667, 1)
 id = 77
 tier = 2
+sprite = ExtResource("2_jukm5")
 name = "Gold Staff"
 mag_buff = 15
 elemental_amplifications = Array[int]([9])

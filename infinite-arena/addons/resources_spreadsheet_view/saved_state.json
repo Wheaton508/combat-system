@@ -13,30 +13,30 @@
     },
     "res://assets/resources/equipment/": {
       "display_color": {
-        "visibility": 0
+        "visibility": 0.0
       },
       "metadata/_custom_type_script": {
-        "visibility": 0
+        "visibility": 0.0
       },
       "resource_local_to_scene": {
-        "visibility": 0
+        "visibility": 0.0
       },
       "resource_name": {
-        "visibility": 0
+        "visibility": 0.0
       }
     },
     "res://assets/resources/items/": {
       "display_color": {
-        "visibility": 0
+        "visibility": 0.0
       },
       "metadata/_custom_type_script": {
-        "visibility": 0
+        "visibility": 0.0
       },
       "resource_local_to_scene": {
-        "visibility": 1
+        "visibility": 1.0
       },
       "resource_name": {
-        "visibility": 0
+        "visibility": 0.0
       }
     },
     "res://assets/resources/moves/": {
@@ -71,10 +71,10 @@
         "visibility": 1.0
       },
       "resource_local_to_scene": {
-        "visibility": 1
+        "visibility": 1.0
       },
       "resource_name": {
-        "visibility": 0
+        "visibility": 0.0
       },
       "resource_path": {
         "visibility": 1.0
@@ -89,7 +89,7 @@
         "visibility": 1.0
       }
     },
-    "res://example/Items/items/": {
+    "res://assets/resources/roles/": {
       "metadata/_custom_type_script": {
         "visibility": 0
       },
@@ -98,6 +98,17 @@
       },
       "resource_name": {
         "visibility": 0
+      }
+    },
+    "res://example/Items/items/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0.0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0.0
+      },
+      "resource_name": {
+        "visibility": 0.0
       }
     },
     "res://resources/": {
@@ -126,7 +137,8 @@
   "recent_paths": [
     "res://assets/resources/moves/",
     "res://assets/resources/equipment/",
-    "res://assets/resources/items/"
+    "res://assets/resources/items/",
+    "res://assets/resources/roles/"
   ],
   "table_functions": {
     "filter": [

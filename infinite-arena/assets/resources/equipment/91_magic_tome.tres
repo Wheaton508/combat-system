@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://dy1xeimuwcd27"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_x0411"]
+[ext_resource type="Texture2D" uid="uid://c13x1fkvvdraf" path="res://imports/fantasy_sprites/equipment/91_magic_tome.png" id="2_m11lj"]
 
 [resource]
 script = ExtResource("1_x0411")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 91
 tier = 2
+sprite = ExtResource("2_m11lj")
 name = "Magic Tome"
 mag_buff = 8
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

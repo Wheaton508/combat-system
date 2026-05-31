@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://tttm3jwee3g6"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_7inxj"]
+[ext_resource type="Texture2D" uid="uid://c8mheigpwqwha" path="res://imports/fantasy_sprites/weapons/80_diamond_staff.png" id="2_rlckn"]
 
 [resource]
 script = ExtResource("1_7inxj")
 display_color = Color(0.8, 0.6509804, 0.46666667, 1)
 id = 80
 tier = 3
+sprite = ExtResource("2_rlckn")
 name = "Diamond Staff"
 mag_buff = 30
 elemental_amplifications = Array[int]([9])

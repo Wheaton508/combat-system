@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://ju8kgnfngb4n"]
 
 [ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_xr5ad"]
+[ext_resource type="Texture2D" uid="uid://c17n0x636cp2l" path="res://imports/fantasy_sprites/items/18_mystic_tuber.png" id="2_7jmct"]
 
 [resource]
 script = ExtResource("1_xr5ad")
 display_color = Color(0.7137255, 0.84313726, 0.65882355, 1)
 id = 18
 tier = 4
+sprite = ExtResource("2_7jmct")
 name = "Magic Tuber"
 metadata/_custom_type_script = "uid://bb2sj67lochp6"

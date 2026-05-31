@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://dvjs04sp7pv0b"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_ilp47"]
+[ext_resource type="Texture2D" uid="uid://fop367lmv25j" path="res://imports/fantasy_sprites/weapons/69_sunset_bow.png" id="2_wi4cv"]
 
 [resource]
 script = ExtResource("1_ilp47")
 display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 69
 tier = 3
+sprite = ExtResource("2_wi4cv")
 name = "Sunset Longbow"
 description = "Restores 10% of max HP after every turn."
 atk_buff = 40

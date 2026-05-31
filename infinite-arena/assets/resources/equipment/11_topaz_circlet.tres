@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://y56jhx1njy61"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_e4pkx"]
+[ext_resource type="Texture2D" uid="uid://cevvi7m5vkm0q" path="res://imports/fantasy_sprites/armor/11_topaz_circlet.png" id="2_w84bs"]
 
 [resource]
 script = ExtResource("1_e4pkx")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 11
 tier = 4
+sprite = ExtResource("2_w84bs")
 name = "Topaz Circlet"
 def_buff = 6
 res_buff = 6

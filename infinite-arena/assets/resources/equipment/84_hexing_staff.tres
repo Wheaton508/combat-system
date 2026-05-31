@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://d2q8tunqdbv0x"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_jkbej"]
+[ext_resource type="Texture2D" uid="uid://cv5dc71rfe335" path="res://imports/fantasy_sprites/weapons/84_hexing_staff.png" id="2_2i4qd"]
 
 [resource]
 script = ExtResource("1_jkbej")
 display_color = Color(0.8, 0.6509804, 0.46666667, 1)
 id = 84
 tier = 4
+sprite = ExtResource("2_2i4qd")
 name = "Hexing Staff"
 description = "Extends debuff duration."
 mag_buff = 20

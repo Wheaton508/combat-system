@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://dws2g74jgda5m"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_x8eho"]
+[ext_resource type="Texture2D" uid="uid://60h0g5pb324s" path="res://imports/fantasy_sprites/weapons/37_diamond_sword.png" id="2_3g73g"]
 
 [resource]
 script = ExtResource("1_x8eho")
 display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 37
 tier = 3
+sprite = ExtResource("2_3g73g")
 name = "Diamond Sword"
 atk_buff = 35
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

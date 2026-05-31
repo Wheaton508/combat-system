@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://dcnbm1rs2g1q0"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_sxvfb"]
+[ext_resource type="Texture2D" uid="uid://bgfm4awffft58" path="res://imports/fantasy_sprites/equipment/106_jade.png" id="2_7koi5"]
 
 [resource]
 script = ExtResource("1_sxvfb")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 106
 tier = 3
+sprite = ExtResource("2_7koi5")
 name = "Jade"
 elemental_amplifications = Array[int]([9])
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

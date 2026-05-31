@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bj10ofvt5hnx6"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_gugmw"]
+[ext_resource type="Texture2D" uid="uid://bk4msp4x2nxro" path="res://imports/fantasy_sprites/weapons/73_double_bow.png" id="2_w5ohi"]
 
 [resource]
 script = ExtResource("1_gugmw")
 display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 73
 tier = 4
+sprite = ExtResource("2_w5ohi")
 name = "Double Shot"
 description = "Increases damage dealt by spread moves."
 atk_buff = 30

@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bsumq0ep0e021"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_s4sjk"]
+[ext_resource type="Texture2D" uid="uid://cqlw46bmtf1w5" path="res://imports/fantasy_sprites/weapons/41_flamberge.png" id="2_5gru0"]
 
 [resource]
 script = ExtResource("1_s4sjk")
 display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 41
 tier = 4
+sprite = ExtResource("2_5gru0")
 name = "Flamberge"
 atk_buff = 40
 elemental_amplifications = Array[int]([3])

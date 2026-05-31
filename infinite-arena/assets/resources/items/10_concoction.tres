@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://ccgf4aawvucbw"]
 
 [ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_aescx"]
+[ext_resource type="Texture2D" uid="uid://c7u56uivks82n" path="res://imports/fantasy_sprites/items/10_concoction.png" id="2_hwdd6"]
 
 [resource]
 script = ExtResource("1_aescx")
 display_color = Color(0.7137255, 0.84313726, 0.65882355, 1)
 id = 10
 tier = 3
+sprite = ExtResource("2_hwdd6")
 name = "Concoction"
 metadata/_custom_type_script = "uid://bb2sj67lochp6"

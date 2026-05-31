@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bbxwjbstvdy4o"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_0vk82"]
+[ext_resource type="Texture2D" uid="uid://bway6fr4w8rx" path="res://imports/fantasy_sprites/armor/1_leather_hat.png" id="2_j8482"]
 
 [resource]
 script = ExtResource("1_0vk82")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 1
 tier = 1
+sprite = ExtResource("2_j8482")
 name = "Leather Hat"
 res_buff = 2
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

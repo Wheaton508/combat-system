@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://n43oipj66l5s"]
 
 [ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_3g83m"]
+[ext_resource type="Texture2D" uid="uid://wr383mgqdn2k" path="res://imports/fantasy_sprites/items/2_raw_meat.png" id="2_e6u0s"]
 
 [resource]
 script = ExtResource("1_3g83m")
 display_color = Color(0.7137255, 0.84313726, 0.65882355, 1)
 id = 2
 tier = 1
+sprite = ExtResource("2_e6u0s")
 name = "Raw Meat"
 description = "Grants +1 Atk for three turns"
 metadata/_custom_type_script = "uid://bb2sj67lochp6"

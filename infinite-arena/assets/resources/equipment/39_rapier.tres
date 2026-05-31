@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bsqjccfq6q0bj"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_yxji7"]
+[ext_resource type="Texture2D" uid="uid://bpb8m8o5f8lbf" path="res://imports/fantasy_sprites/weapons/39_rapier.png" id="2_gg5ab"]
 
 [resource]
 script = ExtResource("1_yxji7")
 display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 39
 tier = 3
+sprite = ExtResource("2_gg5ab")
 name = "Rapier"
 atk_buff = 25
 spd_buff = 15

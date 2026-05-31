@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bll7abu1edjmt"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_7cudj"]
+[ext_resource type="Texture2D" uid="uid://x5jkvo4cucua" path="res://imports/fantasy_sprites/weapons/44_iron_lance.png" id="2_cm4iu"]
 
 [resource]
 script = ExtResource("1_7cudj")
 display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 44
 tier = 1
+sprite = ExtResource("2_cm4iu")
 name = "Iron Lance"
 atk_buff = 7
 metadata/_custom_type_script = "uid://b4f7hbamkm5f2"

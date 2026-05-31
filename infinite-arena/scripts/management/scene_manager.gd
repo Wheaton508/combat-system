@@ -21,6 +21,8 @@ func _ready():
 	var init = load(initial_scene).instantiate()
 	current_scene_holder.add_child(init)
 	current_scene = init
+	
+	_transition(Fade.IN)
 
 func _load_scene(new_scene_path : String):
 	if current_scene != null:

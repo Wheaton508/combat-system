@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cbcak6h1cjese"]
 
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_nb2j6"]
+[ext_resource type="Texture2D" uid="uid://bbtmt8tijafih" path="res://imports/fantasy_sprites/weapons/82_candellight.png" id="2_wjkm3"]
 
 [resource]
 script = ExtResource("1_nb2j6")
 display_color = Color(0.8, 0.6509804, 0.46666667, 1)
 id = 82
 tier = 4
+sprite = ExtResource("2_wjkm3")
 name = "Candellight"
 description = "Fire element."
 mag_buff = 35
