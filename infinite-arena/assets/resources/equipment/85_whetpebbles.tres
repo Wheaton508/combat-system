@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://dvkojnedwpua6"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_2v1ia"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_2v1ia"]
 [ext_resource type="Texture2D" uid="uid://bwwp6vten6t24" path="res://imports/fantasy_sprites/equipment/85_whetpebbles.png" id="2_c3nqw"]
 
 [resource]

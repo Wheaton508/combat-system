@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://7l1aipdwp8c4"]
 
-[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_uncmi"]
+[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/game_objects/item.gd" id="1_uncmi"]
 [ext_resource type="Texture2D" uid="uid://dq3wxqx8hd5do" path="res://imports/fantasy_sprites/items/1_milk.png" id="2_sme8d"]
 
 [resource]

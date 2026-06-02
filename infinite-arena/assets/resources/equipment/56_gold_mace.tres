@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bp5vsec8w8qvj"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_6l48a"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_6l48a"]
 [ext_resource type="Texture2D" uid="uid://5n5mkviwmdha" path="res://imports/fantasy_sprites/weapons/56_gold_mace.png" id="2_4fi0v"]
 
 [resource]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cuprvb1r8ldlx"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_ewpbd"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_ewpbd"]
 [ext_resource type="Texture2D" uid="uid://df8q4el55waju" path="res://imports/fantasy_sprites/weapons/42_vampire_sword.png" id="2_doivi"]
 
 [resource]

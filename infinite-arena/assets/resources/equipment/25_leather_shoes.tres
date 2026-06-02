@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://jmhou6qoxwb2"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_jckqe"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_jckqe"]
 [ext_resource type="Texture2D" uid="uid://7gppjh87a5t" path="res://imports/fantasy_sprites/armor/25_leather_shoes.png" id="2_i4row"]
 
 [resource]

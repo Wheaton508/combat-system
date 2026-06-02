@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cstvsurh7iwpy"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_mnw1p"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_mnw1p"]
 [ext_resource type="Texture2D" uid="uid://chxupo3wtc3k1" path="res://imports/fantasy_sprites/weapons/65_iron_bow.png" id="2_8krog"]
 
 [resource]

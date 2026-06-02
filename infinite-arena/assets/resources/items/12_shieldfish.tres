@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://bhh5618hjk446"]
 
-[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_mwwdu"]
+[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/game_objects/item.gd" id="1_mwwdu"]
 [ext_resource type="Texture2D" uid="uid://cuhuhqeadudlp" path="res://imports/fantasy_sprites/items/12_shieldfish.png" id="2_cn46c"]
 
 [resource]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cgtxei72o6dr4"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_05ceo"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_05ceo"]
 [ext_resource type="Texture2D" uid="uid://cakvd5j3tvjk3" path="res://imports/fantasy_sprites/weapons/71_obsidian_bow.png" id="2_t2s6e"]
 
 [resource]

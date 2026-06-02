@@ -76,3 +76,5 @@ color = Color(0, 0, 0, 0)
 libraries/ = SubResource("AnimationLibrary_wvhn8")
 
 [node name="AudioManager" type="Node" parent="." unique_id=997562286]
+
+[node name="SaveManager" type="Node" parent="." unique_id=601593731]

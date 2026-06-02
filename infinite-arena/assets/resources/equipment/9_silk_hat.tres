@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://dbfsggyysk4k0"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_qwxvr"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_qwxvr"]
 [ext_resource type="Texture2D" uid="uid://bryeah15t6kg1" path="res://imports/fantasy_sprites/armor/9_silk_hat.png" id="2_dyteq"]
 
 [resource]

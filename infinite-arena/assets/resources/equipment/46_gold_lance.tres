@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://433n1q2cmh67"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_0rq5u"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_0rq5u"]
 [ext_resource type="Texture2D" uid="uid://bfvyij4wrldor" path="res://imports/fantasy_sprites/weapons/46_gold_naginata.png" id="2_fdjbx"]
 
 [resource]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://dgm1xi4bxrdvu"]
 
-[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_7utsb"]
+[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/game_objects/item.gd" id="1_7utsb"]
 [ext_resource type="Texture2D" uid="uid://cl4ddspmnmle6" path="res://imports/fantasy_sprites/items/9_magic_herb.png" id="2_p1wt2"]
 
 [resource]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://dl33jxturulft"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_tw0wa"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_tw0wa"]
 [ext_resource type="Texture2D" uid="uid://dp7ti35h77bx8" path="res://imports/fantasy_sprites/weapons/34_devil_sword.png" id="2_mdgbl"]
 
 [resource]

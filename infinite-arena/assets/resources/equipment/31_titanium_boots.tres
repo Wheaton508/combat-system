@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://behj5gjdfm5r8"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_tmgep"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_tmgep"]
 [ext_resource type="Texture2D" uid="uid://cypxp28pgbf3e" path="res://imports/fantasy_sprites/armor/31_titanium_boots.png" id="2_7dqkt"]
 
 [resource]

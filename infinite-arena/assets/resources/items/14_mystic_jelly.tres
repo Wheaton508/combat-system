@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://b0pb85y6hd3xb"]
 
-[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_cngqm"]
+[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/game_objects/item.gd" id="1_cngqm"]
 [ext_resource type="Texture2D" uid="uid://va1orijqlbbl" path="res://imports/fantasy_sprites/items/14_mystic_jelly.png" id="2_d2lu3"]
 
 [resource]

@@ -15,7 +15,7 @@ var current_scene : Node
 # =================================================================================================
 
 
-func _ready():
+func _ready() -> void:
 	Global.scene_manager = self
 	
 	var init = load(initial_scene).instantiate()
@@ -24,7 +24,7 @@ func _ready():
 	
 	_transition(Fade.IN)
 
-func _load_scene(new_scene_path : String):
+func _load_scene(new_scene_path : String) -> void:
 	if current_scene != null:
 		await _transition(Fade.OUT)
 		
@@ -39,7 +39,7 @@ func _load_scene(new_scene_path : String):
 	else:
 		print("ERROR. scene_manager.current_scene never set.") # Debug
 
-func _transition(fade_type : Fade):
+func _transition(fade_type : Fade) -> void:
 	if fade_type == Fade.OUT:
 		scene_transition.visible = true
 		animation_player.play("fade_in_black")
