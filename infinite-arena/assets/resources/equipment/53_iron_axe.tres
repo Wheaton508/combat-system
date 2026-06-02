@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://d0x62mjsiqghv"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_73owu"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_73owu"]
 [ext_resource type="Texture2D" uid="uid://00d1y8fwcay" path="res://imports/fantasy_sprites/weapons/53_iron_axe.png" id="2_8s2ad"]
 
 [resource]

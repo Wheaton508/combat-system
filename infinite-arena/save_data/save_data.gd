@@ -1,5 +1,5 @@
-extends Resource
 class_name SaveData
+extends Resource
 
 #region GENERAL DATA
 @export var audio_level : float
@@ -7,11 +7,16 @@ class_name SaveData
 #endregion
 
 #region RECENT RUN DATA
-# units array (probably stores the unit resources? or even just their class data honestly)
+@export var recent_run_roles : Array[Role]
 #endregion
 
 #region CODEX DATA
 @export var codex_enabled : bool
+# All dictionaries use the item's ID number for the key value
+@export var roles_dict : Dictionary[int, bool]
+@export var moves_dict : Dictionary[int, bool]
+@export var equipment_dict : Dictionary[int, bool]
+@export var item_dict : Dictionary[int, bool]
 #endregion
 
 #region HALL OF FAME DATA
@@ -21,8 +26,10 @@ class_name SaveData
 
 #region BOOKMARK DATA
 @export var run_ongoing : bool
-@export var current_turn : int # Make sure this saves the next turn and not the one you just beat lol
-# units array
+ # Make sure this saves the next turn and not the one you just beat lol
+@export var current_turn : int
+# Should utilize "Primary", "Secondary", and "Backline" as keys to more efficiently save board position
+@export var current_units_dict : Dictionary[String, UnitData]
 #endregion
 
 

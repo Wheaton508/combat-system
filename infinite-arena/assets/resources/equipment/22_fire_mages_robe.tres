@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://bscl38t46ho8a"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_1aih0"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_1aih0"]
 [ext_resource type="Texture2D" uid="uid://c5dhcqpn2gnfk" path="res://imports/fantasy_sprites/armor/22_fire_robe.png" id="2_u45te"]
 
 [resource]

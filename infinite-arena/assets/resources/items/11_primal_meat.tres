@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://ywbns2dmwm3k"]
 
-[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/game_objects/item.gd" id="1_vx2pv"]
+[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_vx2pv"]
 [ext_resource type="Texture2D" uid="uid://yb2hs37l14ns" path="res://imports/fantasy_sprites/items/11_primal_meat.png" id="2_sjdei"]
 
 [resource]

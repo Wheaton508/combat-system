@@ -1,5 +1,5 @@
-extends Resource
 class_name Equipment
+extends Resource
 
 #region ENUMS
 #enum Equipment_Effects {}

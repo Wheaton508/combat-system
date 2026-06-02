@@ -1,5 +1,5 @@
-extends Resource
 class_name Role
+extends Resource
 
 #region CLASS DATA
 @export var role_name : String

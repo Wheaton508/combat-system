@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://dwyx8021m156a"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_6c12a"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_6c12a"]
 [ext_resource type="Texture2D" uid="uid://cr253h57rj2rn" path="res://imports/fantasy_sprites/equipment/97_iron_shield.png" id="2_fdeuj"]
 
 [resource]

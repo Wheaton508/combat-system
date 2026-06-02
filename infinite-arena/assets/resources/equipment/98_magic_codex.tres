@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cfc1l3f3a83xr"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_0nw10"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_0nw10"]
 [ext_resource type="Texture2D" uid="uid://bdifhcftiwgda" path="res://imports/fantasy_sprites/equipment/98_magic_codex.png" id="2_s4us4"]
 
 [resource]

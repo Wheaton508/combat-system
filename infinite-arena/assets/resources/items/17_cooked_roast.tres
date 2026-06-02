@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://ccs2k285yky08"]
 
-[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/game_objects/item.gd" id="1_aohhh"]
+[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_aohhh"]
 [ext_resource type="Texture2D" uid="uid://b1h1xhj8cl6yw" path="res://imports/fantasy_sprites/items/17_cooked_roast.png" id="2_xv6xa"]
 
 [resource]

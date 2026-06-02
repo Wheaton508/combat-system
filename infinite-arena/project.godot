@@ -80,8 +80,6 @@ folder_colors={
 "res://scenes/ui/": "orange",
 "res://scripts/": "red",
 "res://scripts/custom_resources/": "orange",
-"res://scripts/custom_resources/data_resouces/": "yellow",
-"res://scripts/custom_resources/game_objects/": "yellow",
 "res://scripts/management/": "orange",
 "res://scripts/ui/": "orange",
 "res://scripts/ui/buttons/": "yellow"

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://5e8fut1yvlad"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_gc0ty"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_gc0ty"]
 [ext_resource type="Texture2D" uid="uid://da7j8uiq0jppy" path="res://imports/fantasy_sprites/armor/8_titanium_helm.png" id="2_e2d38"]
 
 [resource]

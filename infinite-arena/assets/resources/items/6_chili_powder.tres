@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://c7tuw06pd0igi"]
 
-[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/game_objects/item.gd" id="1_7qkxj"]
+[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_7qkxj"]
 [ext_resource type="Texture2D" uid="uid://bf1k2gsby18j" path="res://imports/fantasy_sprites/items/6_chilli_powder.png" id="2_phrlr"]
 
 [resource]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://dgj0umemdl8"]
 
-[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/game_objects/item.gd" id="1_wh1mm"]
+[ext_resource type="Script" uid="uid://bb2sj67lochp6" path="res://scripts/custom_resources/item.gd" id="1_wh1mm"]
 [ext_resource type="Texture2D" uid="uid://j1u5q3rec4fu" path="res://imports/fantasy_sprites/items/19_holy_tonic.png" id="2_pixuo"]
 
 [resource]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://cal1l3ep8bhx"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_1skm0"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_1skm0"]
 [ext_resource type="Texture2D" uid="uid://e5vq0bh1k5y5" path="res://imports/fantasy_sprites/weapons/36_gold_gsword.png" id="2_ts2uq"]
 
 [resource]

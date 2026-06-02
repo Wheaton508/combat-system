@@ -1,5 +1,5 @@
-extends Node
 class_name SceneManager
+extends Node
 
 enum Fade {IN, OUT}
 

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" format=3 uid="uid://6usg0msxh7ln"]
 
-[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/game_objects/equipment.gd" id="1_cpafr"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="1_cpafr"]
 [ext_resource type="Texture2D" uid="uid://sd4m22ojo4m1" path="res://imports/fantasy_sprites/equipment/87_old_tome.png" id="2_jwvwu"]
 
 [resource]

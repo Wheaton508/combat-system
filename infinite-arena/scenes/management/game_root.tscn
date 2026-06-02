@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b5kfxqhxu2iek"]
 
 [ext_resource type="Script" uid="uid://3npxn58wstyg" path="res://scripts/management/scene_manager.gd" id="1_1idum"]
+[ext_resource type="Script" uid="uid://dwlx8qi2htrm7" path="res://scripts/management/save_manager.gd" id="2_0q4ay"]
 
 [sub_resource type="Animation" id="Animation_1idum"]
 length = 0.001
@@ -78,3 +79,4 @@ libraries/ = SubResource("AnimationLibrary_wvhn8")
 [node name="AudioManager" type="Node" parent="." unique_id=997562286]
 
 [node name="SaveManager" type="Node" parent="." unique_id=601593731]
+script = ExtResource("2_0q4ay")

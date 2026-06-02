@@ -1,5 +1,5 @@
-extends Resource
 class_name Move
+extends Resource
 
 #region ENUMS
 enum Damage_Type {PHYSICAL, MAGIC, HEALING, STATUS}
