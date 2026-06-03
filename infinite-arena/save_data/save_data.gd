@@ -2,7 +2,7 @@ class_name SaveData
 extends Resource
 
 #region GENERAL DATA
-@export var audio_level : float
+@export var music_level : float
 @export var sfx_level : float
 #endregion
 

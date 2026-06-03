@@ -20,8 +20,10 @@ func initialize_save_file() -> void:
 	var save_game : SaveData = SaveData.new()
 	
 	# Initialize save data stats
-	save_game.audio_level = 0.5
-	save_game.sfx_level = 0.5
+	save_game.music_level = 1.0
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(1.0))
+	save_game.sfx_level = 1.0
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(1.0))
 	
 	save_game.recent_run_roles = [null, null, null]
 	
@@ -47,9 +49,8 @@ func initialize_save_file() -> void:
 
 func load_save_file() -> void:
 	print("loading yo shii rn!")
-	# var save_file : SaveData = load("user://save.tres") as SaveData
+	var save_game : SaveData = SafeResourceLoader.load(save_game_path) as SaveData
 	# set relavant info such as:
 		# bookmark data
 		# main menu units
-		# audio settings
 	pass
