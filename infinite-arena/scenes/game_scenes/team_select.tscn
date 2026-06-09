@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b1nj7prre2cxk"]
+
+[ext_resource type="PackedScene" uid="uid://ct27djqfge8y5" path="res://scenes/objects/clickable_unit.tscn" id="1_jx3f8"]
+
+[node name="TeamSelect" type="Node3D" unique_id=169736541]
+
+[node name="ClickableUnit" parent="." unique_id=1282870589 instance=ExtResource("1_jx3f8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8816869)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=318020211]

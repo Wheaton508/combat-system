@@ -37,7 +37,7 @@ func _load_scene(new_scene_path : String) -> void:
 		
 		_transition(Fade.IN)
 	else:
-		print("ERROR. scene_manager.current_scene never set.") # Debug
+		print_debug("ERROR. scene_manager.current_scene never set.")
 
 func _transition(fade_type : Fade) -> void:
 	if fade_type == Fade.OUT:

@@ -26,10 +26,8 @@ extends Resource
 
 #region BOOKMARK DATA
 @export var run_ongoing : bool
- # Make sure this saves the next turn and not the one you just beat lol
-@export var current_turn : int
-# Should utilize "Primary", "Secondary", and "Backline" as keys to more efficiently save board position
-@export var current_units_dict : Dictionary[String, UnitData]
+@export var current_turn : int  # Saves the turn you are going into, not the one you just beat
+@export var current_units_dict : Dictionary[String, UnitData] # Utilizes "Primary", "Secondary", and "Backline" as keys to more efficiently save board position
 #endregion
 
 

@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Role" format=3 uid="uid://b5tbmuhmaf6wd"]
 
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_2ih4l"]
+[ext_resource type="SpriteFrames" uid="uid://bthdwyal3vgv5" path="res://assets/sprite_frames/5_armor_knight_af.tres" id="2_b4pq2"]
 
 [resource]
 script = ExtResource("1_2ih4l")
 role_name = "Armor Knight"
 weaknesses = Array[int]([2, 3, 4, 6])
+ui_sprite = ExtResource("2_b4pq2")
 hp_rank = "A"
 atk_rank = "A"
 def_rank = "S"

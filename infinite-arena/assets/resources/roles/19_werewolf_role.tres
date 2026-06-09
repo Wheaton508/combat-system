@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Role" format=3 uid="uid://db5y3a8o5sk1x"]
 
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_6pxjm"]
+[ext_resource type="SpriteFrames" uid="uid://bbhhtrjmme34s" path="res://assets/sprite_frames/19_werewolf_sf.tres" id="2_hwcdn"]
 
 [resource]
 script = ExtResource("1_6pxjm")
 role_name = "Werewolf"
 weaknesses = Array[int]([1, 8])
+ui_sprite = ExtResource("2_hwcdn")
 hp_rank = "C"
 atk_rank = "A"
 def_rank = "B"

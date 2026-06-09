@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Role" format=3 uid="uid://bov2024uojtru"]
 
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_mlqks"]
+[ext_resource type="SpriteFrames" uid="uid://bpkgaivvrcusf" path="res://assets/sprite_frames/0_soldier_sf.tres" id="2_kva44"]
 
 [resource]
 script = ExtResource("1_mlqks")
 role_name = "Soldier"
 weaknesses = Array[int]([0, 1, 5])
+ui_sprite = ExtResource("2_kva44")
 hp_rank = "A"
 atk_rank = "B"
 def_rank = "B"

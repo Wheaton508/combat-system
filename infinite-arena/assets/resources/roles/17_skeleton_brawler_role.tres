@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Role" format=3 uid="uid://gavnnpcvcrix"]
 
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_hlpf6"]
+[ext_resource type="SpriteFrames" uid="uid://bger7hhsbg2ec" path="res://assets/sprite_frames/17_skeleton_brawler_sf.tres" id="2_ue6g1"]
 
 [resource]
 script = ExtResource("1_hlpf6")
 role_name = "Skeleton Brawler"
 weaknesses = Array[int]([2, 8])
+ui_sprite = ExtResource("2_ue6g1")
 hp_rank = "C"
 atk_rank = "S"
 def_rank = "D"

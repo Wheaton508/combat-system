@@ -73,16 +73,18 @@ folder_colors={
 "res://imports/fantasy_ui/fonts/": "yellow",
 "res://imports/fantasy_ui/ui/": "yellow",
 "res://imports/fantasy_ui/ui/individual_images/": "green",
+"res://imports/prototype_kit/": "orange",
 "res://imports/rpg_characters/": "orange",
 "res://scenes/": "red",
 "res://scenes/game_scenes/": "orange",
 "res://scenes/management/": "orange",
-"res://scenes/ui/": "orange",
+"res://scenes/objects/": "orange",
 "res://scripts/": "red",
 "res://scripts/custom_resources/": "orange",
 "res://scripts/management/": "orange",
 "res://scripts/ui/": "orange",
-"res://scripts/ui/buttons/": "yellow"
+"res://scripts/ui/buttons/": "yellow",
+"res://scripts/units/": "orange"
 }
 
 [input]

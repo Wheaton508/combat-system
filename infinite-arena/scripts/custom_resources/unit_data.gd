@@ -3,7 +3,7 @@ extends Resource
 
 @export var unit_name : String
 @export var unit_role : Role
-@export var unit_stats : Stats
+@export var unit_stats : Stats = Stats.new() # Initializes a new Stats resource on UnitData creation
 @export var move_list : Array[Move]
 @export var hat : Equipment
 @export var top : Equipment

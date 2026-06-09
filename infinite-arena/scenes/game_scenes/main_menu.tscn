@@ -74,7 +74,7 @@ offset_bottom = -177.0
 theme = ExtResource("3_idbya")
 text = "New Game"
 script = ExtResource("4_yok3e")
-scene_path_to_load = "res://scenes/game_scenes/test.tscn"
+scene_path_to_load = "res://scenes/game_scenes/team_select.tscn"
 
 [node name="ContinueGame" type="Button" parent="CanvasLayer/Menu/NinePatchRect" unique_id=1650690439 node_paths=PackedStringArray("menu_to_open", "menu_to_close")]
 layout_mode = 1

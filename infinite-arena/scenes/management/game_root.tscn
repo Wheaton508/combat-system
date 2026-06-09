@@ -57,6 +57,9 @@ _data = {
 
 [node name="GameRoot" type="Node" unique_id=788018985]
 
+[node name="SaveManager" type="Node" parent="." unique_id=601593731]
+script = ExtResource("2_0q4ay")
+
 [node name="SceneManager" type="Node" parent="." unique_id=404785724]
 script = ExtResource("1_1idum")
 initial_scene = "res://scenes/game_scenes/main_menu.tscn"
@@ -77,6 +80,3 @@ color = Color(0, 0, 0, 0)
 libraries/ = SubResource("AnimationLibrary_wvhn8")
 
 [node name="AudioManager" type="Node" parent="." unique_id=997562286]
-
-[node name="SaveManager" type="Node" parent="." unique_id=601593731]
-script = ExtResource("2_0q4ay")
