@@ -4,9 +4,10 @@ extends Node3D
 @onready var animated_sprite_3d: AnimatedSprite3D = $AnimatedSprite3D
 @onready var area_3d: Area3D = $Area3D
 
-@export var stored_role : Role
+var stored_role : Role
 
-#const unit_data_ref = preload("res://scripts/custom_resources/unit_data.gd")
+signal unit_hover(is_hover_start : bool)
+signal unit_selected
 
 
 # =================================================================================================
@@ -17,15 +18,23 @@ func _ready() -> void:
 	area_3d.connect("mouse_exited", _hover_unit_end)
 	area_3d.connect("input_event", _select_unit)
 
-func _instantiate(role_to_grant : Role):
+func _give_role(role_to_grant : Role):
+	if stored_role != null:
+		_reset_vars()
+	
 	stored_role = role_to_grant
 	animated_sprite_3d.sprite_frames = stored_role.ui_sprite
-	animated_sprite_3d.play("Idle")
+	animated_sprite_3d.play("walk")
+
+func _reset_vars() -> void:
+	pass
 
 func _hover_unit_start() -> void:
+	emit_signal("unit_hover", true)
 	print_debug("Hover start.")
 
 func _hover_unit_end() -> void:
+	emit_signal("unit_hover", false)
 	print_debug("Hover end.")
 
 func _select_unit(_camera : Node, event : InputEvent, _event_position : Vector3, _normal : Vector3, _shape_idx : int) -> void:
@@ -36,18 +45,17 @@ func _select_unit(_camera : Node, event : InputEvent, _event_position : Vector3,
 		
 		# Initializes data values on that unit resource
 		
-		
 		# Saves new_data to the Global script. These units will be saved to file for:
 			# Main Menu display when all three are chosen
 			# Actual gameplay purposes when a bookmark is created. During gameplay, always reference the Global script.
 		if Global.units_dict["Primary"] == null:
 			Global.units_dict["Primary"] = new_data
-			# Spawn in a second batch of units
+			emit_signal("unit_selected")
 		elif Global.units_dict["Secondary"] == null:
-			# Spawn in a third batch of units
 			Global.units_dict["Secondary"] = new_data
+			emit_signal("unit_selected")
 		elif Global.units_dict["Backline"] == null:
 			Global.units_dict["Backline"] = new_data
-			# Proceed with gameplay
+			emit_signal("unit_selected")
 		else:
 			print_debug("ERROR. Global.units_dict is full.")

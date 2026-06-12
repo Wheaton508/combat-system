@@ -1,10 +1,127 @@
 [gd_scene format=3 uid="uid://b1nj7prre2cxk"]
 
+[ext_resource type="Script" uid="uid://4g14ldcfrrat" path="res://scripts/management/team_select.gd" id="1_dooo0"]
 [ext_resource type="PackedScene" uid="uid://ct27djqfge8y5" path="res://scenes/objects/clickable_unit.tscn" id="1_jx3f8"]
+[ext_resource type="Texture2D" uid="uid://bh74tbk8bkerl" path="res://imports/fantasy_ui/ui/UI assets (2x).png" id="2_dooo0"]
+[ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="2_ecr83"]
+[ext_resource type="Resource" uid="uid://bov2024uojtru" path="res://assets/resources/roles/0_soldier_role.tres" id="3_hnmg3"]
+[ext_resource type="Resource" uid="uid://dbvglovprgxmn" path="res://assets/resources/roles/1_knight_role.tres" id="4_h0d2y"]
+[ext_resource type="Resource" uid="uid://h7pxwpmif7ay" path="res://assets/resources/roles/2_fencer_role.tres" id="5_6t7t1"]
+[ext_resource type="Resource" uid="uid://cdc2mgq56nfjq" path="res://assets/resources/roles/3_templar_role.tres" id="6_meja6"]
+[ext_resource type="Resource" uid="uid://c2x8j2obcaycw" path="res://assets/resources/roles/4_cavalier_role.tres" id="7_thyug"]
+[ext_resource type="Resource" uid="uid://b5tbmuhmaf6wd" path="res://assets/resources/roles/5_armor_knight_role.tres" id="8_wq3iu"]
+[ext_resource type="Resource" uid="uid://dv0s53i5reqjb" path="res://assets/resources/roles/6_archer_role.tres" id="9_ulf8a"]
+[ext_resource type="Resource" uid="uid://clqqonx0xpl3s" path="res://assets/resources/roles/7_red_mage_role.tres" id="10_2sq20"]
+[ext_resource type="Resource" uid="uid://bqjnhbp28tw74" path="res://assets/resources/roles/8_blue_mage_role.tres" id="11_nt5v7"]
+[ext_resource type="Resource" uid="uid://chslwi0dqymjx" path="res://assets/resources/roles/9_arcane_mage_role.tres" id="12_vuumk"]
+[ext_resource type="Resource" uid="uid://dt76i2jrnhk5f" path="res://assets/resources/roles/10_cleric_role.tres" id="13_ktqji"]
+[ext_resource type="Resource" uid="uid://c70nhbcsmyhpj" path="res://assets/resources/roles/11_orc_role.tres" id="14_qcc1a"]
+[ext_resource type="Resource" uid="uid://f1mrxn1e3bg7" path="res://assets/resources/roles/12_orc_knight_role.tres" id="15_s3xtq"]
+[ext_resource type="Resource" uid="uid://gri1xy5v67tv" path="res://assets/resources/roles/13_orc_elite_role.tres" id="16_k5onc"]
+[ext_resource type="Resource" uid="uid://cs7nb4qh37y3d" path="res://assets/resources/roles/14_orc_rider_role.tres" id="17_h7768"]
+[ext_resource type="Resource" uid="uid://bxo7i0h41olmx" path="res://assets/resources/roles/15_skeleton_role.tres" id="18_e0j5k"]
+[ext_resource type="Resource" uid="uid://d22gq0w7asglt" path="res://assets/resources/roles/16_skeleton_knight_role.tres" id="19_io0gc"]
+[ext_resource type="Resource" uid="uid://gavnnpcvcrix" path="res://assets/resources/roles/17_skeleton_brawler_role.tres" id="20_r286f"]
+[ext_resource type="Resource" uid="uid://c36rpacurkp4a" path="res://assets/resources/roles/18_skeleton_archer_role.tres" id="21_luk5x"]
+[ext_resource type="Resource" uid="uid://db5y3a8o5sk1x" path="res://assets/resources/roles/19_werewolf_role.tres" id="22_3kf2h"]
+
+[sub_resource type="Animation" id="Animation_t1rwp"]
+resource_name = "enter_screen"
+
+[sub_resource type="Animation" id="Animation_2v0g6"]
+resource_name = "exit_screen"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o7odo"]
+_data = {
+&"enter_screen": SubResource("Animation_t1rwp"),
+&"exit_screen": SubResource("Animation_2v0g6")
+}
+
+[sub_resource type="Animation" id="Animation_o7odo"]
+resource_name = "enter_screen"
+
+[sub_resource type="Animation" id="Animation_a2kdb"]
+resource_name = "exit_screen"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bt41l"]
+_data = {
+&"enter_screen": SubResource("Animation_o7odo"),
+&"exit_screen": SubResource("Animation_a2kdb")
+}
+
+[sub_resource type="Animation" id="Animation_bt41l"]
+resource_name = "enter_screen"
+
+[sub_resource type="Animation" id="Animation_6qrdh"]
+resource_name = "exit_screen"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rts8s"]
+_data = {
+&"enter_screen": SubResource("Animation_bt41l"),
+&"exit_screen": SubResource("Animation_6qrdh")
+}
 
 [node name="TeamSelect" type="Node3D" unique_id=169736541]
+script = ExtResource("1_dooo0")
+role_resource_array = Array[ExtResource("2_ecr83")]([ExtResource("3_hnmg3"), ExtResource("4_h0d2y"), ExtResource("5_6t7t1"), ExtResource("6_meja6"), ExtResource("7_thyug"), ExtResource("8_wq3iu"), ExtResource("9_ulf8a"), ExtResource("10_2sq20"), ExtResource("11_nt5v7"), ExtResource("12_vuumk"), ExtResource("13_ktqji"), ExtResource("14_qcc1a"), ExtResource("15_s3xtq"), ExtResource("16_k5onc"), ExtResource("17_h7768"), ExtResource("18_e0j5k"), ExtResource("19_io0gc"), ExtResource("20_r286f"), ExtResource("21_luk5x"), ExtResource("22_3kf2h")])
 
-[node name="ClickableUnit" parent="." unique_id=1282870589 instance=ExtResource("1_jx3f8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8816869)
+[node name="UnitHolder" type="Node3D" parent="." unique_id=584417319]
+
+[node name="ClickableUnit" parent="UnitHolder" unique_id=1282870589 instance=ExtResource("1_jx3f8")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UnitHolder" unique_id=1101292309]
+libraries/ = SubResource("AnimationLibrary_o7odo")
+
+[node name="UnitHolder2" type="Node3D" parent="." unique_id=1601814244]
+
+[node name="ClickableUnit" parent="UnitHolder2" unique_id=191903591 instance=ExtResource("1_jx3f8")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UnitHolder2" unique_id=1648808002]
+libraries/ = SubResource("AnimationLibrary_bt41l")
+
+[node name="UnitHolder3" type="Node3D" parent="." unique_id=1715234951]
+
+[node name="ClickableUnit" parent="UnitHolder3" unique_id=535682865 instance=ExtResource("1_jx3f8")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UnitHolder3" unique_id=46977224]
+libraries/ = SubResource("AnimationLibrary_rts8s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=714636278]
+
+[node name="InputBlocker" type="Control" parent="CanvasLayer" unique_id=1756333160]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UnitInfo" type="Control" parent="CanvasLayer" unique_id=1280087618]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UnitInfo" unique_id=1740854741]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 408.0
+offset_top = 16.0
+offset_right = -20.780151
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dooo0")
+region_rect = Rect2(868, 2, 88, 90)
+patch_margin_left = 20
+patch_margin_top = 26
+patch_margin_right = 20
+patch_margin_bottom = 20
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=318020211]
