@@ -6,7 +6,7 @@ extends Node3D
 
 var stored_role : Role
 
-signal unit_hover(is_hover_start : bool)
+signal unit_hover(is_hover_start : bool, role_resource : Role)
 signal unit_selected
 
 
@@ -30,11 +30,12 @@ func _reset_vars() -> void:
 	pass
 
 func _hover_unit_start() -> void:
-	emit_signal("unit_hover", true)
+	print_debug(stored_role)
+	emit_signal("unit_hover", true, stored_role)
 	print_debug("Hover start.")
 
 func _hover_unit_end() -> void:
-	emit_signal("unit_hover", false)
+	emit_signal("unit_hover", false, null)
 	print_debug("Hover end.")
 
 func _select_unit(_camera : Node, event : InputEvent, _event_position : Vector3, _normal : Vector3, _shape_idx : int) -> void:

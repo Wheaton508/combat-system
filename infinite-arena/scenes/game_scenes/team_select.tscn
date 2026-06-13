@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b1nj7prre2cxk"]
 
 [ext_resource type="Script" uid="uid://4g14ldcfrrat" path="res://scripts/management/team_select.gd" id="1_dooo0"]
-[ext_resource type="PackedScene" uid="uid://ct27djqfge8y5" path="res://scenes/objects/clickable_unit.tscn" id="1_jx3f8"]
 [ext_resource type="Texture2D" uid="uid://bh74tbk8bkerl" path="res://imports/fantasy_ui/ui/UI assets (2x).png" id="2_dooo0"]
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="2_ecr83"]
 [ext_resource type="Resource" uid="uid://bov2024uojtru" path="res://assets/resources/roles/0_soldier_role.tres" id="3_hnmg3"]
@@ -24,67 +23,299 @@
 [ext_resource type="Resource" uid="uid://gavnnpcvcrix" path="res://assets/resources/roles/17_skeleton_brawler_role.tres" id="20_r286f"]
 [ext_resource type="Resource" uid="uid://c36rpacurkp4a" path="res://assets/resources/roles/18_skeleton_archer_role.tres" id="21_luk5x"]
 [ext_resource type="Resource" uid="uid://db5y3a8o5sk1x" path="res://assets/resources/roles/19_werewolf_role.tres" id="22_3kf2h"]
+[ext_resource type="Script" uid="uid://dhn3i07ni288v" path="res://scripts/units/clickable_unit.gd" id="23_6t7t1"]
+[ext_resource type="Script" uid="uid://c005m87j8bbkc" path="res://scripts/ui/unit_preview_panel.gd" id="24_6t7t1"]
+[ext_resource type="FontFile" uid="uid://cs1c6un2wdiyl" path="res://imports/fantasy_ui/fonts/FantasyRPGtitle (size 11).ttf" id="25_hnmg3"]
+[ext_resource type="FontFile" uid="uid://l1xqc83y41p4" path="res://imports/fantasy_ui/fonts/FantasyRPGtext (size 8).ttf" id="26_h0d2y"]
 
-[sub_resource type="Animation" id="Animation_t1rwp"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_meja6"]
+size = Vector3(0.25, 0.22136231, 0.25)
+
+[sub_resource type="Animation" id="Animation_6t7t1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ClickableUnit1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.555, 0, -0.478)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ClickableUnit2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.318, 0, -0.557)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ClickableUnit3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.081, 0, -0.636)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ClickableUnit1/AnimatedSprite3D:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ClickableUnit2/AnimatedSprite3D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ClickableUnit3/AnimatedSprite3D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_meja6"]
 resource_name = "enter_screen"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ClickableUnit1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.555, 0, -0.478), Vector3(-0.455, 0, -0.478)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ClickableUnit1/AnimatedSprite3D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ClickableUnit2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.318, 0, -0.557), Vector3(-0.218, 0, -0.557)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ClickableUnit2/AnimatedSprite3D:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ClickableUnit3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.081, 0, -0.636), Vector3(0.019, 0, -0.636)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ClickableUnit3/AnimatedSprite3D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_2v0g6"]
 resource_name = "exit_screen"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ClickableUnit1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.455, 0, -0.478), Vector3(-1.555, 0, -0.478)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ClickableUnit1/AnimatedSprite3D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ClickableUnit2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.218, 0, -0.557), Vector3(-1.318, 0, -0.557)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ClickableUnit2/AnimatedSprite3D:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ClickableUnit3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.019, 0, -0.636), Vector3(-1.081, 0, -0.636)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ClickableUnit3/AnimatedSprite3D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o7odo"]
 _data = {
-&"enter_screen": SubResource("Animation_t1rwp"),
+&"RESET": SubResource("Animation_6t7t1"),
+&"enter_screen": SubResource("Animation_meja6"),
 &"exit_screen": SubResource("Animation_2v0g6")
-}
-
-[sub_resource type="Animation" id="Animation_o7odo"]
-resource_name = "enter_screen"
-
-[sub_resource type="Animation" id="Animation_a2kdb"]
-resource_name = "exit_screen"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_bt41l"]
-_data = {
-&"enter_screen": SubResource("Animation_o7odo"),
-&"exit_screen": SubResource("Animation_a2kdb")
-}
-
-[sub_resource type="Animation" id="Animation_bt41l"]
-resource_name = "enter_screen"
-
-[sub_resource type="Animation" id="Animation_6qrdh"]
-resource_name = "exit_screen"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rts8s"]
-_data = {
-&"enter_screen": SubResource("Animation_bt41l"),
-&"exit_screen": SubResource("Animation_6qrdh")
 }
 
 [node name="TeamSelect" type="Node3D" unique_id=169736541]
 script = ExtResource("1_dooo0")
 role_resource_array = Array[ExtResource("2_ecr83")]([ExtResource("3_hnmg3"), ExtResource("4_h0d2y"), ExtResource("5_6t7t1"), ExtResource("6_meja6"), ExtResource("7_thyug"), ExtResource("8_wq3iu"), ExtResource("9_ulf8a"), ExtResource("10_2sq20"), ExtResource("11_nt5v7"), ExtResource("12_vuumk"), ExtResource("13_ktqji"), ExtResource("14_qcc1a"), ExtResource("15_s3xtq"), ExtResource("16_k5onc"), ExtResource("17_h7768"), ExtResource("18_e0j5k"), ExtResource("19_io0gc"), ExtResource("20_r286f"), ExtResource("21_luk5x"), ExtResource("22_3kf2h")])
+time_to_wait_on_scene_load = 1.5
 
-[node name="UnitHolder" type="Node3D" parent="." unique_id=584417319]
+[node name="ClickableUnit1" type="Node3D" parent="." unique_id=1687138358]
+transform = Transform3D(0.94832367, 0, 0.31730464, 0, 1, 0, -0.31730464, 0, 0.94832367, -1.555, 0, -0.478)
+script = ExtResource("23_6t7t1")
 
-[node name="ClickableUnit" parent="UnitHolder" unique_id=1282870589 instance=ExtResource("1_jx3f8")]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="ClickableUnit1" unique_id=293365948]
+texture_filter = 0
+animation = &""
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="UnitHolder" unique_id=1101292309]
+[node name="Area3D" type="Area3D" parent="ClickableUnit1" unique_id=886609510]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ClickableUnit1/Area3D" unique_id=1601937575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+shape = SubResource("BoxShape3D_meja6")
+
+[node name="ClickableUnit2" type="Node3D" parent="." unique_id=1674533670]
+transform = Transform3D(0.94832367, 0, 0.31730464, 0, 1, 0, -0.31730464, 0, 0.94832367, -1.318, 0, -0.557)
+script = ExtResource("23_6t7t1")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="ClickableUnit2" unique_id=1761311701]
+texture_filter = 0
+animation = &""
+
+[node name="Area3D" type="Area3D" parent="ClickableUnit2" unique_id=120828707]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ClickableUnit2/Area3D" unique_id=1573552601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+shape = SubResource("BoxShape3D_meja6")
+
+[node name="ClickableUnit3" type="Node3D" parent="." unique_id=977057938]
+transform = Transform3D(0.94832367, 0, 0.31730464, 0, 1, 0, -0.31730464, 0, 0.94832367, -1.081, 0, -0.636)
+script = ExtResource("23_6t7t1")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="ClickableUnit3" unique_id=1779895617]
+texture_filter = 0
+animation = &""
+
+[node name="Area3D" type="Area3D" parent="ClickableUnit3" unique_id=1082334435]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ClickableUnit3/Area3D" unique_id=470883110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+shape = SubResource("BoxShape3D_meja6")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=318020211]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1101292309]
 libraries/ = SubResource("AnimationLibrary_o7odo")
-
-[node name="UnitHolder2" type="Node3D" parent="." unique_id=1601814244]
-
-[node name="ClickableUnit" parent="UnitHolder2" unique_id=191903591 instance=ExtResource("1_jx3f8")]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="UnitHolder2" unique_id=1648808002]
-libraries/ = SubResource("AnimationLibrary_bt41l")
-
-[node name="UnitHolder3" type="Node3D" parent="." unique_id=1715234951]
-
-[node name="ClickableUnit" parent="UnitHolder3" unique_id=535682865 instance=ExtResource("1_jx3f8")]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="UnitHolder3" unique_id=46977224]
-libraries/ = SubResource("AnimationLibrary_rts8s")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=714636278]
 
@@ -96,7 +327,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="UnitInfo" type="Control" parent="CanvasLayer" unique_id=1280087618]
+[node name="UnitPreviewPanel" type="Control" parent="CanvasLayer" unique_id=1280087618]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -105,8 +336,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("24_6t7t1")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UnitInfo" unique_id=1740854741]
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UnitPreviewPanel" unique_id=1740854741]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -124,4 +356,36 @@ patch_margin_top = 26
 patch_margin_right = 20
 patch_margin_bottom = 20
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=318020211]
+[node name="UnitName" type="Label" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=214156889]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 32.0
+offset_right = -37.21985
+offset_bottom = -247.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.34742808, 0.15399575, 0.0038374406, 1)
+theme_override_fonts/font = ExtResource("25_hnmg3")
+theme_override_font_sizes/font_size = 22
+text = "Unit Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Click" type="Label" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=1348007229]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 288.0
+offset_right = -35.21985
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.34901962, 0.15294118, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("26_h0d2y")
+text = "(Click unit to select)"

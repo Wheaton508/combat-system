@@ -1,13 +1,11 @@
 extends Node3D
 
 @onready var input_blocker: Control = $CanvasLayer/InputBlocker
-@onready var unit_info: Control = $CanvasLayer/UnitInfo
-@onready var unit_1: ClickableUnit = $UnitHolder/ClickableUnit
-@onready var unit_2: ClickableUnit = $UnitHolder2/ClickableUnit
-@onready var unit_3: ClickableUnit = $UnitHolder3/ClickableUnit
-@onready var animation_player_1: AnimationPlayer = $UnitHolder/AnimationPlayer
-@onready var animation_player_2: AnimationPlayer = $UnitHolder2/AnimationPlayer
-@onready var animation_player_3: AnimationPlayer = $UnitHolder3/AnimationPlayer
+@onready var unit_preview_panel: Control = $CanvasLayer/UnitPreviewPanel
+@onready var unit_1: ClickableUnit = $ClickableUnit1
+@onready var unit_2: ClickableUnit = $ClickableUnit2
+@onready var unit_3: ClickableUnit = $ClickableUnit3
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 @export var role_resource_array : Array[Role]
 @export var time_to_wait_on_scene_load : float = 1.0 # Will be made constant once I find a good time
@@ -36,6 +34,13 @@ func _ready() -> void:
 	unit_2._give_role(_get_random_role())
 	unit_3._give_role(_get_random_role())
 	
+	animation_player.play("enter_screen")
+	await animation_player.animation_finished
+	
+	unit_1.animated_sprite_3d.play("idle")
+	unit_2.animated_sprite_3d.play("idle")
+	unit_3.animated_sprite_3d.play("idle")
+	
 	# Turn off InputBlocker
 	input_blocker.visible = false
 
@@ -43,14 +48,16 @@ func _refresh_units() -> void:
 	# Clear loaded_roles array
 	loaded_roles.clear()
 	
-	# Put up input blocker
+	# Put up input blocker and take down unit preview - currently bugged
+	unit_preview_panel.visible = false
 	input_blocker.visible = true
 	
 	# Move UnitHolders offscreen
-	animation_player_1.play("exit_screen") # remember to flip units the right way when animating
-	animation_player_2.play("exit_screen")
-	animation_player_3.play("exit_screen")
-	await animation_player_3.animation_finished
+	unit_1.animated_sprite_3d.play("walk")
+	unit_2.animated_sprite_3d.play("walk")
+	unit_3.animated_sprite_3d.play("walk")
+	animation_player.play("exit_screen")
+	await animation_player.animation_finished
 	
 	# Change units
 	unit_1._give_role(_get_random_role())
@@ -60,19 +67,22 @@ func _refresh_units() -> void:
 	await get_tree().create_timer(time_to_wait_between_units).timeout
 	
 	# Move UnitHolders back on screen
-	animation_player_1.play("enter_screen")
-	animation_player_2.play("enter_screen")
-	animation_player_3.play("enter_screen")
-	await animation_player_3.animation_finished
+	animation_player.play("enter_screen")
+	await animation_player.animation_finished
+	
+	unit_1.animated_sprite_3d.play("idle")
+	unit_2.animated_sprite_3d.play("idle")
+	unit_3.animated_sprite_3d.play("idle")
 	
 	# Take down input blocker
-	input_blocker.visible = true
+	input_blocker.visible = false
 
-func _change_info_display (is_hover_start : bool) -> void:
+func _change_info_display (is_hover_start : bool, role_resource) -> void:
 	if is_hover_start:
-		unit_info.visible = true
+		unit_preview_panel.current_role = role_resource
+		unit_preview_panel.visible = true
 	else:
-		unit_info.visible = false
+		unit_preview_panel.visible = false
 
 func _get_random_role() -> Role:
 	var random_role : Role
