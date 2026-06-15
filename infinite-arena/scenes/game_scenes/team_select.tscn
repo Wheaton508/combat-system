@@ -27,6 +27,13 @@
 [ext_resource type="Script" uid="uid://c005m87j8bbkc" path="res://scripts/ui/unit_preview_panel.gd" id="24_6t7t1"]
 [ext_resource type="FontFile" uid="uid://cs1c6un2wdiyl" path="res://imports/fantasy_ui/fonts/FantasyRPGtitle (size 11).ttf" id="25_hnmg3"]
 [ext_resource type="FontFile" uid="uid://l1xqc83y41p4" path="res://imports/fantasy_ui/fonts/FantasyRPGtext (size 8).ttf" id="26_h0d2y"]
+[ext_resource type="Texture2D" uid="uid://ftdbcp2air7s" path="res://imports/fantasy_sprites/icons/hp.png" id="27_thyug"]
+[ext_resource type="Texture2D" uid="uid://c80lc032bn2ww" path="res://imports/fantasy_sprites/icons/atk.png" id="28_ktqji"]
+[ext_resource type="Texture2D" uid="uid://bnh3aeqwtke2v" path="res://imports/fantasy_sprites/icons/def.png" id="30_qcc1a"]
+[ext_resource type="Texture2D" uid="uid://mdnwr6djshwu" path="res://imports/fantasy_sprites/icons/d_rank.png" id="30_ulf8a"]
+[ext_resource type="Texture2D" uid="uid://bbgygrtkphskt" path="res://imports/fantasy_sprites/icons/mag.png" id="31_s3xtq"]
+[ext_resource type="Texture2D" uid="uid://c6daa37fq8odj" path="res://imports/fantasy_sprites/icons/res.png" id="32_k5onc"]
+[ext_resource type="Texture2D" uid="uid://bwq4tpgopc4y4" path="res://imports/fantasy_sprites/icons/spd.png" id="34_h7768"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_meja6"]
 size = Vector3(0.25, 0.22136231, 0.25)
@@ -313,6 +320,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
 shape = SubResource("BoxShape3D_meja6")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=318020211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10033327, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1101292309]
 libraries/ = SubResource("AnimationLibrary_o7odo")
@@ -326,6 +334,48 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="SceneTitle" type="Control" parent="CanvasLayer" unique_id=297186355]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/SceneTitle" unique_id=31195421]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = -256.0
+offset_bottom = -304.0
+texture = ExtResource("2_dooo0")
+region_rect = Rect2(292, 144, 88, 34)
+patch_margin_left = 24
+patch_margin_top = 14
+patch_margin_right = 24
+patch_margin_bottom = 14
+
+[node name="Label" type="Label" parent="CanvasLayer/SceneTitle/NinePatchRect" unique_id=1409390723]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 6.0
+offset_right = -40.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.34901962, 0.15294118, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("25_hnmg3")
+theme_override_font_sizes/font_size = 22
+text = "Choose Your Party"
+horizontal_alignment = 1
 
 [node name="UnitPreviewPanel" type="Control" parent="CanvasLayer" unique_id=1280087618]
 visible = false
@@ -374,6 +424,192 @@ text = "Unit Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="AtkRank" type="Control" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=135873459]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 168.0
+offset_right = -123.21985
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatIcon" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/AtkRank" unique_id=1047831689]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -32.0
+texture = ExtResource("28_ktqji")
+
+[node name="RankLetter" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/AtkRank" unique_id=666127492]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource("30_ulf8a")
+
+[node name="DefRank" type="Control" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=441843778]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = 168.0
+offset_right = -27.219849
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatIcon" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/DefRank" unique_id=2089685509]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -32.0
+texture = ExtResource("30_qcc1a")
+
+[node name="RankLetter" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/DefRank" unique_id=2114985040]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource("30_ulf8a")
+
+[node name="MagRank" type="Control" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=797016620]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 208.0
+offset_right = -123.21985
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatIcon" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/MagRank" unique_id=125770148]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -32.0
+texture = ExtResource("31_s3xtq")
+
+[node name="RankLetter" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/MagRank" unique_id=1129894313]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource("30_ulf8a")
+
+[node name="ResRank" type="Control" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=540039925]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = 208.0
+offset_right = -27.219849
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatIcon" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/ResRank" unique_id=836894810]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -32.0
+texture = ExtResource("32_k5onc")
+
+[node name="RankLetter" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/ResRank" unique_id=325551351]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource("30_ulf8a")
+
+[node name="HPRank" type="Control" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=433234860]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 248.0
+offset_right = -123.21985
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatIcon" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/HPRank" unique_id=709049119]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -32.0
+texture = ExtResource("27_thyug")
+
+[node name="RankLetter" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/HPRank" unique_id=1178238951]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource("30_ulf8a")
+
+[node name="SpdRank" type="Control" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=947687213]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = 248.0
+offset_right = -27.219849
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatIcon" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/SpdRank" unique_id=220904030]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -32.0
+texture = ExtResource("34_h7768")
+
+[node name="RankLetter" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/SpdRank" unique_id=1773242891]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource("30_ulf8a")
 
 [node name="Click" type="Label" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=1348007229]
 layout_mode = 1

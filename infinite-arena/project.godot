@@ -67,6 +67,7 @@ folder_colors={
 "res://imports/fantasy_sprites/": "orange",
 "res://imports/fantasy_sprites/armor/": "yellow",
 "res://imports/fantasy_sprites/equipment/": "yellow",
+"res://imports/fantasy_sprites/icons/": "yellow",
 "res://imports/fantasy_sprites/items/": "yellow",
 "res://imports/fantasy_sprites/weapons/": "yellow",
 "res://imports/fantasy_ui/": "orange",

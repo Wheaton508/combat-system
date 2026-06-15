@@ -67,6 +67,7 @@ initial_scene = "res://scenes/game_scenes/main_menu.tscn"
 [node name="CurrentSceneHolder" type="Node" parent="SceneManager" unique_id=1292384826]
 
 [node name="SceneTransition" type="CanvasLayer" parent="SceneManager" unique_id=2080478561]
+layer = 5
 
 [node name="BlackScreen" type="ColorRect" parent="SceneManager/SceneTransition" unique_id=1788875322]
 anchors_preset = 15
