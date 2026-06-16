@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_hrdr4"]
 [ext_resource type="SpriteFrames" uid="uid://q5psa7pav1ke" path="res://assets/sprite_frames/8_blue_mage_sf.tres" id="2_fc1q5"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="2_th6o3"]
 
 [resource]
 script = ExtResource("1_hrdr4")
 role_name = "Blue Mage"
+weapon_types = Array[int]([4, 5])
 weaknesses = Array[int]([0, 2, 4, 8])
 ui_sprite = ExtResource("2_fc1q5")
 hp_rank = "B"

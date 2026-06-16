@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Role" format=3 uid="uid://dv0s53i5reqjb"]
 
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_bn643"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="2_7h2fq"]
 [ext_resource type="SpriteFrames" uid="uid://bbpxhcm7w6i1l" path="res://assets/sprite_frames/6_archer_sf.tres" id="2_kx0en"]
 
 [resource]
 script = ExtResource("1_bn643")
 role_name = "Archer"
+weapon_types = Array[int]([3])
 weaknesses = Array[int]([0, 1, 5])
 ui_sprite = ExtResource("2_kx0en")
 hp_rank = "B"

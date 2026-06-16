@@ -28,12 +28,27 @@
 [ext_resource type="FontFile" uid="uid://cs1c6un2wdiyl" path="res://imports/fantasy_ui/fonts/FantasyRPGtitle (size 11).ttf" id="25_hnmg3"]
 [ext_resource type="FontFile" uid="uid://l1xqc83y41p4" path="res://imports/fantasy_ui/fonts/FantasyRPGtext (size 8).ttf" id="26_h0d2y"]
 [ext_resource type="Texture2D" uid="uid://ftdbcp2air7s" path="res://imports/fantasy_sprites/icons/hp.png" id="27_thyug"]
+[ext_resource type="Texture2D" uid="uid://bmxnlgndtyjbh" path="res://imports/fantasy_sprites/weapons/33_iron_sword.png" id="28_gtpid"]
 [ext_resource type="Texture2D" uid="uid://c80lc032bn2ww" path="res://imports/fantasy_sprites/icons/atk.png" id="28_ktqji"]
+[ext_resource type="Texture2D" uid="uid://bo1yov7l7ssy4" path="res://imports/fantasy_sprites/icons/slash.png" id="28_luk5x"]
+[ext_resource type="Texture2D" uid="uid://7yhqpt64tqqu" path="res://imports/fantasy_sprites/icons/stab.png" id="29_3kf2h"]
+[ext_resource type="Texture2D" uid="uid://x5jkvo4cucua" path="res://imports/fantasy_sprites/weapons/44_iron_lance.png" id="29_flvbk"]
+[ext_resource type="Texture2D" uid="uid://cj1skn8g2xv5l" path="res://imports/fantasy_sprites/icons/crush.png" id="30_6a5ub"]
+[ext_resource type="Texture2D" uid="uid://00d1y8fwcay" path="res://imports/fantasy_sprites/weapons/53_iron_axe.png" id="30_j7bpl"]
 [ext_resource type="Texture2D" uid="uid://bnh3aeqwtke2v" path="res://imports/fantasy_sprites/icons/def.png" id="30_qcc1a"]
 [ext_resource type="Texture2D" uid="uid://mdnwr6djshwu" path="res://imports/fantasy_sprites/icons/d_rank.png" id="30_ulf8a"]
+[ext_resource type="Texture2D" uid="uid://dlr36kgr2uyum" path="res://imports/fantasy_sprites/icons/fire.png" id="31_14pqf"]
+[ext_resource type="Texture2D" uid="uid://chxupo3wtc3k1" path="res://imports/fantasy_sprites/weapons/65_iron_bow.png" id="31_o7fdc"]
 [ext_resource type="Texture2D" uid="uid://bbgygrtkphskt" path="res://imports/fantasy_sprites/icons/mag.png" id="31_s3xtq"]
+[ext_resource type="Texture2D" uid="uid://dmc2o0cawd86a" path="res://imports/fantasy_sprites/weapons/74_iron_rod.png" id="32_0rtgt"]
 [ext_resource type="Texture2D" uid="uid://c6daa37fq8odj" path="res://imports/fantasy_sprites/icons/res.png" id="32_k5onc"]
+[ext_resource type="Texture2D" uid="uid://dgj2i4otljjfy" path="res://imports/fantasy_sprites/icons/lightning.png" id="32_mxdv7"]
+[ext_resource type="Texture2D" uid="uid://bxog13vak2mnt" path="res://imports/fantasy_sprites/icons/wind.png" id="33_5etdm"]
+[ext_resource type="Texture2D" uid="uid://cj8rng4sepxm4" path="res://imports/fantasy_sprites/weapons/75_iron_staff.png" id="33_pd3qe"]
+[ext_resource type="Texture2D" uid="uid://b8at7iy2rinuv" path="res://imports/fantasy_sprites/icons/ice.png" id="34_gtpid"]
 [ext_resource type="Texture2D" uid="uid://bwq4tpgopc4y4" path="res://imports/fantasy_sprites/icons/spd.png" id="34_h7768"]
+[ext_resource type="Texture2D" uid="uid://b77cwemx1hso5" path="res://imports/fantasy_sprites/icons/dark.png" id="35_flvbk"]
+[ext_resource type="Texture2D" uid="uid://5j6qa8mhb4wd" path="res://imports/fantasy_sprites/icons/light.png" id="36_j7bpl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_meja6"]
 size = Vector3(0.25, 0.22136231, 0.25)
@@ -390,13 +405,13 @@ script = ExtResource("24_6t7t1")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UnitPreviewPanel" unique_id=1740854741]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 0.96800005
+anchor_bottom = 0.95600003
 offset_left = 408.0
 offset_top = 16.0
-offset_right = -20.780151
-offset_bottom = -16.0
+offset_right = -0.3001709
+offset_bottom = -0.16000366
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_dooo0")
@@ -424,6 +439,147 @@ text = "Unit Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="WeaponsList" type="HBoxContainer" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=2000563416]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = 96.0
+offset_right = 16.780151
+offset_bottom = -214.0
+alignment = 1
+
+[node name="Text" type="Label" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaponsList" unique_id=776687547]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.34901962, 0.15294118, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("26_h0d2y")
+theme_override_font_sizes/font_size = 16
+text = "Weapons: "
+
+[node name="Sword" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaponsList" unique_id=1348100809]
+visible = false
+layout_mode = 2
+texture = ExtResource("28_gtpid")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Lance" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaponsList" unique_id=221276850]
+visible = false
+layout_mode = 2
+texture = ExtResource("29_flvbk")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Axe" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaponsList" unique_id=1744019619]
+visible = false
+layout_mode = 2
+texture = ExtResource("30_j7bpl")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Bow" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaponsList" unique_id=239647561]
+visible = false
+layout_mode = 2
+texture = ExtResource("31_o7fdc")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Rod" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaponsList" unique_id=969400703]
+visible = false
+layout_mode = 2
+texture = ExtResource("32_0rtgt")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Staff" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaponsList" unique_id=2138582837]
+visible = false
+layout_mode = 2
+texture = ExtResource("33_pd3qe")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="WeaknessList" type="HBoxContainer" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=1745307532]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = 136.0
+offset_right = 16.780151
+offset_bottom = -174.0
+alignment = 1
+
+[node name="Text" type="Label" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaknessList" unique_id=2065983256]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.34901962, 0.15294118, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("26_h0d2y")
+theme_override_font_sizes/font_size = 16
+text = "Weak: "
+
+[node name="Slash" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaknessList" unique_id=1470297443]
+visible = false
+layout_mode = 2
+texture = ExtResource("28_luk5x")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Stab" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaknessList" unique_id=1584623681]
+visible = false
+layout_mode = 2
+texture = ExtResource("29_3kf2h")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Crush" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaknessList" unique_id=41172008]
+visible = false
+layout_mode = 2
+texture = ExtResource("30_6a5ub")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Fire" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaknessList" unique_id=1714188407]
+visible = false
+layout_mode = 2
+texture = ExtResource("31_14pqf")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Lighting" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaknessList" unique_id=654426526]
+visible = false
+layout_mode = 2
+texture = ExtResource("32_mxdv7")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Wind" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaknessList" unique_id=1058764489]
+visible = false
+layout_mode = 2
+texture = ExtResource("33_5etdm")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Ice" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaknessList" unique_id=672058906]
+visible = false
+layout_mode = 2
+texture = ExtResource("34_gtpid")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Dark" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaknessList" unique_id=558767003]
+visible = false
+layout_mode = 2
+texture = ExtResource("35_flvbk")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Light" type="TextureRect" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect/WeaknessList" unique_id=749948916]
+visible = false
+layout_mode = 2
+texture = ExtResource("36_j7bpl")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="AtkRank" type="Control" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=135873459]
 layout_mode = 1
@@ -611,7 +767,7 @@ offset_right = -6.0
 offset_bottom = -6.0
 texture = ExtResource("30_ulf8a")
 
-[node name="Click" type="Label" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=1348007229]
+[node name="ClickHint" type="Label" parent="CanvasLayer/UnitPreviewPanel/NinePatchRect" unique_id=1348007229]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

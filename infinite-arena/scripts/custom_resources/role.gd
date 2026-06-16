@@ -1,8 +1,13 @@
 class_name Role
 extends Resource
 
+#region ENUMS
+enum Weapon_Types {SWORD, LANCE, AXE, BOW, ROD, STAFF}
+#endregion
+
 #region CLASS DATA
 @export var role_name : String
+@export var weapon_types : Array[Weapon_Types]
 @export var weaknesses : Array[Global.Attack_Elements]
 @export var unit_node_to_load : String # A file path to the unit node corresponding to the role
 @export var ui_sprite : SpriteFrames # Used for things like the codex, hall of fame, and main menu

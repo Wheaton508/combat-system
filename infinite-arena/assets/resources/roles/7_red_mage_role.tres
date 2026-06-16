@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Role" format=3 uid="uid://clqqonx0xpl3s"]
 
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_1ybvf"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="2_fkis7"]
 [ext_resource type="SpriteFrames" uid="uid://75bgw7usw3a8" path="res://assets/sprite_frames/7_red_mage_sf.tres" id="2_gn0rb"]
 
 [resource]
 script = ExtResource("1_1ybvf")
 role_name = "Red Mage"
+weapon_types = Array[int]([4, 5])
 weaknesses = Array[int]([0, 1, 6, 7])
 ui_sprite = ExtResource("2_gn0rb")
 hp_rank = "B"

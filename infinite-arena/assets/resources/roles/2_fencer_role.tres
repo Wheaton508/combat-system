@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_5n0q7"]
 [ext_resource type="SpriteFrames" uid="uid://cmor3gh1k02st" path="res://assets/sprite_frames/2_fencer_sf.tres" id="2_pt0t0"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="2_x0hv3"]
 
 [resource]
 script = ExtResource("1_5n0q7")
 role_name = "Fencer"
+weapon_types = Array[int]([0])
 weaknesses = Array[int]([0, 6])
 ui_sprite = ExtResource("2_pt0t0")
 hp_rank = "C"

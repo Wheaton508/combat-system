@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_8366j"]
 [ext_resource type="SpriteFrames" uid="uid://cwcrwug5ou7em" path="res://assets/sprite_frames/1_knight_sf.tres" id="2_oete6"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="2_w4ygl"]
 
 [resource]
 script = ExtResource("1_8366j")
 role_name = "Knight"
+weapon_types = Array[int]([0])
 weaknesses = Array[int]([1, 2, 4])
 ui_sprite = ExtResource("2_oete6")
 hp_rank = "B"

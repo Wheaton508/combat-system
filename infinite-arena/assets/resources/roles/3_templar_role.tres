@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Role" format=3 uid="uid://cdc2mgq56nfjq"]
 
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_ny3xt"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="2_n656v"]
 [ext_resource type="SpriteFrames" uid="uid://b02vnoipfr8q0" path="res://assets/sprite_frames/3_templar_sf.tres" id="2_vmc3g"]
 
 [resource]
 script = ExtResource("1_ny3xt")
 role_name = "Templar"
+weapon_types = Array[int]([1])
 weaknesses = Array[int]([1, 2, 4, 7])
 ui_sprite = ExtResource("2_vmc3g")
 hp_rank = "B"

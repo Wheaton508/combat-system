@@ -30,17 +30,13 @@ func _reset_vars() -> void:
 	pass
 
 func _hover_unit_start() -> void:
-	print_debug(stored_role)
 	emit_signal("unit_hover", true, stored_role)
-	print_debug("Hover start.")
 
 func _hover_unit_end() -> void:
 	emit_signal("unit_hover", false, null)
-	print_debug("Hover end.")
 
 func _select_unit(_camera : Node, event : InputEvent, _event_position : Vector3, _normal : Vector3, _shape_idx : int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		print_debug("Unit selected.")
 		# Creats an instance of the UnitData resource. Will be saved to file and give to a unit
 		var new_data : UnitData = UnitData.new()
 		

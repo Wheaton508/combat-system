@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Role" format=3 uid="uid://chslwi0dqymjx"]
 
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_m1gir"]
+[ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="2_crhow"]
 [ext_resource type="SpriteFrames" uid="uid://b8ghsqf7ls5yd" path="res://assets/sprite_frames/9_arcane_mage_sf.tres" id="2_oyta6"]
 
 [resource]
 script = ExtResource("1_m1gir")
 role_name = "Arcane Mage"
+weapon_types = Array[int]([4, 5])
 weaknesses = Array[int]([1, 2, 3, 5])
 ui_sprite = ExtResource("2_oyta6")
 hp_rank = "A"
