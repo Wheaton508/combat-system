@@ -23,6 +23,7 @@ enum Weapon_Types {SWORD, LANCE, AXE, BOW, ROD, STAFF}
 #endregion
 
 #region BASE KIT DATA
+@export var starting_moves : Array[Move]
 @export var starting_equipment : Array[Equipment]
 #endregion
 
@@ -32,3 +33,10 @@ enum Weapon_Types {SWORD, LANCE, AXE, BOW, ROD, STAFF}
 
 
 # =================================================================================================
+
+
+func _check_codex() -> bool:
+	return true
+
+func _update_codex() -> void:
+	pass

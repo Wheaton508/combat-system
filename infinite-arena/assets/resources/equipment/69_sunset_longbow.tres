@@ -8,6 +8,7 @@ script = ExtResource("1_ilp47")
 display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 69
 tier = 3
+equip_type = 3
 sprite = ExtResource("2_wi4cv")
 name = "Sunset Longbow"
 description = "Restores 10% of max HP after every turn."

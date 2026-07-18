@@ -8,6 +8,7 @@ script = ExtResource("1_lkyje")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 90
 tier = 2
+equip_type = 4
 sprite = ExtResource("2_7t3dm")
 name = "Wooden Shield"
 def_buff = 8

@@ -8,6 +8,7 @@ script = ExtResource("1_v1eyc")
 display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 57
 tier = 2
+equip_type = 3
 sprite = ExtResource("2_8t4bg")
 name = "Gold Battleaxe"
 atk_buff = 35

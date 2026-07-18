@@ -8,6 +8,7 @@ script = ExtResource("1_b8qgw")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 24
 tier = 1
+equip_type = 2
 sprite = ExtResource("2_dsst5")
 name = "Copper Boots"
 def_buff = 1

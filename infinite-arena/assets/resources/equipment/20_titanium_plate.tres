@@ -8,6 +8,7 @@ script = ExtResource("1_c8xse")
 display_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 id = 20
 tier = 4
+equip_type = 1
 sprite = ExtResource("2_w1u6f")
 name = "Titanium Plate"
 def_buff = 21

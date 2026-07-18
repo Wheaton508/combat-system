@@ -8,6 +8,7 @@ script = ExtResource("1_n1iw5")
 display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 61
 tier = 3
+equip_type = 3
 sprite = ExtResource("2_3k46o")
 name = "Magic Club"
 atk_buff = 35

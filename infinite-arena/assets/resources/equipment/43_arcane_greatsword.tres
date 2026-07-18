@@ -8,6 +8,7 @@ script = ExtResource("1_5tj6j")
 display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 43
 tier = 4
+equip_type = 3
 sprite = ExtResource("2_l40ic")
 name = "Arcane Greatsword"
 description = "Targets Resistance."

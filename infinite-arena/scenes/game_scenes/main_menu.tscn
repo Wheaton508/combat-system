@@ -308,3 +308,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=382073331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[node name="MenuUnits" type="Node" parent="." unique_id=1844525515]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="MenuUnits" unique_id=1622545126]

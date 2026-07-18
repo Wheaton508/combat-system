@@ -8,6 +8,7 @@ script = ExtResource("1_7x6hj")
 display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 38
 tier = 3
+equip_type = 3
 sprite = ExtResource("2_665px")
 name = "Diamond Greatsword"
 atk_buff = 45

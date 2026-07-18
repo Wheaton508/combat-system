@@ -8,6 +8,7 @@ script = ExtResource("1_7xik7")
 display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 54
 tier = 1
+equip_type = 3
 sprite = ExtResource("2_vcqtl")
 name = "Iron Mace"
 description = "Increases damage dealt by Goblins."

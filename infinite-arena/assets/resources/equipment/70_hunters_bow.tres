@@ -8,6 +8,7 @@ script = ExtResource("1_42cjf")
 display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 70
 tier = 3
+equip_type = 3
 sprite = ExtResource("2_mfhr6")
 name = "Hunter's Bow"
 description = "Increases Accuracy by 5%."

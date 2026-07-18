@@ -8,6 +8,7 @@ script = ExtResource("1_cfg27")
 display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 63
 tier = 4
+equip_type = 3
 sprite = ExtResource("2_k80qk")
 name = "Riptide"
 description = "Buffs wielder's Speed on hit."

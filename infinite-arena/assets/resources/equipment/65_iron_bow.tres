@@ -8,6 +8,7 @@ script = ExtResource("1_mnw1p")
 display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 65
 tier = 1
+equip_type = 3
 sprite = ExtResource("2_8krog")
 name = "Iron Bow"
 atk_buff = 5

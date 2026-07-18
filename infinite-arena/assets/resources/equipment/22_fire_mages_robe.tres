@@ -8,6 +8,7 @@ script = ExtResource("1_1aih0")
 display_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 id = 22
 tier = 4
+equip_type = 1
 sprite = ExtResource("2_u45te")
 name = "Fire Mage's Robe"
 mag_buff = 7

@@ -8,6 +8,7 @@ script = ExtResource("1_05s3y")
 display_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 id = 19
 tier = 3
+equip_type = 1
 sprite = ExtResource("2_36j2p")
 name = "Maid Dress"
 mag_buff = 5

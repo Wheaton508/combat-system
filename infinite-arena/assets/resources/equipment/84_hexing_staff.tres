@@ -8,6 +8,7 @@ script = ExtResource("1_jkbej")
 display_color = Color(0.8, 0.6509804, 0.46666667, 1)
 id = 84
 tier = 4
+equip_type = 3
 sprite = ExtResource("2_2i4qd")
 name = "Hexing Staff"
 description = "Extends debuff duration."

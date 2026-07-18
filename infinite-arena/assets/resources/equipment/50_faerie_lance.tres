@@ -8,6 +8,7 @@ script = ExtResource("1_k02ts")
 display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 50
 tier = 3
+equip_type = 3
 sprite = ExtResource("2_lq8t5")
 name = "Faerie Lance"
 description = "Restores 10% of max HP after every turn."

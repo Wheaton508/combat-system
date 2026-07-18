@@ -8,6 +8,7 @@ script = ExtResource("1_cn832")
 display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 40
 tier = 3
+equip_type = 3
 sprite = ExtResource("2_ynakl")
 name = "Sylph Sword"
 description = "Targets Resistance. Wind element."

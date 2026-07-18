@@ -8,6 +8,7 @@ script = ExtResource("1_y6mc4")
 display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 60
 tier = 3
+equip_type = 3
 sprite = ExtResource("2_e8c8m")
 name = "Diamond Battleaxe"
 atk_buff = 50

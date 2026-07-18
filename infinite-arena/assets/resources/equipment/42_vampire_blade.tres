@@ -8,6 +8,7 @@ script = ExtResource("1_ewpbd")
 display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 42
 tier = 4
+equip_type = 3
 sprite = ExtResource("2_doivi")
 name = "Vampire Blade"
 description = "Drains 50% of damage dealt."

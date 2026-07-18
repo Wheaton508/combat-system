@@ -8,6 +8,7 @@ script = ExtResource("1_hjiw8")
 display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 64
 tier = 4
+equip_type = 3
 sprite = ExtResource("2_sy1te")
 name = "Eruption"
 description = "Fire element."

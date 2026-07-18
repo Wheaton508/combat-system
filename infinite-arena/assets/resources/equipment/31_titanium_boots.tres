@@ -8,6 +8,7 @@ script = ExtResource("1_tmgep")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 31
 tier = 4
+equip_type = 2
 sprite = ExtResource("2_7dqkt")
 name = "Titanium Boots"
 def_buff = 10

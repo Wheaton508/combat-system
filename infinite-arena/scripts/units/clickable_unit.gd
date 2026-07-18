@@ -41,10 +41,13 @@ func _select_unit(_camera : Node, event : InputEvent, _event_position : Vector3,
 		var new_data : UnitData = UnitData.new()
 		
 		# Initializes data values on that unit resource
+		new_data.unit_role = stored_role
+		new_data._initialize_data()
 		
 		# Saves new_data to the Global script. These units will be saved to file for:
 			# Main Menu display when all three are chosen
 			# Actual gameplay purposes when a bookmark is created. During gameplay, always reference the Global script.
+		
 		if Global.units_dict["Primary"] == null:
 			Global.units_dict["Primary"] = new_data
 			emit_signal("unit_selected")

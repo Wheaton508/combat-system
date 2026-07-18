@@ -8,6 +8,7 @@ script = ExtResource("1_jckqe")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 25
 tier = 1
+equip_type = 2
 sprite = ExtResource("2_i4row")
 name = "Leather Shoes"
 res_buff = 1

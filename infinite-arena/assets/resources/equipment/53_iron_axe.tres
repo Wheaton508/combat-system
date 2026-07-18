@@ -8,6 +8,7 @@ script = ExtResource("1_73owu")
 display_color = Color(0.54509807, 0.7647059, 0.2901961, 1)
 id = 53
 tier = 1
+equip_type = 3
 sprite = ExtResource("2_8s2ad")
 name = "Iron Axe"
 atk_buff = 10

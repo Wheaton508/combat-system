@@ -8,6 +8,7 @@ script = ExtResource("1_xxbev")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 111
 tier = 4
+equip_type = 4
 sprite = ExtResource("2_y46gq")
 name = "Fairy Bottle"
 description = "Revives on death. This item disappears after."

@@ -8,6 +8,7 @@ script = ExtResource("1_mkyel")
 display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 52
 tier = 4
+equip_type = 3
 sprite = ExtResource("2_hs36l")
 name = "Bolt Lance"
 description = "Targets Resistance. Lightning element."

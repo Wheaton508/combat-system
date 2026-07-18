@@ -2,6 +2,7 @@ class_name Equipment
 extends Resource
 
 #region ENUMS
+enum Equipment_Type {HAT, TOP, BOTTOM, WEAPON, ACCESSORY}
 #enum Equipment_Effects {}
 #endregion
 
@@ -9,6 +10,7 @@ extends Resource
 @export var display_color : Color
 @export var id : int
 @export var tier : int
+@export var equip_type : Equipment_Type
 #endregion
 
 #region EQUIPMENT DETAILS

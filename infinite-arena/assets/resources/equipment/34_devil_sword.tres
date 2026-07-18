@@ -8,6 +8,7 @@ script = ExtResource("1_tw0wa")
 display_color = Color(0.8784314, 0.4, 0.4, 1)
 id = 34
 tier = 1
+equip_type = 3
 sprite = ExtResource("2_mdgbl")
 name = "Devil Sword"
 description = "Has a chance to damage the wielder instead of foe."

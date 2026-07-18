@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://l3yla5dx3kjq" path="res://scripts/custom_resources/role.gd" id="1_cbdfe"]
 [ext_resource type="Script" uid="uid://b4f7hbamkm5f2" path="res://scripts/custom_resources/equipment.gd" id="2_atdo5"]
 [ext_resource type="SpriteFrames" uid="uid://c2qnkjx12u6ld" path="res://assets/sprite_frames/10_cleric_sf.tres" id="2_nhcu1"]
+[ext_resource type="Resource" uid="uid://bumhkqaj8yefn" path="res://assets/resources/equipment/75_iron_staff.tres" id="3_mmavo"]
+[ext_resource type="Script" uid="uid://bqhdowc5xbfe0" path="res://scripts/custom_resources/move.gd" id="4_uebhh"]
+[ext_resource type="Resource" uid="uid://saigge7n4dhb" path="res://assets/resources/moves/92_shine.tres" id="5_ph6cr"]
+[ext_resource type="Resource" uid="uid://dk2ualjpi75su" path="res://assets/resources/moves/99_heal.tres" id="6_buy3m"]
 
 [resource]
 script = ExtResource("1_cbdfe")
@@ -16,3 +20,5 @@ def_rank = "D"
 mag_rank = "B"
 res_rank = "S"
 spd_rank = "B"
+starting_moves = Array[ExtResource("4_uebhh")]([ExtResource("5_ph6cr"), ExtResource("6_buy3m")])
+starting_equipment = Array[ExtResource("2_atdo5")]([ExtResource("3_mmavo")])

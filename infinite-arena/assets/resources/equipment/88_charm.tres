@@ -8,6 +8,7 @@ script = ExtResource("1_ltacc")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 88
 tier = 1
+equip_type = 4
 sprite = ExtResource("2_o54re")
 name = "Charm"
 res_buff = 3

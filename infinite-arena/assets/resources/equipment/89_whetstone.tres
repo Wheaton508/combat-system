@@ -8,6 +8,7 @@ script = ExtResource("1_jod7d")
 display_color = Color(0.7411765, 0.7411765, 0.7411765, 1)
 id = 89
 tier = 2
+equip_type = 4
 sprite = ExtResource("2_x3lrb")
 name = "Whetstone"
 atk_buff = 8

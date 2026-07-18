@@ -13,6 +13,7 @@ extends Node3D
 
 var loaded_roles : Array[Role] # Will be checked in get_random_role to ensure players do not get repeat classes in a given set
 var chosen_roles : Array[Role] # Same as above. Disallows players from getting classes they have already picked
+var unit_index : int = 0 # Used to track which unit slot has been selected for
 
 
 # =================================================================================================

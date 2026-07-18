@@ -8,6 +8,7 @@ script = ExtResource("1_xtc7i")
 display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 49
 tier = 3
+equip_type = 3
 sprite = ExtResource("2_b20n5")
 name = "Diamond Naginata"
 atk_buff = 30

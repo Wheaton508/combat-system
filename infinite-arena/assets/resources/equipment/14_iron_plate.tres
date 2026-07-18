@@ -8,6 +8,7 @@ script = ExtResource("1_o4ggc")
 display_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 id = 14
 tier = 2
+equip_type = 1
 sprite = ExtResource("2_hinb4")
 name = "Iron Plate"
 def_buff = 10

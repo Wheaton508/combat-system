@@ -8,6 +8,7 @@ script = ExtResource("1_5y783")
 display_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 id = 18
 tier = 3
+equip_type = 1
 sprite = ExtResource("2_satvi")
 name = "Winter Coat"
 def_buff = 5

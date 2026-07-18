@@ -8,6 +8,7 @@ script = ExtResource("1_aetx1")
 display_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 id = 21
 tier = 4
+equip_type = 1
 sprite = ExtResource("2_pe3to")
 name = "Silk Robe"
 def_buff = 7

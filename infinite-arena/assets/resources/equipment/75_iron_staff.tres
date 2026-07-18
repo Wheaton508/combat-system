@@ -8,6 +8,7 @@ script = ExtResource("1_vesef")
 display_color = Color(0.8, 0.6509804, 0.46666667, 1)
 id = 75
 tier = 1
+equip_type = 3
 sprite = ExtResource("2_gccm4")
 name = "Iron Staff"
 mag_buff = 5

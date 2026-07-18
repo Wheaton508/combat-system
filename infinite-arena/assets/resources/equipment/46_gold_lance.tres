@@ -8,6 +8,7 @@ script = ExtResource("1_0rq5u")
 display_color = Color(0.35686275, 0.58431375, 0.9764706, 1)
 id = 46
 tier = 2
+equip_type = 3
 sprite = ExtResource("2_fdjbx")
 name = "Gold Lance"
 atk_buff = 22

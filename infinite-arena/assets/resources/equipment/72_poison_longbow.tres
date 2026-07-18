@@ -8,6 +8,7 @@ script = ExtResource("1_31mji")
 display_color = Color(0.14901961, 0.6509804, 0.6039216, 1)
 id = 72
 tier = 4
+equip_type = 3
 sprite = ExtResource("2_4d10y")
 name = "Poison Longbow"
 description = "Debuffs target Defense on hit."
