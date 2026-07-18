@@ -20,6 +20,7 @@ enum Equipment_Type {HAT, TOP, BOTTOM, WEAPON, ACCESSORY}
 #endregion
 
 #region BATTLE DATA
+# These stats can go below zero, but are clamped during damage calculations and on UI interfaces
 @export var atk_buff : int
 @export var def_buff : int
 @export var mag_buff : int

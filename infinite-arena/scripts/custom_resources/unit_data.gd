@@ -17,7 +17,7 @@ extends Resource
 
 
 func _initialize_data():
-	# Set name
+	unit_name = unit_role.role_name # this will be changed later
 	
 	unit_stats._initialize_stats(unit_role)
 	
@@ -34,17 +34,56 @@ func _learn_move(pending_move : Move, move_slot : int) -> void:
 func _equip_equipment(pending_equip : Equipment) -> void:
 	match pending_equip.equip_type:
 		Equipment.Equipment_Type.HAT:
-			pass
+			if hat == null:
+				_calc_equipment(pending_equip)
+			else:
+				_recalc_equipment(pending_equip, hat)
+			hat = pending_equip
 		Equipment.Equipment_Type.TOP:
-			pass
+			if top == null:
+				_calc_equipment(pending_equip)
+			else:
+				_recalc_equipment(pending_equip, top)
+			top = pending_equip
 		Equipment.Equipment_Type.BOTTOM:
-			pass
+			if bottoms == null:
+				_calc_equipment(pending_equip)
+			else:
+				_recalc_equipment(pending_equip, bottoms)
+			bottoms = pending_equip
 		Equipment.Equipment_Type.WEAPON:
-			pass
+			if weapon == null:
+				_calc_equipment(pending_equip)
+			else:
+				_recalc_equipment(pending_equip, weapon)
+			weapon = pending_equip
 		Equipment.Equipment_Type.ACCESSORY:
-			pass
+			if accessory == null:
+				_calc_equipment(pending_equip)
+			else:
+				_recalc_equipment(pending_equip, accessory)
+			accessory = pending_equip
 	
 	_check_codex(pending_equip)
+
+func _calc_equipment(new_equipment : Equipment): # Used when equipping and item to an empty slot
+	unit_stats.atk += new_equipment.atk_buff
+	unit_stats.def += new_equipment.def_buff
+	unit_stats.mag += new_equipment.mag_buff
+	unit_stats.res += new_equipment.res_buff
+	unit_stats.spd += new_equipment.spd_buff
+	
+	# Any logic regarding equipment effects
+
+func _recalc_equipment(new_equipiment : Equipment, old_equipment : Equipment): # Used when replacing an old piece of equipment with a new one
+	unit_stats.atk = unit_stats.atk - old_equipment.atk_buff + new_equipiment.atk_buff
+	unit_stats.def = unit_stats.def - old_equipment.def_buff + new_equipiment.def_buff
+	unit_stats.mag = unit_stats.mag - old_equipment.mag_buff + new_equipiment.mag_buff
+	unit_stats.res = unit_stats.res - old_equipment.res_buff + new_equipiment.res_buff
+	unit_stats.spd = unit_stats.spd - old_equipment.spd_buff + new_equipiment.spd_buff
+	
+	# Any logic regarding equipment effects
+
 
 func _equip_item(pending_item : Item) -> void:
 	item = pending_item
