@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qh2uayd8vj1t"]
 
 [ext_resource type="FontFile" uid="uid://cs1c6un2wdiyl" path="res://imports/fantasy_ui/fonts/FantasyRPGtitle (size 11).ttf" id="1_3hng2"]
+[ext_resource type="Script" uid="uid://boxemh8nqpeex" path="res://scripts/management/main_menu.gd" id="1_k5lk3"]
 [ext_resource type="Texture2D" uid="uid://bh74tbk8bkerl" path="res://imports/fantasy_ui/ui/UI assets (2x).png" id="2_idbya"]
 [ext_resource type="Theme" uid="uid://c21f6vjh7htd5" path="res://assets/themes/main_menu_button_big.tres" id="3_idbya"]
 [ext_resource type="Theme" uid="uid://g0v7wptephtk" path="res://assets/themes/main_menu_button_small.tres" id="4_vwayb"]
@@ -19,6 +20,24 @@
 [ext_resource type="Script" uid="uid://q1ie23ai824c" path="res://scripts/ui/volume_slider.gd" id="13_csycq"]
 
 [node name="MainMenu" type="Node3D" unique_id=712058389]
+script = ExtResource("1_k5lk3")
+
+[node name="MenuUnits" type="Node" parent="." unique_id=1844525515]
+
+[node name="UnitSprite" type="AnimatedSprite3D" parent="MenuUnits" unique_id=1622545126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1163676)
+flip_h = true
+texture_filter = 0
+
+[node name="UnitSprite2" type="AnimatedSprite3D" parent="MenuUnits" unique_id=97401247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20656407, 0, -1.1163676)
+flip_h = true
+texture_filter = 0
+
+[node name="UnitSprite3" type="AnimatedSprite3D" parent="MenuUnits" unique_id=370457317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28718984, 0, -1.1163676)
+flip_h = true
+texture_filter = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1337414225]
 
@@ -309,7 +328,3 @@ grow_vertical = 2
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=382073331]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-
-[node name="MenuUnits" type="Node" parent="." unique_id=1844525515]
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="MenuUnits" unique_id=1622545126]

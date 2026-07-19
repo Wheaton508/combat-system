@@ -1,0 +1,27 @@
+[gd_resource type="Theme" format=3 uid="uid://b5f42j1ls3e6v"]
+
+[ext_resource type="FontFile" uid="uid://cs1c6un2wdiyl" path="res://imports/fantasy_ui/fonts/FantasyRPGtitle (size 11).ttf" id="1_eqpfo"]
+[ext_resource type="Texture2D" uid="uid://7r5phqtyw7qw" path="res://imports/fantasy_ui/ui/UI assets (1x).png" id="1_jkh20"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jkh20"]
+texture = ExtResource("1_jkh20")
+region_rect = Rect2(96, 192, 48, 16)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eqpfo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tm45h"]
+texture = ExtResource("1_jkh20")
+region_rect = Rect2(48, 192, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p8d44"]
+texture = ExtResource("1_jkh20")
+region_rect = Rect2(0, 192, 48, 16)
+
+[resource]
+Button/font_sizes/font_size = 11
+Button/fonts/font = ExtResource("1_eqpfo")
+Button/styles/disabled = SubResource("StyleBoxTexture_jkh20")
+Button/styles/focus = SubResource("StyleBoxEmpty_eqpfo")
+Button/styles/hover = SubResource("StyleBoxTexture_tm45h")
+Button/styles/normal = SubResource("StyleBoxTexture_p8d44")
+Button/styles/pressed = SubResource("StyleBoxTexture_jkh20")

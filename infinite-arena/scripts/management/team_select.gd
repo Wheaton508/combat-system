@@ -1,10 +1,16 @@
+class_name TeamSelect
 extends Node3D
 
+@onready var scene_title: Control = $CanvasLayer/SceneTitle
+@onready var confirm_party: Control = $CanvasLayer/ConfirmParty
 @onready var input_blocker: Control = $CanvasLayer/InputBlocker
 @onready var unit_preview_panel: Control = $CanvasLayer/UnitPreviewPanel
 @onready var unit_1: ClickableUnit = $ClickableUnit1
 @onready var unit_2: ClickableUnit = $ClickableUnit2
 @onready var unit_3: ClickableUnit = $ClickableUnit3
+@onready var unit_sprite_1: AnimatedSprite3D = $PartyUnits/UnitSprite
+@onready var unit_sprite_2: AnimatedSprite3D = $PartyUnits/UnitSprite2
+@onready var unit_sprite_3: AnimatedSprite3D = $PartyUnits/UnitSprite3
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 @export var role_resource_array : Array[Role]
@@ -13,6 +19,7 @@ extends Node3D
 
 var loaded_roles : Array[Role] # Will be checked in get_random_role to ensure players do not get repeat classes in a given set
 var chosen_roles : Array[Role] # Same as above. Disallows players from getting classes they have already picked
+var units_selected : int = 0
 
 
 # =================================================================================================
@@ -45,12 +52,14 @@ func _ready() -> void:
 	input_blocker.visible = false
 
 func _refresh_units() -> void:
+	units_selected += 1
+	
 	# Clear loaded_roles array
 	loaded_roles.clear()
 	
 	# Put up input blocker and take down unit preview - currently bugged
-	unit_preview_panel.visible = false
 	input_blocker.visible = true
+	unit_preview_panel.visible = false
 	
 	# Move UnitHolders offscreen
 	unit_1.animated_sprite_3d.play("walk")
@@ -59,23 +68,39 @@ func _refresh_units() -> void:
 	animation_player.play("exit_screen")
 	await animation_player.animation_finished
 	
-	# Change units
-	unit_1._give_role(_get_random_role())
-	unit_2._give_role(_get_random_role())
-	unit_3._give_role(_get_random_role())
-	
-	await get_tree().create_timer(time_to_wait_between_units).timeout
-	
-	# Move UnitHolders back on screen
-	animation_player.play("enter_screen")
-	await animation_player.animation_finished
-	
-	unit_1.animated_sprite_3d.play("idle")
-	unit_2.animated_sprite_3d.play("idle")
-	unit_3.animated_sprite_3d.play("idle")
-	
-	# Take down input blocker
-	input_blocker.visible = false
+	if units_selected == 3:
+		scene_title.visible = false
+		
+		unit_sprite_1.sprite_frames = Global.units_dict["Primary"].unit_role.ui_sprite
+		unit_sprite_1.play("idle")
+		unit_sprite_2.sprite_frames = Global.units_dict["Secondary"].unit_role.ui_sprite
+		unit_sprite_2.play("idle")
+		unit_sprite_3.sprite_frames = Global.units_dict["Backline"].unit_role.ui_sprite
+		unit_sprite_3.play("idle")
+		
+		animation_player.play("flip_camera")
+		await animation_player.animation_finished
+		
+		confirm_party.visible = true
+		input_blocker.visible = false
+	else:
+		# Change units
+		unit_1._give_role(_get_random_role())
+		unit_2._give_role(_get_random_role())
+		unit_3._give_role(_get_random_role())
+		
+		await get_tree().create_timer(time_to_wait_between_units).timeout
+		
+		# Move UnitHolders back on screen
+		animation_player.play("enter_screen")
+		await animation_player.animation_finished
+		
+		unit_1.animated_sprite_3d.play("idle")
+		unit_2.animated_sprite_3d.play("idle")
+		unit_3.animated_sprite_3d.play("idle")
+		
+		# Take down input blocker
+		input_blocker.visible = false
 
 func _change_info_display (is_hover_start : bool, role_resource) -> void:
 	if is_hover_start:

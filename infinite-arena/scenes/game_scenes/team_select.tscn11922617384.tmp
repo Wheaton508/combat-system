@@ -26,9 +26,7 @@
 [ext_resource type="Script" uid="uid://dhn3i07ni288v" path="res://scripts/units/clickable_unit.gd" id="23_6t7t1"]
 [ext_resource type="Script" uid="uid://c005m87j8bbkc" path="res://scripts/ui/unit_preview_panel.gd" id="24_6t7t1"]
 [ext_resource type="FontFile" uid="uid://cs1c6un2wdiyl" path="res://imports/fantasy_ui/fonts/FantasyRPGtitle (size 11).ttf" id="25_hnmg3"]
-[ext_resource type="Theme" uid="uid://b5f42j1ls3e6v" path="res://assets/themes/golden_button_big.tres" id="26_flvbk"]
 [ext_resource type="FontFile" uid="uid://l1xqc83y41p4" path="res://imports/fantasy_ui/fonts/FantasyRPGtext (size 8).ttf" id="26_h0d2y"]
-[ext_resource type="Script" uid="uid://c8wa4yk34ys8q" path="res://scripts/ui/buttons/team_selected_button.gd" id="27_j7bpl"]
 [ext_resource type="Texture2D" uid="uid://ftdbcp2air7s" path="res://imports/fantasy_sprites/icons/hp.png" id="27_thyug"]
 [ext_resource type="Texture2D" uid="uid://bmxnlgndtyjbh" path="res://imports/fantasy_sprites/weapons/33_iron_sword.png" id="28_gtpid"]
 [ext_resource type="Texture2D" uid="uid://c80lc032bn2ww" path="res://imports/fantasy_sprites/icons/atk.png" id="28_ktqji"]
@@ -364,26 +362,6 @@ animation = &""
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
 shape = SubResource("BoxShape3D_meja6")
 
-[node name="PartyUnits" type="Node" parent="." unique_id=877384569]
-
-[node name="UnitSprite" type="AnimatedSprite3D" parent="PartyUnits" unique_id=637619947]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.75)
-flip_h = true
-texture_filter = 0
-animation = &""
-
-[node name="UnitSprite2" type="AnimatedSprite3D" parent="PartyUnits" unique_id=1717668269]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.75)
-flip_h = true
-texture_filter = 0
-animation = &""
-
-[node name="UnitSprite3" type="AnimatedSprite3D" parent="PartyUnits" unique_id=1855431864]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.75)
-flip_h = true
-texture_filter = 0
-animation = &""
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=318020211]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10033327, 0)
 
@@ -441,30 +419,6 @@ theme_override_fonts/font = ExtResource("25_hnmg3")
 theme_override_font_sizes/font_size = 22
 text = "Choose Your Party"
 horizontal_alignment = 1
-
-[node name="ConfirmParty" type="Control" parent="CanvasLayer" unique_id=1407820110]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Button" type="Button" parent="CanvasLayer/ConfirmParty" unique_id=1932877811]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 224.0
-offset_top = 8.0
-offset_right = -224.0
-offset_bottom = -288.0
-theme = ExtResource("26_flvbk")
-theme_override_font_sizes/font_size = 22
-text = "Fight!"
-script = ExtResource("27_j7bpl")
-scene_path_to_load = "res://scenes/game_scenes/combat_scene.tscn"
 
 [node name="UnitPreviewPanel" type="Control" parent="CanvasLayer" unique_id=1280087618]
 visible = false
